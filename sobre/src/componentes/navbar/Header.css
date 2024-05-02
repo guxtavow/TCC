@@ -1,0 +1,23 @@
+.container-fluid{
+    height: 8vh;
+}
+
+.center{
+    width:72vw;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.Usuario{
+    display: inline-flex;
+    float:inline-end;
+    
+}
+.Login{
+    width:100px ;
+    background-color: #8044BC;
+    border-radius: 16px;
+    margin-left: 10px;
+    color: white;
+    border: #8044BC;
+}
