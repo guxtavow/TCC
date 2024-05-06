@@ -1,0 +1,74 @@
+.Duvida{
+    background-color: #185185;
+    color: white;
+    padding: 50px;
+    border: solid;
+    margin: auto;
+    width: 60vw;
+    border-radius: 20px;
+}
+
+.input-group{
+    margin: auto;
+    margin-top: 30px;
+    width: 28vw;
+    height: 6vh;
+    background-color:#185185;
+    border-color: #185185;
+    color: white;
+}
+
+.form-control{
+    background-color: #43729e;
+    border-color: #43729e;
+    color: white;
+}
+
+.form-control::placeholder{
+    color:white;
+}
+
+.infoFooter{
+    margin-top: 50px;
+    height: 35vh;
+}
+
+.Icons{
+    width: 15vw;
+    margin-left: 10px;
+    margin-top: 10px;
+    float:left;
+}
+
+
+#text1{
+    text-align:center;
+}
+
+#button{
+    color: white;
+    background-color:#FFC225;
+    border-color: #FFC225;
+}
+
+.links{
+    float: right;
+    width: 55vw;
+    height: 30vh;
+    padding: 10px;
+    display: inline-flex;
+    margin-top: 10px;
+}
+
+.Link{
+    text-decoration: none;
+    font-size: 16px;
+    padding: 50px;
+}
+
+table{
+margin-left: auto;
+}
+
+
+
