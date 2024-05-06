@@ -1,0 +1,51 @@
+.Banner{
+    height: 60vh;
+    background-image: linear-gradient(to bottom,white 60%,#FF2B00 40%);
+}
+
+#garoto1{
+    position: initial;
+    margin-top: 4.4vh;
+    margin-right: 6vw;
+}
+#sobrenos{
+    position: initial;
+    margin-top: 14.2vh;
+    margin-right: 6vw;
+}
+.WelcomeText{
+    margin-top: 20vh;
+}
+.text1{
+    font-size: large;
+    margin: auto;
+    width: 70vw;
+}
+#menina{
+    margin-top: 10vh;
+    margin-bottom: -30px;
+}
+
+.Missao{
+    height: 50vh;
+    margin-top: -15vh;
+    background-image: linear-gradient(to bottom, #dbe2ea  50%,#0086FF 50%);
+    display: flex;
+    justify-content: center;
+}
+.textoDiv{
+    background-color: white;
+    width: 65vw;
+    height: 30vh;
+    margin: auto;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    
+}
+.text2{
+
+    font-size: larger;
+    width: 50vw;
+    margin: auto;
+}
