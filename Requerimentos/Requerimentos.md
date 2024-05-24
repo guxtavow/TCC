@@ -77,7 +77,7 @@ Em desenvolvimento.
 No momento estamos na fase de:
 
 - Escopo das paginas (completo);
-- Documentação e Video do projeto (em andamento);
+- Documentação e Video do projeto (completo);
 - Desenvolvimento do FrontEnd das paginas (em andamento).
  . . .
 
