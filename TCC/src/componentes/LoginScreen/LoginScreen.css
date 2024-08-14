@@ -1,0 +1,119 @@
+.wrapper{
+    padding: 50px 10%;
+}
+
+.wrapper h1 {
+    height: 15vh;
+    font-size: 2.5vw;
+    color: #333333;
+}
+
+.wrapper h2 {
+    font-size: 3.5vw;
+}
+
+.wrapper h3 {
+    font-size: 1.5vw;
+    margin: 3vh 0;
+}
+
+.wrapper h4 {
+    width: 40%;
+    font-size: 1.2vw;
+    color: #0000001a;
+    margin: 3vh 0;
+    justify-content: center;
+    text-align: center;
+}
+
+.wrapper h5 {
+    font-size: 2vw;
+}
+
+.wrapper .input-box{
+    position: relative;
+    width: 40%;
+    height: 6vh;
+    background-color:#FFB09F;
+    border-radius: 5px;
+    margin: 3vh 0;
+
+}
+
+.wrapper h6 {
+    font-size: 2vw;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 1.5vh 4%;
+}
+
+.input-box input::placeholder{
+    font-size: 1.2vw;
+}
+
+.wrapper .remember-forgot{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2vw;
+    margin: -1.5vh 0 1.5vh;
+}
+
+.wrapper label input{
+    margin-right: 4px;
+}
+
+.wrapper button{
+    width: 40%;
+    height: 5vh;
+    font-size: 1.2vw;
+    color: #ffff;
+    background: #6C21B7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+}
+ .icon{
+    margin-right: 1vw;
+    font-size: 2vw;
+ }
+
+ .wrapper .register-link{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+}
+
+.wrapper .Conta{
+    position: absolute;
+    top: 9vh;
+    right: 5%;
+    width: 13%;
+    height: 6vh;
+    font-size: 1.5vw;
+    color: #ffff;
+    background: #6C21B7;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.wrapper img{
+    position: absolute;
+    top: 20%;
+    right: 12%;
+    transform: translate(0,30%);
+    width: 30vw;
+    height: auto;
+}
