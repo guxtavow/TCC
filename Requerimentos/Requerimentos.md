@@ -24,11 +24,13 @@ Os bancos de dados utilizado atualmente são:
 
 * SQLAlchemy
 
+<hr />
+
 # PULL REQUEST
 Para fazer sua branch e trabalhar no TCC, siga estes passos:
 
 ### PRIMEIRO: CLONAR A BRANCH DEVELOP 
-No seu visual estudio(ou qualquer outra IDE de sua preferencia que de pra fazer isso), baixe a extensão do GIT ou o proprio git e clone o repositorio "develop"
+No seu visual estudio(ou qualquer outra IDE de sua preferencia que de pra fazer isso), baixe a extensão do GIT ou o proprio git **(se estiver no VSCODE, recomendo o gitLens)** e clone o repositorio **"develop"**.
 
 ### SEGUNDO: AO CLONAR CRIE UMA BRANCH NOVA
 Crie uma branch para a sua nova alteração com o nome da pagina/funcionalidade que você está responsável, é só apertar em create new branch e colocar o nome da sua pagina ou função
@@ -41,7 +43,7 @@ Após tudo isso, na pasta /TCC/src/componentes/ crie uma pasta com o nome da pag
 
 ![alt text](image-1.png)
 
-<b>ATENÇÃO:</b> **Você verá duas pastas de inicio que é ***"footer" e "navbar"***, elas são componentes fixos que teram em todas as páginas(menos login provavelmente), importe elas para o seu conteudo sem mexer nos seus códigos.**
+<b>ATENÇÃO:</b> **Você verá duas pastas de inicio que é ***"footer" e "navbar"***, elas são componentes fixos que terão em todas as páginas(menos login provavelmente), importe elas para o seu conteudo sem mexer nos seus códigos.**
 
 ### QUARTO: SUBA SUAS PASTAS/CÓDIGOS E NÃO DE MERGE NA DEVELOP NEM NA MAIN
 Só para a gente se organizar, assim que você subir seus códigos não de merge imediatamente, só suba os códigos pro git e avisa o pessoal no grupo do zap.
@@ -66,7 +68,7 @@ Alguns componentes serão fixos, ou seja devem ser componentes **SEPARADOS**, pa
 * Footer
 * Navbar
 
-<br />
+<hr />
 
 # STATUS DO DESENVOLVIMENTO
 
@@ -78,7 +80,8 @@ No momento estamos na fase de:
 
 - Escopo das paginas (completo);
 - Documentação e Video do projeto (completo);
-- Desenvolvimento do FrontEnd das paginas (em andamento).
+- Desenvolvimento do FrontEnd das paginas (em andamento);
+- Desenvolvimento do BackEnd das paginas (em andamento).
  . . .
 
 

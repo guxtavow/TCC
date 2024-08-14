@@ -1,5 +1,6 @@
 .Banner{
-    height: 60vh;
+    min-height: 60vh;
+    max-height: 80vh;
     background-image: linear-gradient(to bottom,white 60%,#FF2B00 40%);
 }
 
