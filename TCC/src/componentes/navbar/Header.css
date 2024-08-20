@@ -11,6 +11,22 @@
 .Usuario{
     display: inline-flex;
     float:inline-end;
+    margin-left: 30px;
+
+}
+#night{
+    border: none;
+    background-color: inherit;
+    color: yellow;
+    margin: auto;
+    margin-left: -90px;
+    transition: all 0.9s ease-in-out;
+
+}
+
+#sunglasses{
+    color: #282c34;
+    transition: all 0.9s ease-in-out;
 }
 
 .nav-link{
