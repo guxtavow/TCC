@@ -36,12 +36,12 @@ No seu visual estudio(ou qualquer outra IDE de sua preferencia que de pra fazer 
 Crie uma branch para a sua nova alteração com o nome da pagina/funcionalidade que você está responsável, é só apertar em create new branch e colocar o nome da sua pagina ou função
 (No exemplo abaixo coloquei uma que fiz de exemplo, no caso a branch "Sobre").
 
-![alt text](image.png)
+![alt text](/Requerimentos/image.png)
 
 ### TERCEIRO: CRIE UMA PASTA DENTRO DE COMPONENTES
 Após tudo isso, na pasta /TCC/src/componentes/ crie uma pasta com o nome da pagina que você está criando, exemplo, se estou fazendo a página de "Sobre", vou criar a pasta SOBRE.
 
-![alt text](image-1.png)
+![alt text](/Requerimentos/image-1.png)
 
 <b>ATENÇÃO:</b> **Você verá duas pastas de inicio que é ***"footer" e "navbar"***, elas são componentes fixos que terão em todas as páginas(menos login provavelmente), importe elas para o seu conteudo sem mexer nos seus códigos.**
 
