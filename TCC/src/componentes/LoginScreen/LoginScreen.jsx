@@ -15,7 +15,26 @@ const LoginScreen = () => {
                 <button type="submit">
                     <FcGoogle className="icon" /> Login with Google
                 </button>
-                <h4>---------Ou Logue-se com seu E-mail----------</h4>
+                <div style={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    textAlign: 'center', 
+                    margin: '10px 0' 
+                    }}>
+                <div style={{ 
+                    flex: 0.13, 
+                    borderBottom: '1px solid black',
+                    }} />
+                <span style={{ 
+                    padding: '0 10px' 
+                    }}>
+                Ou Logue-se com o E-mail
+                </span>
+                <div style={{ 
+                    flex: 0.13, 
+                    borderBottom: '1px solid black' 
+                    }} />
+                </div>
                 <h5>Email</h5>
                 <div className="input-box">
                     <input type="text" 
