@@ -1,17 +1,17 @@
 /* Estiliza o contêiner principal da tela de login */
-.wrapper{
+.wrapper {
     padding: 50px 10%; /* Adiciona preenchimento interno de 50px no topo e na parte inferior, e 10% nas laterais */
-    background-color:#FFB09F; /* Define a cor de fundo do contêiner */
+    background-color: #FFB09F; /* Define a cor de fundo do contêiner */
 }
 
-/* Comentado - Estilização do ícone do Google que estava posicionado absolutamente */
-/*.wrapper .bee-icon {
-    width: 3vw;  
-    height: auto;
-    margin-right:161vh; 
-    margin-top: -6.2vw;
-    position: absolute;
-}*/
+/* Estiliza o ícone da abelha ao lado do título */
+.wrapper .bee-icon {
+    width: 3vw; /* Define a largura do ícone */
+    height: auto; /* Mantém a proporção da altura */
+    margin-right: 159vh; /* Margem à direita (comentado no código original) */
+    margin-top: -3.8vw; /* Margem superior (comentado no código original) */
+    position: absolute; /* Posiciona o ícone absolutamente */
+}
 
 /* Estiliza o título principal */
 .wrapper h1 {
@@ -19,6 +19,7 @@
     max-width: 15vw; /* Define a largura máxima como 15% da largura da janela de visualização */
     font-size: 2.5vw; /* Define o tamanho da fonte como 2.5% da largura da janela de visualização */
     color: #333333; /* Define a cor do texto */
+    margin: 1vh 3%; /* Define a margem superior e inferior como 1% da altura da janela de visualização e 3% nas laterais */
 }
 
 /* Estiliza o subtítulo h2 */
@@ -55,7 +56,7 @@
     position: relative; /* Define a posição como relativa para permitir posicionamento absoluto dos filhos */
     width: 40%; /* Define a largura como 40% da largura do contêiner pai */
     height: 6vh; /* Define a altura como 6% da altura da janela de visualização */
-    background-color:#f3d0c9; /* Define a cor de fundo */
+    background-color: #f3d0c9; /* Define a cor de fundo */
     border-radius: 5px; /* Adiciona bordas arredondadas */
     margin: 3vh 0; /* Define a margem superior e inferior como 3% da altura da janela de visualização */
 }
@@ -127,8 +128,8 @@
 
 /* Estiliza o botão para criar conta */
 .wrapper .Conta {
-    position: absolute; /* Define a posição como absoluta para permitir o posicionamento personalizado */
-    top: 6vh; /* Define a posição superior como 6% da altura da janela de visualização */
+    position: absolute; /* Define a posição como absoluta para posicionamento personalizado */
+    top: 11vh; /* Define a posição superior como 11% da altura da janela de visualização */
     right: 5%; /* Define a posição à direita como 5% da largura da janela de visualização */
     width: 13%; /* Define a largura como 13% da largura do contêiner pai */
     height: 6vh; /* Define a altura como 6% da altura da janela de visualização */
@@ -142,10 +143,10 @@
 
 /* Estiliza a imagem do logo */
 .wrapper img {
-    position: absolute; /* Define a posição como absoluta para permitir o posicionamento personalizado */
+    position: absolute; /* Define a posição como absoluta para posicionamento personalizado */
     top: 20%; /* Define a posição superior como 20% da altura da janela de visualização */
     right: 12%; /* Define a posição à direita como 12% da largura da janela de visualização */
-    transform: translate(0,30%); /* Move a imagem para baixo em 30% da altura da janela de visualização */
+    transform: translate(0, 30%); /* Move a imagem para baixo em 30% da altura da janela de visualização */
     width: 30vw; /* Define a largura como 30% da largura da janela de visualização */
     height: auto; /* Define a altura como automática para manter a proporção */
 }
