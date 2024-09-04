@@ -2,10 +2,18 @@
     padding: 50px 10%;
     background-color:#FFB09F;
 }
+.wrapper .bee-icon {
+    width: 3vw;  /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin-right:161vh;  /* Espaçamento entre o texto e a imagem */
+    margin-top: -6.2vw;
+    position: absolute;
+}
+
 
 .wrapper h1 {
     height: 15vh;
-    max-width: 6vw;
+    max-width: 15vw;
     font-size: 2.5vw;
     color: #333333;
 }

@@ -1,19 +1,23 @@
 import React from "react";
 import './LoginScreen.css';
 import { FcGoogle } from "react-icons/fc";
-import logo from "./img/login.png"
+import logo from "./img/login.png";
+import GoogleIcon from "./img/abelha.png";
 
 const LoginScreen = () => {
     return (
         <div className="wrapper">
             <form action="">
-                <h1>TechKids</h1>
-                <img src={logo} alt="foto" title="foto"/>
+                <h1>
+                    TechKids
+                    <img src={GoogleIcon} alt="Google Icon" className="bee-icon" />
+                </h1>
+                <img src={logo} alt="foto" title="foto" />
                 <button className="Conta" type="submit">Criar Conta</button>
                 <h2>Logue-se agora</h2>
                 <h3>Olá, Bem-vindo de volta!</h3>
                 <button type="submit">
-                    <FcGoogle className="icon" /> Login with Google
+                    <FcGoogle className="icon" /> Login com Google
                 </button>
                 <div style={{ 
                     display: 'flex', 
@@ -35,12 +39,12 @@ const LoginScreen = () => {
                     borderBottom: '1px solid black' 
                     }} />
                 </div>
-                <h5>Email</h5>
+                <h5>E-mail</h5>
                 <div className="input-box">
                     <input type="text" 
                     placeholder="Insira seu e-mail" required />
                 </div>
-                <h6>Password</h6>
+                <h6>Senha</h6>
                 <div className="input-box">
                     <input type="password" 
                     placeholder="Entre com sua senha" required />
