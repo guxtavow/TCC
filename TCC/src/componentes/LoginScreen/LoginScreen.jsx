@@ -18,7 +18,7 @@ const LoginScreen = () => {
                 <h3>Olá, Bem-vindo de volta!</h3> {/* Mensagem de boas-vindas */}
                 
                 <button type="submit">
-                    <FcGoogle className="icon" /> Login com Google {/* Botão para login com Google */}
+                    <FcGoogle className="icon" /> Login com Google {/* Botão para fazer login com Google */}
                 </button>
                 
                 <div style={{ 
