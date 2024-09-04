@@ -1,0 +1,148 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #FFB09F; /* Cor de fundo para a tela inteira */
+  }
+  
+  /* Garantir que o wrapper ocupe toda a tela */
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ocupa toda a altura do contêiner pai */
+    padding: 0 10%; /* Ajuste o padding conforme necessário */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+  }
+  .wrapper h1 {
+    display: flex; /* Usa flexbox para alinhar itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    font-size: 2.5vw;
+    color: #333333;
+    margin: 3.3vh 3%; /* Remove margens padrão, se necessário */
+  }
+  
+  .wrapper .bee-icon {
+    display: flex; /* Usa flexbox para alinhar itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    max-width: 3vw;  /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin: -13.5vh 75.5%; /* Espaçamento entre o texto e a imagem */
+  }
+
+.wrapper h2 {
+    font-size: 2.5vw;
+    max-width: 23.3vw;
+    margin: 3vh 0;
+}
+
+.wrapper h3 {
+    font-size: 2vw;
+    max-width: 8vw;
+    margin: 3vh 0;
+    white-space: nowrap; /* Impede a quebra de linha */
+}
+
+.wrapper h4 {
+    font-size: 2vw;
+    max-width: 8vw;
+    margin: 3vh 0;
+    white-space: nowrap; /* Impede a quebra de linha */
+}
+
+.wrapper h5 {
+    font-size: 2vw;
+    max-width: 6vw;
+}
+
+.wrapper .input-box{
+    position: relative;
+    width: 40%;
+    height: 6vh;
+    background-color:#f3d0c9;
+    border-radius: 5px;
+    margin: 3vh 0;
+
+}
+
+.wrapper h6 {
+    font-size: 2vw;
+    max-width: 6vw;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 1.5vh 4%;
+}
+
+.input-box input::placeholder{
+    font-size: 1.2vw;
+}
+
+.input-box,
+.categoria {
+  position: relative; /* Necessário para o posicionamento absoluto do dropdown */
+  width: 40%; /* Certifique-se de que a largura seja a mesma */
+  height: 6vh; /* Altura consistente com as caixas de entrada */
+  background-color: #f3d0c9; /* Cor de fundo das caixas */
+  border-radius: 5px; /* Cantos arredondados */
+  margin: 3vh 0; /* Margem superior e inferior */
+  box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+.categoria select {
+  width: 100%;
+  height: 120%;
+  padding: 1.5vh; /* Espaçamento interno */
+  border: none; /* Remove borda padrão */
+  border-radius: 5px; /* Cantos arredondados */
+  background-color: #f3d0c9; /* Cor de fundo do dropdown */
+  font-size: 1.2vw; /* Tamanho da fonte */
+  box-sizing: border-box; /* Inclui padding e borda na largura total */
+
+}
+
+
+
+
+.wrapper label input{
+    margin-right: 4px;
+}
+
+.wrapper button{
+    width: 40%;
+    height: 5vh;
+    font-size: 1.2vw;
+    color: #ffff;
+    background: #6C21B7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    margin: 3vh 0;
+}
+ .icon{
+    margin-right: 1vw;
+    font-size: 2vw;
+ }
+
+ .wrapper .register-link{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+}
+
+.wrapper img{
+    position: absolute;
+    top: 20%;
+    right: 12%;
+    transform: translate(0,30%);
+    width: 30vw;
+    height: auto;
+}

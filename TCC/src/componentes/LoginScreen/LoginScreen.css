@@ -1,133 +1,151 @@
+/* Estiliza o contêiner principal da tela de login */
 .wrapper{
-    padding: 50px 10%;
-    background-color:#FFB09F;
+    padding: 50px 10%; /* Adiciona preenchimento interno de 50px no topo e na parte inferior, e 10% nas laterais */
+    background-color:#FFB09F; /* Define a cor de fundo do contêiner */
 }
-.wrapper .bee-icon {
-    width: 3vw;  /* Ajuste o tamanho conforme necessário */
+
+/* Comentado - Estilização do ícone do Google que estava posicionado absolutamente */
+/*.wrapper .bee-icon {
+    width: 3vw;  
     height: auto;
-    margin-right:161vh;  /* Espaçamento entre o texto e a imagem */
+    margin-right:161vh; 
     margin-top: -6.2vw;
     position: absolute;
-}
+}*/
 
-
+/* Estiliza o título principal */
 .wrapper h1 {
-    height: 15vh;
-    max-width: 15vw;
-    font-size: 2.5vw;
-    color: #333333;
+    height: 15vh; /* Define a altura do título como 15% da altura da janela de visualização */
+    max-width: 15vw; /* Define a largura máxima como 15% da largura da janela de visualização */
+    font-size: 2.5vw; /* Define o tamanho da fonte como 2.5% da largura da janela de visualização */
+    color: #333333; /* Define a cor do texto */
 }
 
+/* Estiliza o subtítulo h2 */
 .wrapper h2 {
-    font-size: 3.5vw;
-    max-width: 25vw;
+    font-size: 3.5vw; /* Define o tamanho da fonte como 3.5% da largura da janela de visualização */
+    max-width: 25vw; /* Define a largura máxima como 25% da largura da janela de visualização */
 }
 
+/* Estiliza o subtítulo h3 */
 .wrapper h3 {
-    font-size: 1.5vw;
-    max-width: 17vw;
-    margin: 3vh 0;
+    font-size: 1.5vw; /* Define o tamanho da fonte como 1.5% da largura da janela de visualização */
+    max-width: 17vw; /* Define a largura máxima como 17% da largura da janela de visualização */
+    margin: 3vh 0; /* Define a margem superior e inferior como 3% da altura da janela de visualização */
 }
 
+/* Estiliza o subtítulo h4 */
 .wrapper h4 {
-    min-width: 40%;
-    font-size: 1.2vw;
-    color: #0000001a;
-    margin: 3vh 0;
-    justify-content: center;
-    text-align: center;
+    min-width: 40%; /* Define a largura mínima como 40% da largura do contêiner pai */
+    font-size: 1.2vw; /* Define o tamanho da fonte como 1.2% da largura da janela de visualização */
+    color: #0000001a; /* Define a cor do texto com opacidade */
+    margin: 3vh 0; /* Define a margem superior e inferior como 3% da altura da janela de visualização */
+    justify-content: center; /* Centraliza o conteúdo dentro do contêiner */
+    text-align: center; /* Centraliza o texto */
 }
 
+/* Estiliza o subtítulo h5 */
 .wrapper h5 {
-    font-size: 2vw;
-    max-width: 6vw;
+    font-size: 2vw; /* Define o tamanho da fonte como 2% da largura da janela de visualização */
+    max-width: 6vw; /* Define a largura máxima como 6% da largura da janela de visualização */
 }
 
-.wrapper .input-box{
-    position: relative;
-    width: 40%;
-    height: 6vh;
-    background-color:#f3d0c9;
-    border-radius: 5px;
-    margin: 3vh 0;
-
+/* Estiliza as caixas de entrada */
+.wrapper .input-box {
+    position: relative; /* Define a posição como relativa para permitir posicionamento absoluto dos filhos */
+    width: 40%; /* Define a largura como 40% da largura do contêiner pai */
+    height: 6vh; /* Define a altura como 6% da altura da janela de visualização */
+    background-color:#f3d0c9; /* Define a cor de fundo */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    margin: 3vh 0; /* Define a margem superior e inferior como 3% da altura da janela de visualização */
 }
 
+/* Estiliza o subtítulo h6 */
 .wrapper h6 {
-    font-size: 2vw;
-    max-width: 6vw;
+    font-size: 2vw; /* Define o tamanho da fonte como 2% da largura da janela de visualização */
+    max-width: 6vw; /* Define a largura máxima como 6% da largura da janela de visualização */
 }
 
-.input-box input{
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    padding: 1.5vh 4%;
+/* Estiliza o campo de entrada dentro da caixa de entrada */
+.input-box input {
+    width: 100%; /* Define a largura como 100% da largura do contêiner pai */
+    height: 100%; /* Define a altura como 100% da altura do contêiner pai */
+    background: transparent; /* Define o fundo como transparente */
+    border: none; /* Remove a borda */
+    outline: none; /* Remove o contorno */
+    padding: 1.5vh 4%; /* Adiciona preenchimento interno */
 }
 
-.input-box input::placeholder{
-    font-size: 1.2vw;
+/* Estiliza o texto de placeholder nos campos de entrada */
+.input-box input::placeholder {
+    font-size: 1.2vw; /* Define o tamanho da fonte do texto de placeholder */
 }
 
-.wrapper .remember-forgot{
-    width: 40%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.2vw;
-    margin: -1.5vh 0 1.5vh;
+/* Estiliza a seção de lembrar senha e esqueci a senha */
+.wrapper .remember-forgot {
+    width: 40%; /* Define a largura como 40% da largura do contêiner pai */
+    display: flex; /* Define o layout como flexível */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+    font-size: 1.2vw; /* Define o tamanho da fonte */
+    margin: -1.5vh 0 1.5vh; /* Define a margem superior, inferior e entre os itens */
 }
 
-.wrapper label input{
-    margin-right: 4px;
+/* Estiliza a checkbox dentro da label */
+.wrapper label input {
+    margin-right: 4px; /* Adiciona uma margem à direita da checkbox */
 }
 
-.wrapper button{
-    width: 40%;
-    height: 5vh;
-    font-size: 1.2vw;
-    color: #ffff;
-    background: #6C21B7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 5px;
-}
- .icon{
-    margin-right: 1vw;
-    font-size: 2vw;
- }
-
- .wrapper .register-link{
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2vw;
+/* Estiliza os botões */
+.wrapper button {
+    width: 40%; /* Define a largura como 40% da largura do contêiner pai */
+    height: 5vh; /* Define a altura como 5% da altura da janela de visualização */
+    font-size: 1.2vw; /* Define o tamanho da fonte */
+    color: #ffff; /* Define a cor do texto */
+    background: #6C21B7; /* Define a cor de fundo */
+    display: flex; /* Define o layout como flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
 }
 
-.wrapper .Conta{
-    position: absolute;
-    top: 7vh;
-    right: 5%;
-    width: 13%;
-    height: 6vh;
-    font-size: 1.5vw;
-    color: #ffff;
-    background: #6C21B7;
-    border: none;
-    border-radius: 5px;
-    font-weight: 700;
+/* Estiliza o ícone dentro do botão */
+.icon {
+    margin-right: 1vw; /* Adiciona uma margem à direita do ícone */
+    font-size: 2vw; /* Define o tamanho da fonte do ícone */
 }
 
-.wrapper img{
-    position: absolute;
-    top: 20%;
-    right: 12%;
-    transform: translate(0,30%);
-    width: 30vw;
-    height: auto;
+/* Estiliza o link para registro */
+.wrapper .register-link {
+    width: 40%; /* Define a largura como 40% da largura do contêiner pai */
+    display: flex; /* Define o layout como flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    font-size: 1.2vw; /* Define o tamanho da fonte */
+}
+
+/* Estiliza o botão para criar conta */
+.wrapper .Conta {
+    position: absolute; /* Define a posição como absoluta para permitir o posicionamento personalizado */
+    top: 6vh; /* Define a posição superior como 6% da altura da janela de visualização */
+    right: 5%; /* Define a posição à direita como 5% da largura da janela de visualização */
+    width: 13%; /* Define a largura como 13% da largura do contêiner pai */
+    height: 6vh; /* Define a altura como 6% da altura da janela de visualização */
+    font-size: 1.5vw; /* Define o tamanho da fonte */
+    color: #ffff; /* Define a cor do texto */
+    background: #6C21B7; /* Define a cor de fundo */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    font-weight: 700; /* Define o peso da fonte como negrito */
+}
+
+/* Estiliza a imagem do logo */
+.wrapper img {
+    position: absolute; /* Define a posição como absoluta para permitir o posicionamento personalizado */
+    top: 20%; /* Define a posição superior como 20% da altura da janela de visualização */
+    right: 12%; /* Define a posição à direita como 12% da largura da janela de visualização */
+    transform: translate(0,30%); /* Move a imagem para baixo em 30% da altura da janela de visualização */
+    width: 30vw; /* Define a largura como 30% da largura da janela de visualização */
+    height: auto; /* Define a altura como automática para manter a proporção */
 }
