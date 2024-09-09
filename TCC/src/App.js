@@ -6,6 +6,8 @@ import Sobre from './componentes/Sobre/Sobre';
 import Chatbot from './componentes/Chatbot/chat';
 import Home from './componentes/Home/Home';
 import LoginScreen from './componentes/LoginScreen/LoginScreen';
+import Cadastro from './componentes/Cadastro/Cadastro';
+
 
 
 function App() {
