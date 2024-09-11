@@ -1,0 +1,54 @@
+.container-fluid{
+    height: 8vh;
+}
+
+.center{
+    width:72vw;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.Usuario{
+    display: inline-flex;
+    float:inline-end;
+    margin-left: 30px;
+
+}
+#night{
+    border: none;
+    background-color: inherit;
+    color: yellow;
+    margin: auto;
+    margin-left: -90px;
+    transition: all 0.9s ease-in-out;
+
+}
+
+#sunglasses{
+    color: #282c34;
+    transition: all 0.9s ease-in-out;
+}
+
+.nav-link{
+    transition: transform 1s ease;
+}
+
+.nav-link:hover{
+    color:#8044BC;
+    transform:scale(1.2);
+    transition: transform 1s ease;
+}
+
+.Login{
+    width:100px ;
+    background-color: #8044BC;
+    border-radius: 16px;
+    margin-left: 10px;
+    color: white;
+    border: #8044BC;
+    transition: transform 1s ease;
+}
+.Login:hover{
+    transform: scale(1.2);
+    transition: transform 1s ease;
+}
