@@ -8,8 +8,8 @@ export default function Sobre(){
     return(
         <>
         <div className='Banner'>
-        <img src={Garoto} alt='img1' id='garoto1' width='400px' />
-        <img src={SobreNos} alt='img2' id='sobrenos' width='580px' />
+            <img src={Garoto} alt='img1' id='garoto1' width='400px' />
+            <img src={SobreNos} alt='img2' id='sobrenos' width='580px' />
         </div>
 
         <div className='WelcomeText'>
