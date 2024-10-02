@@ -1,76 +1,44 @@
 import React from 'react';
-import { FaCode, FaDatabase, FaShieldAlt, FaBrain } from 'react-icons/fa';
+import './Home.css';
 
-import menina from './girl_note.png';
-import meninaTablet from './girl_tablet.png';
-import checkIcon from './checkIcon.png';
+import imagem1 from './elements/imagem1.png';
 
-import './Home.css'
+export default function Home() {
+  return (
+    <div className="container">
+      <main className="home-content">
 
-export default function Home(){
-    //Cons --- DIV 1
-    const handleClick = () => {
-        alert('Botão clicado!');
-    };
-
-return (
-<>
-{/* --- DIV 1 --- */}
-<div className="container">
-    <div className="left">
-        <h1>Conexão de Conhecimento
-            Abra a porta para o futuro</h1>
-        <p>Bem-vindo ao TechKids, seu assistente de estudos de tecnologia! Aqui, aprender é divertido. 
-            Vamos juntos descobrir o fascinante mundo da tecnologia. Pronto para a aventura?</p>
-        <button onClick={handleClick}>Vamos Lá!</button>
-    </div>
-    <div className="right">
-        <img src={menina} alt="Imagem do TCC" />
-    </div>
-</div>
-
-{/* --- DIV 2 --- */}
-<div className="container2">
-      <div className="header">
-        <h1>Podemos aprender sobre diversas áreas de tecnologia</h1>
-        <p>Diversas aulas e dicas através de nossa IA para várias áreas de tecnologia de maneira divertida e dinâmica</p>
-      </div>
-      <div className="buttonsDiv2">
-        <button className="buttonDiv2" onClick={() => handleClick('/front')}>
-          <FaCode className="buttonIcon" /> Front End
-        </button>
-        <button className="buttonDiv2" onClick={() => handleClick('/back')}>
-          <FaDatabase className="buttonIcon" /> Back End
-        </button>
-        <button className="buttonDiv2" onClick={() => handleClick('/hacking')}>
-          <FaShieldAlt className="buttonIcon" /> Hacking
-        </button>
-        <button className="buttonDiv2" onClick={() => handleClick('/logica')}>
-          <FaBrain className="buttonIcon" /> Lógica
-        </button>
-      </div>
-</div>
-
-{/* --- DIV 3 --- */}
-<div className="container3">
-    <div className="content">
-        <div className="image-section">
-            <img src={meninaTablet} alt="Imagem do TCC" />
+        {/* Conteúdo da seção 1 */}
+        <div className="section-content section1">
+          <div className="text-content">
+            <h3>Conexão de Conhecimento:</h3>
+            <h3>Explorando a Tecnologia de Forma Divertida</h3>
+            <p>
+              Bem-vindo ao <strong>TechKids</strong>, seu assistente de estudos virtual! 
+              Aqui, aprender é divertido, e juntos iremos descobrir o fascinante mundo da tecnologia. 
+            </p>
+          </div>
+          <div className="image-content">
+            <img src={imagem1} alt="Exemplo Seção 1" />
+          </div>
         </div>
-        <div className="text-section">
-            <h1>O que seu filho vai ganhar depois de estudar e se divertir no Techkids?</h1>
-            <ul>
-                <li><img src={checkIcon} alt="Check" /> Conhecimento basicos ao avançado em Programação</li>
-                <li><img src={checkIcon} alt="Check" /> A capacidade de criticar o conhecimento aumenta</li>
-                <li><img src={checkIcon} alt="Check" /> Irá lidar com diversos</li>
-            </ul>
+
+        {/* Conteúdo da seção 2 */}
+        <div className="section-content section2">
+          {/* Adicione conteúdo aqui */}
         </div>
+
+        {/* Conteúdo da seção 3 */}
+        <div className="section-content section3">
+          {/* Adicione conteúdo aqui */}
         </div>
+
+        {/* Conteúdo da seção 4 */}
+        <div className="section-content section4">
+          {/* Adicione conteúdo aqui */}
+        </div>
+
+      </main>
     </div>
-
-{/* --- DIV 4 --- */}
-
-</>
-)
+  );
 }
-

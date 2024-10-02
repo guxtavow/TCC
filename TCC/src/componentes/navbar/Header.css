@@ -1,54 +1,58 @@
-.container-fluid{
+.container-fluid {
     height: 8vh;
 }
 
-.center{
-    width:72vw;
-    display: inline-flex;
+.center {
+    width: 72vw;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
-.Usuario{
-    display: inline-flex;
-    float:inline-end;
-    margin-left: 30px;
 
+.Usuario {
+    display: inline-flex;
+    margin-left: 30px;
 }
-#night{
+
+#night {
     border: none;
     background-color: inherit;
     color: yellow;
     margin: auto;
-    margin-left: -90px;
+    margin-left: 0; /* Ajuste de margin para centralizar melhor */
     transition: all 0.9s ease-in-out;
-
 }
 
-#sunglasses{
+#sunglasses {
     color: #282c34;
     transition: all 0.9s ease-in-out;
 }
 
-.nav-link{
+.navbar {
+    padding: 0;
+}
+
+.nav-link {
     transition: transform 1s ease;
 }
 
-.nav-link:hover{
-    color:#8044BC;
-    transform:scale(1.2);
+.nav-link:hover {
+    color: #8044BC;
+    transform: scale(1.2);
     transition: transform 1s ease;
 }
 
-.Login{
-    width:100px ;
+.Login {
+    width: 100px;
     background-color: #8044BC;
     border-radius: 16px;
     margin-left: 10px;
     color: white;
-    border: #8044BC;
+    border: none;
     transition: transform 1s ease;
 }
-.Login:hover{
+
+.Login:hover {
     transform: scale(1.2);
     transition: transform 1s ease;
 }
