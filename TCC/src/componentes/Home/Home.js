@@ -5,9 +5,10 @@ import imagem1 from './elements/imagem1.png';
 import btnCadastro from './elements/btn-cad.png';
 import btnEntrar from './elements/btn-entrar.png';
 import imagem2 from './elements/imagem2.png';
-import imagemCard1 from './elements/teacher.png';  // Importando imagens para os cards
+import imagemCard1 from './elements/teacher.png';
 import imagemCard2 from './elements/book.png';
 import imagemCard3 from './elements/pig.png';
+import imagem4 from './elements/imagem3.png';
 
 export default function Home() {
   return (
@@ -37,11 +38,11 @@ export default function Home() {
               Acesse ou crie seu cadastro para acessar um conteúdo personalizado de acordo com o seu perfil:
             </strong></p>
             <div className="button-container">
-              <button className="action-button">
+              <button className="action-button" aria-label="Cadastro">
                 <img src={btnCadastro} alt="Botão Cadastro" className="button-icon" />
                 <strong>Cadastro</strong>
               </button>
-              <button className="action-button">
+              <button className="action-button" aria-label="Entrar">
                 <img src={btnEntrar} alt="Botão Entrar" className="button-icon" />
                 <strong>Entrar</strong>
               </button>
@@ -59,8 +60,8 @@ export default function Home() {
               </p>
             </div>
             <div className="image-below-bubble">
-             <img src={imagem2} alt="Imagem TechBot" />
-          </div>
+              <img src={imagem2} alt="Imagem TechBot" />
+            </div>
           </div>
         </div>
 
@@ -102,7 +103,16 @@ export default function Home() {
 
         {/* Seção 4 */}
         <div className="section-content section4">
-          {/* Adicione conteúdo aqui */}
+          <div className="image-content">
+            <img src={imagem4} alt="Imagem ilustrativa" />
+          </div>
+          <div className="text-content">
+            <p><strong>E como funciona?</strong></p>
+            <p>
+              Clique <a href="#">aqui</a> para descobrir como nosso site pode transformar o aprendizado 
+              de programação em uma aventura divertida para crianças!
+            </p>
+          </div>
         </div>
       </main>
     </div>
