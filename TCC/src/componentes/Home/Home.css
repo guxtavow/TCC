@@ -133,6 +133,44 @@ p {
   height: auto; /* Garante que a altura seja proporcional */
 }
 
+/* Estilos da Seção 3 - Cards */
+.section3 {
+  background: linear-gradient(to bottom, #f0f0f0 50%, #FABE2C 50%); /* Divisão de cores */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Permite que os cards se ajustem em telas menores */
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px; /* Limite de largura para os cards */
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto; /* Mantém a proporção da imagem */
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-bottom: 10px;
+}
+
+.card strong {
+  font-size: 18px;
+}
+
 /* Estilos responsivos */
 @media (max-width: 768px) {
   .section-content {
@@ -151,5 +189,10 @@ p {
 
   .image-content img {
     max-width: 100%; /* A imagem ocupa 100% da largura do container em telas menores */
+  }
+
+  /* Cards responsivos */
+  .cards-container {
+    flex-direction: column; /* Empilha os cards em telas menores */
   }
 }

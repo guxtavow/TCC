@@ -5,7 +5,9 @@ import imagem1 from './elements/imagem1.png';
 import btnCadastro from './elements/btn-cad.png';
 import btnEntrar from './elements/btn-entrar.png';
 import imagem2 from './elements/imagem2.png';
-
+import imagemCard1 from './elements/teacher.png';  // Importando imagens para os cards
+import imagemCard2 from './elements/book.png';
+import imagemCard3 from './elements/pig.png';
 
 export default function Home() {
   return (
@@ -64,7 +66,38 @@ export default function Home() {
 
         {/* Seção 3 */}
         <div className="section-content section3">
-          {/* Adicione conteúdo aqui */}
+          <h3><strong>Por que você deve escolher o Techkids?</strong></h3>
+          
+          <div className="cards-container">
+            {/* Card 1 */}
+            <div className="card">
+              <img src={imagemCard1} alt="Card 1" />
+              <p><strong>Experiencia do Aluno</strong></p>
+              <p>
+                Cada criança é uma exploradora em uma jornada tecnológica emocionante! 
+                Nossa interface amigável e conteúdo interativo tornam o aprendizado uma experiência incrível
+              </p>
+            </div>
+            
+            {/* Card 2 */}
+            <div className="card">
+              <img src={imagemCard2} alt="Card 2" />
+              <p><strong>Programa Criativo</strong></p>
+              <p>
+                Simples de mexer, dinamico e com jogos de aprendizagem a tecnologia, onde estudar fica divertido.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="card">
+              <img src={imagemCard3} alt="Card 3" />
+              <p><strong>Sem custos</strong></p>
+              <p>
+                Nosso site de estudos de tecnologia para crianças é totalmente gratuita. 
+                Aprenda, divirta-se e mergulhe no mundo da tecnologia sem custos.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Seção 4 */}
