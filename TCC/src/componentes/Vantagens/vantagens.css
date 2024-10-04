@@ -1,0 +1,11 @@
+.vantagem{
+    margin-top: 10vh;
+}
+
+
+.Banner{
+    background-image: linear-gradient(to bottom,transparent 60%, #FF2B00 40%);
+    width: 100%;
+    min-height: 20vh;
+    border: solid;
+}

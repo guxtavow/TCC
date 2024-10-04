@@ -1,3 +1,13 @@
+.navbar{
+    position: fixed;
+    margin-bottom: 10vh;
+    top: 0%;
+    width: 100%;
+    z-index: 10;
+    
+}
+
+
 .container-fluid{
     height: 8vh;
 }
@@ -16,16 +26,16 @@
 }
 #night{
     border: none;
-    background-color: inherit;
-    color: yellow;
-    margin: auto;
     margin-left: -90px;
+    background-color: inherit;
+}
+#sol{
+    background-color: inherit;
     transition: all 0.9s ease-in-out;
-
 }
 
-#sunglasses{
-    color: #282c34;
+#lua{
+    background-color: inherit;
     transition: all 0.9s ease-in-out;
 }
 

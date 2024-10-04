@@ -1,39 +1,61 @@
+.Sobre{
+    margin-top: 10vh;
+}
+
+
 .Banner{
     min-height: 60vh;
     max-height: 80vh;
-    background-image: linear-gradient(to bottom,white 60%,#FF2B00 40%);
+    background-image: linear-gradient(to bottom,transparent 60%,#FF2B00 40%);
 }
 
 #garoto1{
     position: initial;
-    margin-top: 4.4vh;
+    margin-top: 7.4vh;
     margin-right: 6vw;
+    border-radius: 40px;
+    bottom: 0%;
 }
 #sobrenos{
     position: initial;
-    margin-top: 14.2vh;
+    margin-top: -19vh;
+    margin-bottom: 5vh;
     margin-right: 6vw;
 }
 .WelcomeText{
     margin-top: 20vh;
+    margin-bottom: 20vh;
+    width: 100%;
+
 }
 .text1{
     font-size: large;
     margin: auto;
-    width: 70vw;
+    width: 90%;
+    text-align: center;
+    font-size: x-large;
+    text-shadow:
+    -6px 3px 90px #f2994a,
+    1px -1px 90px #f2994a,
+   -1px  1px 90px #f2994a,
+    1px  1px 50px #f2994a;   
 }
 #menina{
     margin-top: 10vh;
     margin-bottom: -30px;
+    border-radius: 30px;
 }
 
 .Missao{
     height: 50vh;
     margin-top: -15vh;
-    background-image: linear-gradient(to bottom, #dbe2ea  50%,#0086FF 50%);
+    background-image: linear-gradient(to bottom, transparent  50%,#0086FF 50%);
     display: flex;
     justify-content: center;
+    color: black;
 }
+
+
 .textoDiv{
     background-color: white;
     width: 65vw;

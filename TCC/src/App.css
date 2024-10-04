@@ -15,7 +15,7 @@ body{
 body.dark-mode{
   background-color: #222935;
   color: white;
-  transition: all 0.8s ease-in;
+  transition: all 0.9s ease-in-out;
 }
 
 @media (prefers-reduced-motion: no-preference) {
