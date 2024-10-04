@@ -1,35 +1,96 @@
-from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
+from sqlalchemy import create_engine, Column, Integer, String, DateTime, ForeignKey, Enum, Text, Float
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship, sessionmaker
-from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.orm import relationship
+from datetime import datetime
+import enum
 
-db = SQLAlchemy()
+Base = declarative_base()
 
-# Tabela de Usuários
-class User(db.Model):
-    __tablename__ = 'users'
+# Definição do tipo de usuário
+class TipoUsuario(enum.Enum):
+    admin = "Admin"
+    aluno = "Aluno"
+
+# Definição do nível do aluno
+class Nivel(enum.Enum):
+    inicial = "Inicial"
+    intermediario = "Intermediário"
+    avancado = "Avançado"
+
+# Tabela Usuário
+class Usuario(Base):
+    __tablename__ = 'usuario'
+
     id = Column(Integer, primary_key=True)
-    username = Column(String, unique=True, nullable=False)
-    password = Column(String, nullable=False)
-    games = relationship('Game', back_populates='user')
-    chatbot_responses = relationship('ChatbotResponse', back_populates='user')
+    nome = Column(String(100), nullable=False)
+    email = Column(String(100), nullable=False, unique=True)
+    senha = Column(String(255), nullable=False)
+    tipo = Column(Enum(TipoUsuario), nullable=False)
+    data_cadastro = Column(DateTime, default=datetime.now, nullable=False)
+    nivel_atual = Column(Enum(Nivel), default=Nivel.inicial, nullable=False)
+    ultimo_login = Column(DateTime)
 
-# Tabela de Jogos
-class Game(db.Model):
-    __tablename__ = 'games'
+    chats = relationship("Chat", back_populates="usuario")
+    historico_niveis = relationship("HistoricoNivel", back_populates="usuario")
+    log_acessos = relationship("LogAcesso", back_populates="usuario")
+
+# Tabela Jogo
+class Jogo(Base):
+    __tablename__ = 'jogo'
+
     id = Column(Integer, primary_key=True)
-    name = Column(String, nullable=False)
-    description = Column(String)
-    user_id = Column(Integer, ForeignKey('users.id'))
-    user = relationship('User', back_populates='games')
+    nome = Column(String(100), nullable=False)
+    descricao = Column(Text, nullable=False)
+    tipo = Column(String(50), nullable=False)  # Lúdico ou Educacional
+    pontuacao_maxima = Column(Float, nullable=False)
+    link_acesso = Column(String(255), nullable=False)
+    tecnologia_id = Column(Integer, ForeignKey('tecnologia.id'), nullable=False)
 
-# Tabela de Respostas do Chatbot
-class ChatbotResponse(db.Model):
-    __tablename__ = 'chatbot_responses'
+    tecnologia = relationship("Tecnologia", back_populates="jogos")
+
+# Tabela Tecnologia
+class Tecnologia(Base):
+    __tablename__ = 'tecnologia'
+
     id = Column(Integer, primary_key=True)
-    response = Column(String, nullable=False)
-    user_id = Column(Integer, ForeignKey('users.id'))
-    user = relationship('User', back_populates='chatbot_responses')
+    nome = Column(String(100), nullable=False)
+    descricao = Column(Text, nullable=False)
 
-# Criação das Tabelas
-db.create_all()
+    jogos = relationship("Jogo", back_populates="tecnologia")
+
+# Tabela Nível
+class NivelTable(Base):
+    __tablename__ = 'nivel'
+
+    id = Column(Integer, primary_key=True)
+    nome = Column(String(50), nullable=False)
+    descricao = Column(Text, nullable=False)
+
+# Tabela Log de Acessos
+class LogAcesso(Base):
+    __tablename__ = 'log_acesso'
+
+    id = Column(Integer, primary_key=True)
+    usuario_id = Column(Integer, ForeignKey('usuario.id'), nullable=False)
+    data_acesso = Column(DateTime, default=datetime.now, nullable=False)
+    tipo_acesso = Column(String(50), nullable=False)
+
+    usuario = relationship("Usuario", back_populates="log_acessos")
+
+# Tabela Histórico de Níveis
+class HistoricoNivel(Base):
+    __tablename__ = 'historico_nivel'
+
+    id = Column(Integer, primary_key=True)
+    usuario_id = Column(Integer, ForeignKey('usuario.id'), nullable=False)
+    nivel_antigo = Column(Enum(Nivel), nullable=False)
+    nivel_novo = Column(Enum(Nivel), nullable=False)
+    data_mudanca = Column(DateTime, default=datetime.now, nullable=False)
+
+    usuario = relationship("Usuario", back_populates="historico_niveis")
+
+# Configuração do banco de dados (pode ajustar a URI conforme necessário)
+engine = create_engine('sqlite:///techkids.db')
+
+# Criação das tabelas no banco de dados
+Base.metadata.create_all(engine)
