@@ -1,0 +1,33 @@
+/* Responsaveis.css */
+
+.performance-indicator {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin: 20px;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .header-content h3 {
+    margin: 0 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .left-image, .right-image {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .performance-indicator p {
+    font-size: 16px;
+    text-align: center;
+  }
+  
