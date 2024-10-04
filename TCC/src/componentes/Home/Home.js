@@ -56,7 +56,7 @@
                   Conheça o TechBot, nosso amigo virtual que responde suas dúvidas e 
                   te guia no mundo digital. Além disso, temos jogos incríveis para tornar o 
                   aprendizado ainda mais divertido!
-                  Quer saber mais? <a href="#">Clique aqui</a> para descobrir tudo sobre nós!
+                  Quer saber mais? Clique <a href="#">aqui</a> para descobrir tudo sobre nós!
                 </p>
               </div>
               <div className="image-below-bubble">

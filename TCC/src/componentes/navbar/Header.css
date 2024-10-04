@@ -1,19 +1,31 @@
+/* Estilos gerais */
 .container-fluid {
-    height: 8vh;
+    height: auto; /* Ajusta a altura automaticamente */
+    overflow: hidden; /* Garante que o conteúdo não "vaze" */
 }
 
+.navbar {
+    padding: 0;
+    overflow: hidden; /* Garante que o conteúdo não "vaze" */
+}
+
+/* Centralização dos itens */
 .center {
-    width: 72vw;
+    width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
 }
 
+/* Estilos do usuário */
 .Usuario {
     display: inline-flex;
-    margin-left: 30px;
+    margin-left: 10px; /* Reduz a margem para telas menores */
+    flex-wrap: nowrap; /* Permite que os itens quebrem linha se necessário */
 }
 
+/* Botão de modo noturno */
 #night {
     border: none;
     background-color: inherit;
@@ -23,15 +35,13 @@
     transition: all 0.9s ease-in-out;
 }
 
+/* Ícones */
 #sunglasses {
     color: #282c34;
     transition: all 0.9s ease-in-out;
 }
 
-.navbar {
-    padding: 0;
-}
-
+/* Links de navegação */
 .nav-link {
     transition: transform 1s ease;
 }
@@ -42,6 +52,7 @@
     transition: transform 1s ease;
 }
 
+/* Botão de login */
 .Login {
     width: 100px;
     background-color: #8044BC;
@@ -55,4 +66,66 @@
 .Login:hover {
     transform: scale(1.2);
     transition: transform 1s ease;
+}
+
+/* Garantir que a navbar contenha todos os elementos */
+.navbar-collapse {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap; /* Permite que os itens quebrem linha se necessário */
+}
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+    .center {
+        width: 100%; /* Ajusta a largura para telas menores */
+    }
+
+    .Usuario {
+        margin-left: 10px; /* Reduz a margem para telas menores */
+    }
+
+    .Login {
+        width: 80px; /* Reduz a largura do botão de login */
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+}
+
+@media (max-width: 768px) {
+    .center {
+        width: 100%; /* Ajusta a largura para telas menores */
+    }
+
+    .Usuario {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        margin-left: 0; /* Remove a margem esquerda */
+    }
+
+    .Login {
+        width: 100%; /* O botão ocupa toda a largura disponível */
+        margin-top: 10px; /* Adiciona margem superior */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+
+    .nav-link {
+        width: 100%; /* Os links ocupam toda a largura disponível */
+        text-align: left; /* Alinha o texto à esquerda */
+    }
+
+    #night {
+        margin-left: 0; /* Remove a margem esquerda */
+        margin-top: 10px; /* Adiciona margem superior */
+    }
 }
