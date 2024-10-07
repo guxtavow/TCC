@@ -1,0 +1,189 @@
+.TituloGames {  
+    min-height: 20vh;
+    max-height: 40vh;
+    min-width: none;
+    max-width: max-content;
+    margin: auto;
+    margin-top: 10vh;
+    position: relative;
+    text-shadow:
+    -6px 3px 40px #f2994a,
+    1px -1px 40px #f2994a,
+    -1px  1px 40px #f2994a,
+    1px  1px 90px #f2994a;   
+}
+
+.titleP { 
+    font-size: xx-large;
+    font-weight: 900;
+}
+
+.titleP2 { 
+    font-size: larger;
+    font-weight: 600;
+}
+
+.games-container {
+    display: flex ;
+    margin-left: 5%;
+    justify-content: space-between; /* Espaço entre o lado esquerdo e direito */
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 10px; /* Você pode ajustar este valor se necessário */
+    justify-items: center; /* Centraliza os itens */
+    padding: 0; /* Remove o padding do contêiner, se houver */
+    margin: 0; /* Remove o margin do contêiner, se houver */
+}
+
+.game-card {
+    background-color: #fff; /* cor de fundo do card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efeito de sombra */
+    border-radius: 10px; /* bordas arredondadas */
+    padding: 10px; /* espaço interno */
+    cursor: pointer; /* cursor de mão ao passar o mouse */
+    text-align: center; /* centraliza o texto */
+    transition: background-color 0.3s, transform 0.2s; /* animações para hover */
+    max-width: 150px; /* largura fixa do card */
+    max-height: auto; /* altura fixa do card, se desejado */
+    margin: 0;
+}
+
+.games h2 {
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-top: 25vh;
+    margin-left: 5%;
+}
+
+.game-card:hover {
+    background-color: #346fd6; /* muda a cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* leve aumento ao passar o mouse */
+}
+
+.game-card img {
+    max-width: 100%; /* garante que a imagem não ultrapasse os limites do card */
+    height: auto; /* mantém a proporção da imagem */
+}
+
+.last-game:hover {
+    background-color: #346fd6; /* muda a cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* leve aumento ao passar o mouse */
+}
+
+.last-game {
+    background-color: #fff; /* Cor de fundo da seção do último jogo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efeito de sombra */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    cursor: pointer; /* cursor de mão ao passar o mouse */
+    text-align: center; /* Centraliza o texto */
+    transition: background-color 0.3s, transform 0.2s; /* animações para hover */
+    max-width: 30vw; /* Largura da seção do último jogo */
+    width: 100%;
+    max-height: 50vh; /* Altura máxima */
+    margin-right: 5%; /* Empurra para a direita */
+}
+
+.last-game h3 {
+    background-color: #007BFF; /* Cor de fundo azul para o título */
+    border: 2px solid #0056b3; /* Borda mais escura para contraste */
+    border-radius: 5px; /* Bordas arredondadas */
+    color: white; /* Cor do texto para contraste */
+    padding: 5px; /* Espaçamento interno do título */
+    margin: 0; /* Remove margem do título */
+    margin-bottom: 15px; /* Adiciona margem inferior para separar do conteúdo abaixo */
+}
+
+.last-game img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse os limites */
+    max-height: auto; /* Mantém a proporção da imagem */
+}
+
+.top-jogadores-card {
+    background-color: #fff; /* Cor de fundo do card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efeito de sombra */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding:20px; /* Espaçamento interno */
+    max-width: 30vw; /* Largura do card de top jogadores */
+    width: 100%; /* Para garantir que ocupe toda a largura disponível */
+    margin-left: 65%; /* Empurra para a direita */
+    margin-bottom: 60vh;
+}
+
+.top-jogadores-header {
+    display: flex; /* Usar flexbox para o cabeçalho */
+    justify-content: space-between; /* Espaço entre o título e o texto "Mostrar Tudo" */
+    align-items: center; /* Alinha verticalmente */
+}
+
+.mostrar-tudo {
+    color: blue; /* Cor do texto "Mostrar Tudo" */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+}
+
+.top-jogadores-profiles {
+    margin-top: 10px; /* Espaçamento entre o cabeçalho e os perfis */
+}
+
+.profile-card {
+    display: flex; /* Usar flexbox para alinhar a imagem e o texto */
+    align-items: center; /* Alinha verticalmente */
+    margin-bottom: 10px; /* Espaçamento entre os perfis */
+}
+
+.profile-pic {
+    width: 4.4vw; /* Largura da imagem de perfil */
+    height: 9.5vh; /* Altura da imagem de perfil */
+    border-radius: 50%; /* Formato circular */
+    background-color: #ddd; /* Cor de fundo da imagem de perfil */
+    margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+}
+
+.profile-info {
+    flex-grow: 1; /* Faz o espaço crescer para ocupar o restante do card */
+    text-align: left;
+}
+
+.follow-btn {
+    border: 2px solid blue; /* Borda azul */
+    background-color: white; /* Fundo branco */
+    cursor: pointer; /* Cursor de ponteiro */
+    padding: 1vh 2vw; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.follow-btn.following {
+    background-color: blue; /* Fundo azul quando seguindo */
+    color: white; /* Texto branco quando seguindo */
+    border: 2px solid blue; /* Borda azul */
+}
+
+body.dark-mode {
+    background-color: #050c16; /* Cor de fundo para modo escuro */
+    color: #ffffff; /* Cor do texto (preto) */
+}
+
+body.dark-mode .game-card {
+    background-color: #346fd631; /* Cor dos cards no modo escuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Efeito de sombra mais escura */
+    color: #000000; /* Cor do texto (preto) */
+}
+
+body.dark-mode .last-game {
+    background-color: #ffffff; /* Cor da seção do último jogo no modo escuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Efeito de sombra mais escura */
+}
+
+body.dark-mode .last-game h3 {
+    background-color: #0056b3; /* Cor de fundo do título no modo escuro */
+    color: white; /* Cor do texto do título para contraste */
+}
+body.dark-mode .top-jogadores-card {
+    background-color: #ffffff; /* Cor dos cards no modo escuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Efeito de sombra mais escura */
+    color: #000000; /* Cor do texto (preto) */
+}
+
+
