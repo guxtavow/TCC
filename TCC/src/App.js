@@ -4,13 +4,14 @@ import Header from './componentes/navbar/Header';
 import Footer from './componentes/footer/Footer';
 import Sobre from './componentes/Sobre/Sobre';
 import LoginScreen from './componentes/LoginScreen/LoginScreen'
-import Cadastro from './componentes/Cadastro/Cadastro'
+import CadastroProf from './componentes/CadastroProf/CadastroProf'
+import CadastroResp from './componentes/CadastroResp/CadastroResp'
 
 
 function App() {
   return (
     <div className="App">
-      <LoginScreen />
+      <CadastroResp />
     </div>
   );
 }
