@@ -1,15 +1,28 @@
+import React, { useState } from 'react';
 import './Games.css';
 import Controle from './controle.png';
 import Lampada from './lampada1.png';
-import Jogo from './elden.png';
+import Front from './Front.png';
+import Back from './Back.png';
+import Hack from './Hack.png';
+import Devop from './Devop.png';
+import Logica from './logica.png';
+import Game from './gaming.png';
 import Fire from './fire.png';
+import LastDefault from './lastgame.png';
 import Player1 from './jogador1.png';
 import Player2 from './jogador2.png';
 import Player3 from './jogador3.png';
 import Player4 from './jogador4.png';
-import React, { useState } from 'react'; // Importe o React e useState
 
 const Games = () => {
+    // Estado para armazenar o último jogo acessado
+    const [lastGame, setLastGame] = useState({
+        name: 'Nenhum jogo acessado',
+        img: LastDefault, // Imagem padrão para o último jogo
+    });
+
+    // Estado para controle de "seguir" jogadores
     const [followed, setFollowed] = useState(Array(4).fill(false)); // Atualizado para 4 jogadores
 
     const toggleFollow = (index) => {
@@ -18,7 +31,20 @@ const Games = () => {
         setFollowed(newFollowed);
     };
 
-    // Dados dos jogadores
+    // Função para atualizar o último jogo
+    const updateLastGame = (name, img) => {
+        setLastGame({ name, img });
+    };
+
+    const games = [
+        { name: 'Front End Gaming', img: Front },
+        { name: 'Back End Gaming', img: Back },
+        { name: 'Hacking Gaming', img: Hack },
+        { name: 'Logica Gaming', img: Logica },
+        { name: 'Devops Gaming', img: Devop },
+        { name: 'Gaming', img: Game },
+    ];
+
     const players = [
         { name: "Joao Silva", username: "@josilv", image: Player1 },
         { name: "Amanda Ferreira", username: "@amandaf", image: Player2 },
@@ -39,38 +65,25 @@ const Games = () => {
             </div>
 
             <section className="games">
-                <h2>Todos os Jogos<img src={Fire} alt="Elden Ring" /></h2>
+                <h2>Todos os Jogos<img src={Fire} alt="All Games" /></h2>
                 <div className="games-container">
                     <div className="games-grid">
-                        <div className="game-card" onClick={() => alert('Game 1 clicked!')}>
-                            <img src={Jogo} alt="Elden Ring" />
-                            <p>Front End Gaming</p>
-                        </div>
-                        <div className="game-card" onClick={() => alert('Game 2 clicked!')}>
-                            <img src={Jogo} alt="Elden Ring" />
-                            <p>Back End Gaming</p>
-                        </div>
-                        <div className="game-card" onClick={() => alert('Game 3 clicked!')}>
-                            <img src={Jogo} alt="Elden Ring" />
-                            <p>Hacking Gaming</p>
-                        </div>
-                        <div className="game-card" onClick={() => alert('Game 4 clicked!')}>
-                            <img src={Jogo} alt="Elden Ring" />
-                            <p>Logica Gaming</p>
-                        </div>
-                        <div className="game-card" onClick={() => alert('Game 5 clicked!')}>
-                            <img src={Jogo} alt="Elden Ring" />
-                            <p>Devops Gaming</p>
-                        </div>
-                        <div className="game-card" onClick={() => alert('Game 6 clicked!')}>
-                            <img src={Jogo} alt="Elden Ring" />
-                            <p>Gaming</p>
-                        </div>
+                        {games.map((game, index) => (
+                            <div
+                                className="game-card"
+                                key={index}
+                                onClick={() => updateLastGame(game.name, game.img)} // Atualiza o último jogo
+                            >
+                                <img src={game.img} alt={game.name} />
+                                <p>{game.name}</p>
+                            </div>
+                        ))}
                     </div>
 
-                    <div className="last-game" onClick={() => alert('Last Game clicked!')}>
+                    <div className="last-game">
                         <h3>Último Jogo:</h3>
-                        <img src={Jogo} alt="Elden Ring" />
+                        <img src={lastGame.img} alt={lastGame.name} />
+                        <p>{lastGame.name}</p>
                     </div>
                 </div>
 
@@ -102,5 +115,6 @@ const Games = () => {
             </section>
         </>
     );
-}
+};
+
 export default Games;
