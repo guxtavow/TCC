@@ -22,8 +22,15 @@
   position: relative;
   display: flex;
   justify-content: space-between; /* Conteúdo alinhado à esquerda, imagem à direita */
-  align-items: center;
+  align-items: center; /* Alinhamento vertical */
   font-family: 'Arial', sans-serif;
+  transition: transform 0.3s, box-shadow 0.3s; /* Transição suave */
+}
+
+/* Hover effect */
+.indicator-card:hover {
+  transform: translateY(-5px); /* Eleva o card ao passar o mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
 }
 
 /* Primeira cor (primeiro card) */
@@ -45,9 +52,6 @@
 .card-icon {
   width: 90px; /* Tamanho da imagem */
   height: 90px;
-  position: absolute; /* Mantém a imagem em posição absoluta */
-  right: 20px; /* Alinha a imagem à direita */
-  bottom: 20px; /* Alinha a imagem ao final da div */
 }
 
 /* Detalhes do Card à esquerda */
@@ -78,6 +82,7 @@
   text-decoration: none;
   font-weight: bold;
   margin-top: 8px;
+  transition: color 0.2s; /* Transição suave */
 }
 
 /* Criando os buraquinhos apenas na lateral esquerda */
@@ -97,4 +102,5 @@
 /* Estilização do texto do link */
 .card-details a:hover {
   color: #007BFF;
+  text-decoration: underline; /* Adiciona sublinhado no hover */
 }
