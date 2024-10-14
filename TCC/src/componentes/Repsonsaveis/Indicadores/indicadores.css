@@ -1,0 +1,100 @@
+/* Geral para a página de indicadores */
+.indicators-page {
+  padding: 40px;
+  background-color: #f3f4f6;
+}
+
+/* Contêiner de Cards */
+.indicators-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Estilização do Card Geral */
+.indicator-card {
+  border-radius: 20px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+  padding: 20px;
+  width: 280px; /* Largura do card */
+  height: 160px; /* Altura do card */
+  position: relative;
+  display: flex;
+  justify-content: space-between; /* Conteúdo alinhado à esquerda, imagem à direita */
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Primeira cor (primeiro card) */
+.indicator-card.card-1 {
+  background-color: #0BF4C8;
+}
+
+/* Segunda cor (segundo card) */
+.indicator-card.card-2 {
+  background-color: #FAD85D;
+}
+
+/* Terceira cor (terceiro card) */
+.indicator-card.card-3 {
+  background-color: #F2A0FF;
+}
+
+/* Estilização da Imagem do Card */
+.card-icon {
+  width: 90px; /* Tamanho da imagem */
+  height: 90px;
+  position: absolute; /* Mantém a imagem em posição absoluta */
+  right: 20px; /* Alinha a imagem à direita */
+  bottom: 20px; /* Alinha a imagem ao final da div */
+}
+
+/* Detalhes do Card à esquerda */
+.card-details {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1; /* Ocupar o espaço disponível */
+}
+
+.card-details h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-details p {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.card-details a {
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* Criando os buraquinhos apenas na lateral esquerda */
+.indicator-card::before {
+  content: '';
+  position: absolute;
+  top: 10px; /* Ajuste para alinhar os buraquinhos corretamente */
+  bottom: 10px;
+  left: -10px; /* Posição para os buracos à esquerda */
+  width: 15px;
+  background-color: #f3f4f6; /* Cor de fundo da página para simular o buraco */
+  border-radius: 50%; /* Torna os "buracos" arredondados */
+  height: 30px;
+  box-shadow: 0 40px 0 #f3f4f6, 0 80px 0 #f3f4f6; /* Simula outros buracos para baixo */
+}
+
+/* Estilização do texto do link */
+.card-details a:hover {
+  color: #007BFF;
+}
