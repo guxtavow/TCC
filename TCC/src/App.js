@@ -7,6 +7,7 @@ import Chatbot from './componentes/Chatbot/chat';
 import Home from './componentes/Home/Home';
 import LoginScreen from './componentes/LoginScreen/LoginScreen';
 import Cadastro from './componentes/Cadastro/Cadastro';
+import Games from './componentes/Games/Games';
 
 
 
@@ -14,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-        <Chatbot />
+        <Games />
       <Footer />
     </div>
   );
