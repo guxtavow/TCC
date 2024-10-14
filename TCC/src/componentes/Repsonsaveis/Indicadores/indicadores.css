@@ -33,19 +33,17 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
 }
 
-/* Primeira cor (primeiro card) */
+/* Cores dos cards */
 .indicator-card.card-1 {
-  background-color: #0BF4C8;
+  background-color: #0BF4C8; /* Cor para Quantidades de Atividades */
 }
 
-/* Segunda cor (segundo card) */
 .indicator-card.card-2 {
-  background-color: #FAD85D;
+  background-color: #FAD85D; /* Cor para Atividades Concluídas */
 }
 
-/* Terceira cor (terceiro card) */
 .indicator-card.card-3 {
-  background-color: #F2A0FF;
+  background-color: #F2A0FF; /* Cor para Desempenho */
 }
 
 /* Estilização da Imagem do Card */
