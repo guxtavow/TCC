@@ -49,16 +49,14 @@ return(
     <div className='links'>
         <table className='Comunidade'>
             <h3>Comunidade</h3>
-            <tr><a href='#' className='Link' id='Parceiros'>Parceiros</a></tr>
             <tr><a href='#' className='Link' id='Developers'>Developers</a></tr>
-            <tr><a href='#' className='Link' id='Blog'>Blog</a></tr>
         </table>
 
         <table className='Links-Rapidos'>
             <h3>Links Rápidos</h3>
             <tr><a href='#' className='Link' id='Parceiros'>Inicio</a></tr>
             <tr><a href='#' className='Link' id='Developers'>Chat</a></tr>
-            <tr><a href='#' className='Link' id='Blog'>Dashboard</a></tr>
+            <tr><a href='#' className='Link' id='Blog'>Pais/Professores</a></tr>
             <tr><a href='#' className='Link' id='Blog'>Como usar</a></tr>
             <tr><a href='#' className='Link' id='Blog'>Sobre nós</a></tr>
         </table>
@@ -66,7 +64,6 @@ return(
         <table className='Mais'>
             <h3>Mais</h3>
             <tr><a href='#' className='Link' id='Parceiros'>Termos</a></tr>
-            <tr><a href='#' className='Link' id='Developers'>Investidores</a></tr>
             <tr><a href='#' className='Link' id='Blog'>Privacidade</a></tr>
             <tr><a href='#' className='Link' id='Blog'>Ajuda</a></tr>
             <tr><a href='#' className='Link' id='Blog'>Contato</a></tr>

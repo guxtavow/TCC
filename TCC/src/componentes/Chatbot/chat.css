@@ -7,7 +7,7 @@
     min-width: none;
     max-width: max-content;
     margin: auto;
-    margin-top: 10vh;
+    margin-top: 14vh;
     position: relative;
     text-shadow:
     -6px 3px 40px #f2994a,
@@ -29,13 +29,22 @@
 /* --------------------------------- CHATBOT -------------------------------- */
 
 #robochat{ /* IMAGEM FUNDO DO CHAT */
-    margin-top: 12vh;
+    margin-top: 8vh;
     margin-bottom: 17vh;
     z-index: 0;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+#robochatlamp{ /* IMAGEM FUNDO DO CHAT */
+    margin-top: -39vh;
+    margin-bottom: 17vh;
+    z-index: 0;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
 }
 
 .TextoChat{ /* BLOCO DO INFO-CHATBOT */
-    background-image:linear-gradient(to top, rgb(253, 186, 0) 55% , white 45%);
+    background-color: transparent;
     height: 65vh;
     display: flex;   
     justify-content: center; 
@@ -45,7 +54,7 @@
 }
 
 body.dark-mode .TextoChat{ /* PARA AFETAR A LINHA NO DARKMODE */
-    background-image:linear-gradient(to top, #185185 55% , #222935 45%);
+    background-color: transparent;
     transition: all 0.8s ease-in;
 }
 
@@ -54,14 +63,14 @@ body.dark-mode .TextoChat{ /* PARA AFETAR A LINHA NO DARKMODE */
     height: 35vh;
     padding: 30px;
     border-radius: 20px;
-    background-color: white;
-    color: black;
+    background-color: #FFCA34;
+    color: white;
     text-align: center;
     transition: all 0.8s ease-in;
 
 }
 body.dark-mode .sobreChat{ /* PARA AFETAR O BLOCO DENTRO DA LINHA NO DARKMODE */
-    background-color: #45659b;
+    background-color: #FFCA34;
     color: white;
     transition: all 0.8s ease-in;
 }
@@ -73,6 +82,8 @@ body.dark-mode .sobreChat{ /* PARA AFETAR O BLOCO DENTRO DA LINHA NO DARKMODE */
 
 #textChat{ /* AFETAR O TEXTO DO BLOCO */
     margin: auto;
+    font-size: larger;
+    font-weight: 650;
     margin-top: 3vh;
     width: 48vw;
 }
