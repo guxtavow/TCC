@@ -1,9 +1,9 @@
 import './chat.css'
-import Robo from './robo.png'
-import Lampada from './lampada.png'
-import Robochat from './robozinho.png'
+import Robo from './elements/robo.png'
+import Lampada from './elements/lampada.png'
+import Robochat from './elements/robozinho.png'
 import { useEffect, useState } from 'react'
-import RobochatLamp from './Robô.png'
+import RobochatLamp from './elements/Robô.png'
 
 
 export default function Chatbot(){

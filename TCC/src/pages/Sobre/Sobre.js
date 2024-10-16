@@ -1,7 +1,7 @@
 import './Sobre.css'
-import Garoto from './garoto.jpg'
-import SobreNos from './img1.png'
-import Garota from './image 10.png'
+import Garoto from './elements/garoto.jpg'
+import SobreNos from './elements/img1.png'
+import Garota from './elements/image 10.png'
 
 export default function Sobre(){
     return(

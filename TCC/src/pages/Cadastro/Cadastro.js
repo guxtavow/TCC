@@ -1,8 +1,8 @@
 import React from "react";
 import './Cadastro.css'; // Importa o arquivo CSS para estilização
 import { FcGoogle } from "react-icons/fc"; // Importa o ícone do Google
-import logo2 from "./img2/login2.png"; // Importa uma imagem
-import GoogleIcon2 from "./img2/abelha2.png"; // Importa outra imagem
+import logo2 from "./elements/login2.png"; // Importa uma imagem
+import GoogleIcon2 from "./elements/abelha2.png"; // Importa outra imagem
 
 const Cadastro = () => {
     return (

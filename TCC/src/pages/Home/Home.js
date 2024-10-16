@@ -1,9 +1,9 @@
 import React from 'react';
 import { FaCode, FaDatabase, FaShieldAlt, FaBrain } from 'react-icons/fa';
 
-import menina from './girl_note.png';
-import meninaTablet from './girl_tablet.png';
-import checkIcon from './checkIcon.png';
+import menina from './elements/girl_note.png';
+import meninaTablet from './elements/girl_tablet.png';
+import checkIcon from './elements/checkIcon.png';
 
 import './Home.css'
 

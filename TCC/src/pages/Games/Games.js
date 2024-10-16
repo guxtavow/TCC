@@ -1,19 +1,19 @@
 import React, { useState } from 'react'; // Importa React e useState para gerenciamento de estado
 import './Games.css'; // Importa os estilos do CSS
-import Controle from './controle.png'; // Importa ícones e imagens
-import Lampada from './lampada1.png';
-import Front from './Front.png';
-import Back from './Back.png';
-import Hack from './Hack.png';
-import Devop from './Devop.png';
-import Logica from './logica.png';
-import Game from './gaming.png';
-import Fire from './fire.png';
-import LastDefault from './lastgame.png'; // Imagem padrão para o último jogo
-import Player1 from './jogador1.png';
-import Player2 from './jogador2.png';
-import Player3 from './jogador3.png';
-import Player4 from './jogador4.png';
+import Controle from './elements/controle.png'; // Importa ícones e imagens
+import Lampada from './elements/lampada1.png';
+import Front from './elements/Front.png';
+import Back from './elements/Back.png';
+import Hack from './elements/Hack.png';
+import Devop from './elements/Devop.png';
+import Logica from './elements/logica.png';
+import Game from './elements/gaming.png';
+import Fire from './elements/fire.png';
+import LastDefault from './elements/lastgame.png'; // Imagem padrão para o último jogo
+import Player1 from './elements/jogador1.png';
+import Player2 from './elements/jogador2.png';
+import Player3 from './elements/jogador3.png';
+import Player4 from './elements/jogador4.png';
 
 const Games = () => {
     // Estado para armazenar o último jogo acessado

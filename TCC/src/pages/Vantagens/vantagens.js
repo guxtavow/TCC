@@ -2,15 +2,15 @@
 import './vantagens.css';
 
 // Importa as imagens que serão usadas no componente
-import Menino from './pensador.png'; // Imagem do menino tendo uma idéia
-import Como from './como.png'; // Imagem do "Como Funciona?"
-import Menina from './menina.png'; // Imagem da menina
-import Bandeira1 from './bandeira1.png'; // Imagem da primeira bandeira
-import Bandeira2 from './bandeira2.png'; // Imagem da segunda bandeira
-import Bandeira3 from './bandeira3.png'; // Imagem da terceira bandeira
-import Bandeira4 from './bandeira4.png'; // Imagem da quarta bandeira
-import Linha from './linha.png'; // Imagem da linha
-import Formas from './formas.png'; // Imagem das formas
+import Menino from './elements/pensador.png'; // Imagem do menino tendo uma idéia
+import Como from './elements/como.png'; // Imagem do "Como Funciona?"
+import Menina from './elements/menina.png'; // Imagem da menina
+import Bandeira1 from './elements/bandeira1.png'; // Imagem da primeira bandeira
+import Bandeira2 from './elements/bandeira2.png'; // Imagem da segunda bandeira
+import Bandeira3 from './elements/bandeira3.png'; // Imagem da terceira bandeira
+import Bandeira4 from './elements/bandeira4.png'; // Imagem da quarta bandeira
+import Linha from './elements/linha.png'; // Imagem da linha
+import Formas from './elements/formas.png'; // Imagem das formas
 import { FaCheckCircle } from "react-icons/fa"; // Importa o ícone de check-circle
 
 // Cria um componente chamado Vantagens

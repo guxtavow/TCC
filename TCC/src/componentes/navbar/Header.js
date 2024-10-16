@@ -7,7 +7,6 @@ import Lua from './image 24.png'
 
 
 export default function Header(){
-    
     const [DarkMode, setIsDarkMode] = useState(() =>{
         const saveMode = localStorage.getItem('dark-mode')
         return saveMode ? JSON.parse(saveMode) : false
@@ -42,7 +41,7 @@ return(
                 <a className="navbar-brand" href="#">
                     <img src={logoBee} className="Logo1" alt="1logo" width="40" height="40" style={{marginLeft:'20px'}} />
                 </a>
-                <a class="navbar-brand" href="#"><b>TechKids</b></a>
+                <a class="navbar-brand" href="/"><b>TechKids</b></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -51,16 +50,16 @@ return(
                     <div className='center'>
                         
                         <li class="nav-item">
-                        <a class="nav-link" href="#"><b>Chat</b></a>
+                        <a class="nav-link" href='/chatbot'><b>Chat</b></a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#"><b>Professor</b></a>
+                        <a class="nav-link" href='/responsaveis'><b>Professor</b></a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#"><b>Como usar</b></a>
+                        <a class="nav-link" href='/vantagens'><b>Como usar</b></a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#"><b>Sobre Nós</b></a>
+                            <a class="nav-link" href='/sobre' ><b>Sobre Nós</b></a>
                         </li>
                     
 
