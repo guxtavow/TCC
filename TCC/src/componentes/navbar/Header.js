@@ -38,7 +38,7 @@ return(
         }}
         >
             <div class="container-fluid">
-                <a className="navbar-brand" href="#">
+                <a className="navbar-brand" href="/">
                     <img src={logoBee} className="Logo1" alt="1logo" width="40" height="40" style={{marginLeft:'20px'}} />
                 </a>
                 <a class="navbar-brand" href="/"><b>TechKids</b></a>
