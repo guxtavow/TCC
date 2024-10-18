@@ -1,104 +1,124 @@
-/* Geral para a página de indicadores */
 .indicators-page {
   padding: 40px;
   background-color: #f3f4f6;
-}
-
-/* Contêiner de Cards */
-.indicators-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative; /* Permite que o card de feedback seja posicionado de forma absoluta */
+}
+
+.first-row, .second-row, .third-row, .fourth-row {
+  display: flex;
+  width: calc(100% - 350px); /* Mantendo o espaço para o card de Feedback */
+  justify-content: space-between;
+}
+
+/* Feedback card ocupa todo o espaço vertical desejado */
+.feedback {
+  width: 330px;
+  position: absolute;
+  top: 0; /* Começa no topo da área de cards */
+  right: 40px; /* Alinha à direita, fora da área principal de cards */
+  bottom: 0; /* Faz o card se estender até o final dos cards à esquerda */
+  display: flex;
+  align-items: flex-start;
   justify-content: center;
 }
 
-/* Estilização do Card Geral */
+.feedback-card {
+  background-color: #ADD8E6;
+  width: 100%;
+  height: 100%; /* O feedback ocupa toda a altura disponível */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
 .indicator-card {
-  border-radius: 20px; /* Bordas arredondadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 280px; /* Largura do card */
-  height: 160px; /* Altura do card */
+  width: 280px;
+  height: 160px;
   position: relative;
   display: flex;
-  justify-content: space-between; /* Conteúdo alinhado à esquerda, imagem à direita */
-  align-items: center; /* Alinhamento vertical */
+  justify-content: space-between;
+  align-items: center;
   font-family: 'Arial', sans-serif;
-  transition: transform 0.3s, box-shadow 0.3s; /* Transição suave */
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 /* Hover effect */
 .indicator-card:hover {
-  transform: translateY(-5px); /* Eleva o card ao passar o mouse */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Cores dos cards */
-.indicator-card.card-1 {
-  background-color: #0BF4C8; /* Cor para Quantidades de Atividades */
+/* Custom configurations for each card */
+.card-1 {
+  background-color: #0BF4C8;
 }
 
-.indicator-card.card-2 {
-  background-color: #FAD85D; /* Cor para Atividades Concluídas */
+.card-2 {
+  background-color: #FAD85D;
 }
 
-.indicator-card.card-3 {
-  background-color: #F2A0FF; /* Cor para Desempenho */
+.card-3 {
+  background-color: #F2A0FF;
 }
 
-/* Estilização da Imagem do Card */
-.card-icon {
-  width: 90px; /* Tamanho da imagem */
-  height: 90px;
-}
-
-/* Detalhes do Card à esquerda */
-.card-details {
-  text-align: left;
+/* Segunda fileira */
+.second-row {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1; /* Ocupar o espaço disponível */
+  width: calc(100% - 350px); /* Mantendo o espaço para o card de Feedback */
+  justify-content: space-between;
 }
 
-.card-details h3 {
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 10px;
+/* Ajuste no card 'Perguntas Respondidas' */
+.card-4 {
+  background-color: #87CEEB;
+  flex-grow: 1; /* O card vai crescer para ocupar o espaço disponível */
+  margin-right: 20px; /* Espaço entre o 'Perguntas Respondidas' e o 'Calendário' */
 }
 
-.card-details p {
-  font-size: 36px;
-  font-weight: bold;
-  color: #333;
-  margin: 0;
+/* Card 'Calendário' mantém o tamanho padrão */
+.card-5 {
+  background-color: #FFE4B5;
+  width: 280px; /* Largura fixa */
 }
 
-.card-details a {
-  font-size: 14px;
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 8px;
-  transition: color 0.2s; /* Transição suave */
+/* Terceira fileira */
+.third-row {
+  display: flex;
+  width: calc(100% - 350px); /* Mantendo o espaço para o card de Feedback */
+  justify-content: space-between;
 }
 
-/* Criando os buraquinhos apenas na lateral esquerda */
-.indicator-card::before {
-  content: '';
-  position: absolute;
-  top: 10px; /* Ajuste para alinhar os buraquinhos corretamente */
-  bottom: 10px;
-  left: -10px; /* Posição para os buracos à esquerda */
-  width: 15px;
-  background-color: #f3f4f6; /* Cor de fundo da página para simular o buraco */
-  border-radius: 50%; /* Torna os "buracos" arredondados */
-  height: 30px;
-  box-shadow: 0 40px 0 #f3f4f6, 0 80px 0 #f3f4f6; /* Simula outros buracos para baixo */
+/* Ajuste no card 'Dúvidas' */
+.card-6 {
+  background-color: #2F4F4F;
+  flex-grow: 1; /* Faz o card 'Dúvidas' ocupar todo o espaço disponível */
 }
 
-/* Estilização do texto do link */
-.card-details a:hover {
-  color: #007BFF;
-  text-decoration: underline; /* Adiciona sublinhado no hover */
+/* Quarta fileira */
+.fourth-row {
+  display: flex;
+  width: calc(100% - 350px); /* Mantendo espaço para o card de Feedback */
+  justify-content: flex-start; /* Alinha os cards à esquerda */
+  gap: 20px; /* Adiciona um espaço entre os cards */
+}
+
+/* Card 'Editar Perfil' */
+.card-7 {
+  background-color: #DB7093;
+  width: 280px; /* Tamanho fixo */
+}
+
+/* Card 'Adicionar Filhos' */
+.card-8 {
+  background-color: #FFB6C1;
+  width: 280px; /* Tamanho fixo */
 }
