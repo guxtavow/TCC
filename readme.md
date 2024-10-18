@@ -22,3 +22,16 @@ Este documento fornece as instruções para acessar o servidor MySQL remotamente
    - **Password:** Clique em "Store in Vault..." e insira bancodadostechk.
 4. Clique em **Test Connection** para verificar se a conexão está funcionando corretamente.
 5. Se tudo estiver correto, clique em **OK** para salvar a conexão.
+
+## Docker-Compose
+
+Para acessar o banco de dados MySQL via Docker, siga os passos abaixo:
+
+### Passos
+
+1. Certifique-se de que você tem Docker e Docker Compose instalados.
+2. No diretório onde o `docker-compose.yml` está localizado, execute o seguinte comando:
+    `docker-compose up -d`
+
+
+3. Seu banco de dados MySQL estará acessível através do endereço `localhost:3306`.
