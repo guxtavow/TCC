@@ -34,4 +34,4 @@ Para acessar o banco de dados MySQL via Docker, siga os passos abaixo:
     `docker-compose up -d`
 
 
-3. Seu banco de dados MySQL estará acessível através do endereço `localhost:3306`.
+3. Seu banco de dados MySQL estará acessível através do endereço `192.168.0.20:3306`.
