@@ -48,7 +48,6 @@ return(
                 <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <div className='center'>
-                        
                         <li class="nav-item">
                         <a class="nav-link" href='/chatbot'><b>Chat</b></a>
                         </li>

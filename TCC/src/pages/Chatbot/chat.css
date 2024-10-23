@@ -87,3 +87,118 @@ body.dark-mode .sobreChat{ /* PARA AFETAR O BLOCO DENTRO DA LINHA NO DARKMODE */
     margin-top: 3vh;
     width: 48vw;
 }
+
+.Chatbot{
+    margin: auto;
+    max-width: 90vw;
+    min-height: 120vh;
+    z-index: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+.ChatBox{
+    width: 60vw;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    z-index: 10;
+    position:static;
+    margin: auto;
+    margin-top: 18%;
+}
+
+.input-container{
+    display: flex;
+}
+
+
+.chat-messages{
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+    max-width: 100%;
+    min-height: 61vh;
+    max-height: 61vh;
+    overflow-y: auto;
+}
+/* Estiliza a barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+}
+
+/* Estiliza a parte de fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: transparent; /* Cor de fundo */
+}
+
+/* Estiliza o "polegar", que é a parte móvel da barra */
+::-webkit-scrollbar-thumb {
+    background-color: #FFCA34; 
+    border-radius: 10px; 
+    height: 10px;
+}
+
+/* Estiliza o polegar quando o mouse passa sobre ele */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Cor ao passar o mouse */
+}
+
+
+
+.user-message{
+    align-self: flex-start;
+    text-align: left;
+    margin: 20px;
+    border: solid 1px;
+    border-radius: 30px;
+    padding: 10px;
+    max-width: fit-content;
+}
+
+
+.bot-message{
+    align-self: flex-end;
+    right: 0;
+    width: 70%;
+    text-align: right;
+    border: solid 1px;
+    border-radius: 30px;
+    padding: 20px;
+    color: #FFCA34;
+}
+
+.botao-limpar{
+    width: 10px;
+    opacity: 0.6;
+    margin: 5px;
+    padding: 5px;
+    border: none;
+    background: transparent;
+    color: blueviolet;
+
+}
+
+
+.input-chat{
+    display: flex;
+    width: 90%;
+    background-color: transparent;
+    border-radius: 30px;
+    padding: 6px;
+    color: white;
+    margin-left: 1vw;
+}
+
+.botao-enviar{
+    margin-left: 10px;
+    padding: 5px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    font-weight: bolder;
+    border-radius: 30px;
+}
