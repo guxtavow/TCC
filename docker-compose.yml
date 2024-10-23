@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:latest
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: Jcm30052000*  # Senha do root
+      MYSQL_DATABASE: techkids  # Nome do banco de dados que será criado
+    ports:
+      - "3307:3306"  # Porta local 3307 mapeada para 3306 no contêiner
+    volumes:
+      - ./data:/var/lib/mysql  # Persistência de dados no volume local
