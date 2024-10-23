@@ -14,7 +14,7 @@ def home():
 @app.route('/usuario', methods=['POST'])
 def criar_usuario():
     data = request.json
-    usuario = Usuario(nome=data['nome'], email=data['email'], senha=data['senha'], tipo=data['tipo'])
+    usuario = Usuario(nome=data['nome'], email=data['email'], senha=data['senha'], tipo=data['tipo'], telefone=data['telefone'], gparentesco=data['grau'])
     session.add(usuario)
     session.commit()
     return jsonify({"message": "Usuário criado com sucesso!"}), 201
