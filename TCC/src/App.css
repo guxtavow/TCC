@@ -9,7 +9,7 @@
 
 body{
   transition: all 0.8s ease-in;
-
+  overflow-x: hidden;
 }
 
 body.dark-mode{

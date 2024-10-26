@@ -40,11 +40,11 @@
               <div className="button-container">
                 <button className="action-button" aria-label="Cadastro">
                   <img src={btnCadastro} alt="Botão Cadastro" className="button-icon" />
-                  <strong>Cadastro</strong>
+                  <strong><a href='/Cadastro'>Cadastro</a></strong>
                 </button>
                 <button className="action-button" aria-label="Entrar">
                   <img src={btnEntrar} alt="Botão Entrar" className="button-icon" />
-                  <strong>Entrar</strong>
+                  <strong><a href='/LoginScreen'>Entrar</a></strong> 
                 </button>
               </div>
               <div className="speech-bubble">

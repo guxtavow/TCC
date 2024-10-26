@@ -1,25 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import './LoginScreen.css'; // Importa o CSS para estilização do componente
 import { FcGoogle } from "react-icons/fc"; // Importa o ícone do Google
 import logo from "./img/login.png"; // Importa a imagem do logo
 import GoogleIcon from "./img/abelha.png"; // Importa o ícone da abelha
+import ApiLogin from "../../services/LoginApi.js"
 
 const LoginScreen = () => {
+    const [senha, setSenha] = useState("");
+    const [email, setEmail] = useState("");
+    const [error, setError] = useState("");
+
+    const LoginUsuario = async (e) => {
+        e.preventDefault();
+        const response = await ApiLogin(email, senha);
+        console.log(response);
+
+            if (response.logado === true) {
+                alert("Login bem sucedido!");
+                localStorage.setItem("logado", "true"); // Use "isLoggedIn" como chave
+                window.location.href = "/Home";
+            } else {
+                setError("Email ou senha incorretos");
+            }
+        }
+
     return (
         <div className="wrapper"> {/* Container principal da tela de login */}
-            <form action=""> {/* Formulário de login */}
+            <button className="Conta"><a href="/Cadastro">Criar Conta</a></button> {/* Botão para criar uma nova conta */}
+
+            <form onSubmit={LoginUsuario} className="form"> {/* Formulário de login */}
                 <h1>
                     TechKids
                     <img src={GoogleIcon} alt="Ícone do Google" className="bee-icon" />
                 </h1>
                 <img src={logo} alt="Logo da aplicação" title="Logo da aplicação" /> {/* Logo da aplicação */}
-                <button className="Conta" type="submit">Criar Conta</button> {/* Botão para criar uma nova conta */}
                 <h2>Logue-se agora</h2> {/* Título instruindo o usuário a fazer login */}
                 <h3>Olá, Bem-vindo de volta!</h3> {/* Mensagem de boas-vindas */}
                 
-                <button type="submit">
-                    <FcGoogle className="icon" /> Login com Google {/* Botão para fazer login com Google */}
-                </button>
                 
                 <div style={{ 
                     display: 'flex', 
@@ -47,6 +64,8 @@ const LoginScreen = () => {
                     <input 
                         type="text" 
                         placeholder="Insira seu e-mail" 
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         required 
                     /> {/* Campo de entrada para o e-mail */}
                 </div>
@@ -56,10 +75,13 @@ const LoginScreen = () => {
                     <input 
                         type="password" 
                         placeholder="Entre com sua senha" 
+                        value={senha}
+                        onChange={(e) => setSenha(e.target.value)}
                         required 
                     /> {/* Campo de entrada para a senha */}
                 </div>
-                
+                {error && <p style={{ color: 'red' }}>{error}</p>}
+
                 <div className="remember-forgot">
                     <label>
                         <input type="checkbox" /> Lembrar Senha

@@ -1,0 +1,232 @@
+/* Estilos gerais */
+p {
+    font-size: 19px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Removido a altura fixa */
+    margin-top: 12vh;
+  }
+  
+  .home-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* Seção 1 */
+  .section1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .section1 .text-content {
+    flex: 1;
+    margin-right: 20px; /* Espaço entre o texto e a imagem */
+    text-align: left; /* Alinha o texto à esquerda */
+  }
+  
+  .section1 .text-content h3,
+  .section1 .text-content p {
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+  
+  .section1 .image-content {
+    flex: 1;
+    max-width: 50%;
+    text-align: right; /* Alinha a imagem à direita */
+  }
+  
+  .section1 .image-content img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Seção 2 */
+  .section2 .text-content {
+    flex: 1;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .section2 .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .section2 .action-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFD838;
+    color: #1F1C14;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .section2 .action-button:hover {
+    background-color: #6b2a9e;
+  }
+  
+  .section2 .button-icon {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .section2 .speech-bubble {
+    position: relative;
+    border-radius: 135px;
+    padding: 100px;
+    margin: 87px;
+    border: 2px solid #8044BC;
+    font-family: Arial, sans-serif;
+    border-width: 5px;
+  }
+  
+  .section2 .speech-bubble p {
+    margin: 0;
+    text-align: justify;
+  }
+  
+  .section2 .speech-bubble::after,
+  .section2 .speech-bubble::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -10px;
+    margin-bottom: -20px;
+  }
+  
+  .section2 .speech-bubble::before {
+    border-top-color: #8044BC;
+    border-width: 22px;
+    margin-left: -12px;
+    margin-bottom: -22px;
+  }
+  
+  .section2 .image-below-bubble {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .section2 .image-below-bubble img {
+    display: block;
+    max-width: none;
+    height: auto;
+  }
+  
+  /* Seção 3 */
+  .section3 {
+    background: linear-gradient(to bottom, #f0f0f000 50%, #FABE2C 50%);
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .section3 .cards-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .section3 .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .section3 .card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .section3 .card p {
+    margin-bottom: 10px;
+  }
+  
+  .section3 .card strong {
+    font-size: 18px;
+  }
+  
+  /* Seção 4 */
+  .section4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .section4 .image-content {
+    flex: 1;
+    max-width: 40%;
+  }
+  
+  .section4 .image-content img {
+    width: 70%;
+    height: auto;
+  }
+  
+  .section4 .text-content {
+    flex: 1;
+    text-align: center;
+    margin-left: 20px;
+  }
+  
+  .section4 .text-content p {
+    margin-bottom: 10px;
+  }
+  
+  .section4 .text-content a {
+    color: #8044BC;
+    text-decoration: underline;
+  }
+  
+  .section4 .text-content strong {
+    font-size: 22px;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .section-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .text-content {
+      max-width: 100%;
+    }
+  
+    .image-content {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+  
+    .image-content img {
+      max-width: 100%;
+    }
+  
+    .cards-container {
+      flex-direction: column;
+    }
+  }
+  

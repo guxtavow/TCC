@@ -1,23 +1,37 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, jsonify, request
+from flask_cors import CORS
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
+from usuarios import Usuario, Session
+
 
 app = Flask(__name__)
-engine = create_engine('mysql+pymysql://user:password@localhost/techkids')
-Session = sessionmaker(bind=engine)
-session = Session()
+CORS(app)
 
-@app.route('/')
-def home():
-    return render_template('LoginScreen.html')
 
-@app.route('/usuario', methods=['POST'])
+@app.route('/login', methods=['POST'])
+def login():
+    data = request.get_json()
+    email = data.get('email')
+    senha = data.get('password')
+    
+    session = Session()
+    
+    usuario = session.query(Usuario).filter_by(email=email).first()
+    
+    session.close()
+    
+    if usuario and usuario.senha == senha:
+        return jsonify({
+            "logado": True,
+            "usuario": usuario.get_dados_formatados()
+        }), 200
+    else:
+        return jsonify({"logado": False, "mensagem": "Email ou senha incorretos"}), 401
+
+@app.route('/usuario')
 def criar_usuario():
-    data = request.json
-    usuario = Usuario(nome=data['nome'], email=data['email'], senha=data['senha'], tipo=data['tipo'], telefone=data['telefone'], gparentesco=data['grau'])
-    session.add(usuario)
-    session.commit()
-    return jsonify({"message": "Usuário criado com sucesso!"}), 201
+    return
 
 if __name__ == '__main__':
     app.run(debug=True)
