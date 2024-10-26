@@ -99,3 +99,18 @@
   font-size: 16px;
   text-align: center;
 }
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.card-details {
+  flex: 1;
+  text-align: left;
+}
+.card-icon {
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;  /* Espaçamento entre o texto e a imagem */
+}

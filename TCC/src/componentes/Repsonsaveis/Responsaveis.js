@@ -3,15 +3,22 @@ import './Responsaveis.css';
 import leftImage from './elements/imagem1.png';
 import rightImage from './elements/imagem2.png';
 
+import quantidadesIcon from './elements/quantidades.png';
+import concluidosIcon from './elements/concluidos.png';
+import desempenhoIcon from './elements/desempenho.png';
+
+
 function Card({ title, value, linkText, icon, className }) {
   return (
-    <div className={`indicator-card ${className}`}>
-      <div className="card-details">
-        <h3>{title}</h3>
-        <p>{value}</p>
-        {linkText && <a href="#">{linkText}</a>}
+<div className={`indicator-card ${className}`}>
+      <div className="card-content">  {/* Wrapper flex para texto e imagem */}
+        <div className="card-details">
+          <h3>{title}</h3>
+          <p>{value}</p>
+          {linkText && <a href="#">{linkText}</a>}
+        </div>
+        {icon && <img src={icon} alt={`${title} icon`} className="card-icon" />} {/* Ícone à direita */}
       </div>
-      {icon && <img src={icon} alt="" className="card-icon" />}
     </div>
   );
 }
@@ -34,11 +41,11 @@ export default function Responsaveis() {
 
       {/* Conteúdo dos Indicadores */}
       <div className="indicators-page">
-        <div className="first-row">
-          <Card title="Quantidades de Atividades" value="50" linkText="Ver Atividades" className="card-1" />
-          <Card title="Atividades Concluídas" value="25" linkText="Ver Atividades" className="card-2" />
-          <Card title="Desempenho" value="50%" linkText="Ver Desempenho" className="card-3" />
-        </div>
+      <div className="first-row">
+        <Card title="Quantidades de Atividades" value="50" linkText="Ver Atividades" icon={quantidadesIcon} className="card-1" />
+        <Card title="Atividades Concluídas" value="25" linkText="Ver Atividades" icon={concluidosIcon} className="card-2" />
+        <Card title="Desempenho" value="50%" linkText="Ver Desempenho" icon={desempenhoIcon} className="card-3" />
+      </div>
         
         <div className="second-row">
           <Card title="Perguntas Respondidas" value="40" linkText="Ver Perguntas" className="card-4" />
