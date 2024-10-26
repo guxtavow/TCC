@@ -1,135 +1,147 @@
+/* Estilos gerais do formulário */
+form {
+  display: flex;
+  flex-direction: column; /* Mantém a disposição em coluna */
+  padding: 0 10%;
+  box-sizing: border-box;
+  height: 100%; /* Ajusta a altura conforme necessário */
+  background-color: #FFCDCD; /* Cor de fundo do formulário */
+}
 
-/* Contêiner Principal */
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 0 10%;
-    box-sizing: border-box;
-  }
-  
-  /* Cabeçalhos */
-  .wrapper h1, .wrapper h2, .wrapper h3, .wrapper h5 {
-    font-size: 2vw;
-    margin: 3vh 0;
-  }
-  
-  .wrapper h7 {
-    display: flex;
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin: 0 7vw;
-  }
+/* Cabeçalho */
+h1 {
+  font-size: 2.5vw; /* Tamanho da fonte */
+  color: #333333;
+  margin: 3.3vh 3%; /* Margens do cabeçalho */
+  display: flex;
+  align-items: center;
+}
 
-  
-  .wrapper h1 {
-    font-size: 2.5vw;
-    color: #333333;
-    margin: 3.3vh 3%;
-    display: flex;
-    align-items: center;
-  }
-  
-  .wrapper h2 {
-    max-width: 23.3vw;
-    font-size: 2.5vw;
-  }
-  
-  .button-group {
-    display: flex;
-    gap: 0.1; /* Espaço entre os botões */
-    max-width: 25vw;
-    margin: 0 5vw; /* Define a margem superior, inferior e entre os itens */
-    font-size: 2.5vw;
-  }
+/* Subtítulo */
+h2 {
+  font-size: 3vw; /* Ajuste o tamanho da fonte conforme necessário */
+  color: #333; /* Cor desejada */
+  margin-right: 61%;
+}
 
-  .Grau{
-    font-size: 2vw;
-    margin: 3vh 0;
-    max-width: 18vw;
-    font-weight: 500;
-  }
-  
-  
-  .wrapper h5 {
-    max-width: 8vw;
-  }
-  
-  /* Ícones e Imagens */
-  .wrapper .bee-icon {
-    display: flex;
-    align-items: center;
-    max-width: 3vw;
-    height: auto;
-    margin: -13.5vh 75.5%;
-  }
-  
-  .wrapper img {
-    position: absolute;
-    top: 20%;
-    right: 12%;
-    transform: translate(0, 30%);
-    width: 30vw;
-    height: auto;
-  }
-  
-  /* Caixas de Entrada */
-  .wrapper .input-box, .categoria {
-    position: relative;
-    width: 40%;
-    height: 6vh;
-    background-color: #f3d0c9;
-    border-radius: 5px;
-    margin: 3vh 0;
-    box-sizing: border-box;
-  }
-  
-  .input-box input, .categoria select {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    padding: 1.5vh 4%;
-    font-size: 1.2vw;
-  }
-  
-  .categoria select {
-    height: 120%;
-    border-radius: 5px;
-    background-color: #f3d0c9;
-  }
-  
-  /* Botões */
-  .wrapper button {
-    width: 40%;
-    height: 5vh;
-    font-size: 1.2vw;
-    color: #ffff;
-    background: #6C21B7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 5px;
-    margin: 3vh 0;
-  }
-  
-  .icon {
-    margin-right: 1vw;
-    font-size: 2vw;
-  }
-  
-  /* Links de Registro */
-  .wrapper .register-link {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2vw;
-  }
-  
-  /* Margens para inputs dentro de labels */
-  .wrapper label input {
-    margin-right: 4px;
-  }
+/* Instrução de perfil */
+.perfis {
+  font-size: 1.5vw; /* Tamanho da fonte */
+  margin-right: 61%;
+}
+
+/* Cabeçalhos de entrada */
+h4 {
+  max-width: 20vw; /* Largura máxima */
+  text-align: left; /* Alinhamento do texto */
+  font-size: 1.5vw; /* Tamanho da fonte */
+  margin: 3vh 0; /* Margens */
+  color: black; /* Cor do texto */
+}
+
+/* Ícones e Imagens */
+.bee-icon {
+  display: flex;
+  align-items: center;
+  max-width: 3vw;
+  height: auto;
+  margin: -18vh 75.5%; /* Ajuste conforme necessário */
+}
+
+/* Imagem principal */
+img {
+  position: absolute;
+  top: 20%;
+  right: 12%;
+  transform: translate(0, 30%);
+  width: 30vw;
+  height: auto;
+}
+
+/* Grupo de Botões */
+
+/* Estilização do grupo de cards */
+.button-group {
+  display: flex; /* Usar flexbox para alinhar os botões */
+  gap: 0; /* Remove o espaço entre os botões */
+  width: 20vw;
+  margin-left: 7%;
+}
+
+.btn {
+  padding: 5px; 
+  border-radius: 10px; 
+  border: 2px solid black; 
+  color: #000000; 
+  font-weight: bold; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+  text-align: center;
+  height: 7vh;
+  margin-top: -2%;
+}
+
+
+
+/* Caixas de Entrada */
+.input-box {
+  position: relative;
+  width: 40%;
+  height: 6vh;
+  background-color: #FFB09F;
+  border-radius: 5px;
+  margin: 1vh 0;
+  box-sizing: border-box;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 1.5vh 4%;
+  font-size: 1.2vw;
+}
+
+/* Botões */
+button {
+  width: 40%;
+  height: 5vh;
+  font-size: 1.5vw;
+  color: #ffff;
+  background: #6C21B7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  margin: 3vh 0;
+}
+
+.Criar {
+  position: absolute; /* Define a posição como absoluta para posicionamento personalizado */
+  right: 5%; /* Define a posição à direita como 5% da largura da janela de visualização */
+  width: 13%; /* Define a largura como 13% da largura do contêiner pai */
+  height: 6vh; /* Define a altura como 6% da altura da janela de visualização */
+  font-size: 1.5vw; /* Define o tamanho da fonte */
+  color: #ffff; /* Define a cor do texto */
+  background: #6C21B7; /* Define a cor de fundo */
+  border: none; /* Remove a borda */
+  border-radius: 5px; /* Adiciona bordas arredondadas */
+  font-weight: 700; /* Define o peso da fonte como negrito */
+}
+
+/* Links de Registro */
+.register-link {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2vw;
+}
+
+/* Margens para inputs dentro de labels */
+label input {
+  margin-right: 4px;
+}
