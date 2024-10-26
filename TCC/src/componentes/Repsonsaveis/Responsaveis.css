@@ -6,13 +6,15 @@
   gap: 20px;
   justify-content: space-between;
   align-items: flex-start;
-  position: relative; /* Para posicionar o card de feedback de forma absoluta */
+  position: relative;
 }
 
+/* Fileiras de cards */
 .first-row, .second-row, .third-row, .fourth-row {
   display: flex;
   width: calc(100% - 350px); /* Mantém espaço para o card de feedback */
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 /* Card de feedback */
@@ -46,12 +48,14 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 280px;
-  height: 160px;
+  min-height: 160px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   font-family: 'Arial', sans-serif;
   transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 /* Efeito hover nos cards */
@@ -99,18 +103,43 @@
   font-size: 16px;
   text-align: center;
 }
+
+/* Conteúdo do card */
 .card-content {
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
 }
+
 .card-details {
   flex: 1;
   text-align: left;
 }
+
 .card-icon {
   width: 60px;
   height: 60px;
-  margin-left: 10px;  /* Espaçamento entre o texto e a imagem */
+  margin-left: 10px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .indicators-page {
+    flex-direction: column; /* Empilha os cards em uma coluna */
+    align-items: center; /* Centraliza os cards */
+  }
+
+  .first-row, .second-row, .third-row, .fourth-row, .feedback {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .indicator-card {
+    width: 90%; /* Deixa o card ocupar quase toda a largura do container */
+    max-width: 350px; /* Limita a largura do card */
+    margin-bottom: 20px; /* Espaçamento entre os cards empilhados */
+  }
 }
