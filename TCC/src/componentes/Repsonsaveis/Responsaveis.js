@@ -2,6 +2,9 @@ import React from 'react';
 import './Responsaveis.css';
 import leftImage from './elements/imagem1.png';
 import rightImage from './elements/imagem2.png';
+import atividades from './elements/quantidades.png'
+import concluidas from './elements/concluidos.png'
+import desempenho from './elements/desempenho.png'
 
 export default function Responsaveis() {
   return (
@@ -21,20 +24,39 @@ export default function Responsaveis() {
 
       <div className="dashboard">
         <div className="grid-container">
+
           <div className="indicator-card card-1">
-            <h3>Quandidade de Atividades</h3>
-            <p>50</p>
-            <a href="#">Ver Aividades</a>
+            <div className="card-content">
+            <div className="card-text">
+                <h3>Quandidade de Atividades</h3>
+                <p>50</p>
+                <a href="#">Ver Aividades</a>
+              </div>
+              <img src={atividades} alt="Quantidades" className="card-icon" />
+            </div>
           </div>
+
           <div className="indicator-card card-2">
-            <h3>Atividades Concluídas</h3>
-            <p>25</p>
-            <a href="#">Ver Atividades</a>
+            <div className="card-content">
+            <div className="card-text">
+                <h3>Atividades Concluídas</h3>
+                <p>25</p>
+                <a href="#">Ver Atividades</a>
+              </div>
+              <img src={concluidas} alt="Concluídas" className="card-icon" />
+            </div>
           </div>
+
+
           <div className="indicator-card card-3">
-            <h3>Desempenho</h3>
-            <p>50%</p>
-            <a href="#">Ver Desempenho</a>
+            <div className="card-content">
+            <div className="card-text">
+                <h3>Desempenho</h3>
+                <p>50%</p>
+                <a href="#">Ver Desempenho</a>
+              </div>
+              <img src={desempenho} alt="Desempenho" className="card-icon" />
+            </div>
           </div>
 
           <div className="indicator-card card-4">
