@@ -87,6 +87,11 @@
 
 .card-4 {
   grid-column: span 2;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .card-5 {
@@ -105,16 +110,40 @@
 .card-content {
   display: flex;
   align-items: center;
-}
-
-.card-icon {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
+  justify-content: space-between; /* Move a imagem para a direita */
 }
 
 .card-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+/* Ajuste do tamanho da imagem e espaçamento à esquerda */
+.card-icon {
+  width: 30%; /* Aumenta o tamanho da imagem */
+  margin-left: 10px; /* Adiciona espaço entre o texto e a imagem */
+}
+
+/* Estilo para os links nos cards */
+.indicator-card a {
+  color: black; /* Define a cor preta */
+}
+
+/* Estilo hover para os links */
+.indicator-card a:hover {
+  color: #555; /* Coloque uma cor mais clara para o efeito hover, se desejar */
+  text-decoration: underline; /* Adiciona o sublinhado ao passar o mouse */
+}
+
+.responsive-image {
+  width: 100%; /* A imagem ocupará 100% da largura do card */
+  height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+}
+
+/* Ajustes adicionais para telas menores */
+@media (max-width: 768px) {
+  .responsive-image {
+    max-width: 100%; /* Para telas pequenas, a imagem ocupa o card por completo */
+  }
 }

@@ -2,9 +2,10 @@ import React from 'react';
 import './Responsaveis.css';
 import leftImage from './elements/imagem1.png';
 import rightImage from './elements/imagem2.png';
-import atividades from './elements/quantidades.png'
-import concluidas from './elements/concluidos.png'
-import desempenho from './elements/desempenho.png'
+import atividades from './elements/quantidades.png';
+import concluidas from './elements/concluidos.png';
+import desempenho from './elements/desempenho.png';
+import perguntas from './elements/perguntas.png';
 
 export default function Responsaveis() {
   return (
@@ -24,14 +25,13 @@ export default function Responsaveis() {
 
       <div className="dashboard">
         <div className="grid-container">
-
           <div className="indicator-card card-1">
             <div className="card-content">
-            <div className="card-text">
-                <h3>Quandidade de Atividades</h3>
-                <p>50</p>
-                <a href="#">Ver Aividades</a>
-              </div>
+              <div className="card-text">
+                  <h3>Quandidade de Atividades</h3>
+                  <p>50</p>
+                  <a href="#">Ver Aividades</a>
+                </div>
               <img src={atividades} alt="Quantidades" className="card-icon" />
             </div>
           </div>
@@ -46,8 +46,7 @@ export default function Responsaveis() {
               <img src={concluidas} alt="Concluídas" className="card-icon" />
             </div>
           </div>
-
-
+        
           <div className="indicator-card card-3">
             <div className="card-content">
             <div className="card-text">
@@ -59,11 +58,17 @@ export default function Responsaveis() {
             </div>
           </div>
 
+          {/*
           <div className="indicator-card card-4">
             <h3>Perguntas Respondidas</h3>
             <p>150</p>
             <a href="#">Ver mais</a>
           </div>
+          */}
+          <div className="indicator-card card-4">
+            <img src={perguntas} alt="Perguntas Respondidas" className="responsive-image" />
+          </div>
+
           <div className="indicator-card card-5">
             <h3>Calendário</h3>
             <p>Próximos eventos</p>
