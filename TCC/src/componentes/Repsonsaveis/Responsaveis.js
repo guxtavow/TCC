@@ -5,9 +5,6 @@ import rightImage from './elements/imagem2.png';
 import atividades from './elements/quantidades.png';
 import concluidas from './elements/concluidos.png';
 import desempenho from './elements/desempenho.png';
-import perguntas from './elements/perguntas.png';
-import duvidas from './elements/duvidas.png';
-import feedback from './elements/feedback.png';
 
 
 
@@ -62,15 +59,10 @@ export default function Responsaveis() {
             </div>
           </div>
 
-          {/*
           <div className="indicator-card card-4">
             <h3>Perguntas Respondidas</h3>
             <p>150</p>
             <a href="#">Ver mais</a>
-          </div>
-          */}
-          <div className="indicator-card card-4">
-            <img src={perguntas} alt="Perguntas Respondidas" className="responsive-image" />
           </div>
 
           <div className="indicator-card card-5">
@@ -79,7 +71,6 @@ export default function Responsaveis() {
             <a href="#">Acessar</a>
           </div>
 
-          {/*
           <div className="indicator-card card-6">
             <h3>Dúvidas</h3>
             <p>5</p>
@@ -89,14 +80,6 @@ export default function Responsaveis() {
           <div className="vertical-card">
             <h3>Feedback</h3>
             <p>Sugestões e mais</p>
-          </div>
-       */}
-          <div className="indicator-card card-6">
-            <img src={duvidas} alt="Dúvidas" className="responsive-image" />
-          </div>
-
-          <div className="vertical-card">
-            <img src={feedback} alt="Feedback" className="responsive-image" />
           </div>
         </div>
       </div>

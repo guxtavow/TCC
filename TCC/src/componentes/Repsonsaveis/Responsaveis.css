@@ -87,11 +87,6 @@
 
 .card-4 {
   grid-column: span 2;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
 }
 
 .card-5 {
@@ -134,18 +129,4 @@
 .indicator-card a:hover {
   color: #555; /* Coloque uma cor mais clara para o efeito hover, se desejar */
   text-decoration: underline; /* Adiciona o sublinhado ao passar o mouse */
-}
-
-.card-6, .vertical-card {
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-/* Ajustes adicionais para telas menores */
-@media (max-width: 768px) {
-  .responsive-image {
-    max-width: 100%; /* Para telas pequenas, a imagem ocupa o card por completo */
-  }
 }
