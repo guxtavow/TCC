@@ -5,8 +5,7 @@ import rightImage from './elements/imagem2.png';
 import atividades from './elements/quantidades.png';
 import concluidas from './elements/concluidos.png';
 import desempenho from './elements/desempenho.png';
-
-
+import Calendar from './Calendar/Calendar';
 
 export default function Responsaveis() {
   return (
@@ -29,17 +28,17 @@ export default function Responsaveis() {
           <div className="indicator-card card-1">
             <div className="card-content">
               <div className="card-text">
-                  <h3>Quandidade de Atividades</h3>
-                  <p>50</p>
-                  <a href="#">Ver Aividades</a>
-                </div>
+                <h3>Quandidade de Atividades</h3>
+                <p>50</p>
+                <a href="#">Ver Aividades</a>
+              </div>
               <img src={atividades} alt="Quantidades" className="card-icon" />
             </div>
           </div>
 
           <div className="indicator-card card-2">
             <div className="card-content">
-            <div className="card-text">
+              <div className="card-text">
                 <h3>Atividades Concluídas</h3>
                 <p>25</p>
                 <a href="#">Ver Atividades</a>
@@ -50,7 +49,7 @@ export default function Responsaveis() {
         
           <div className="indicator-card card-3">
             <div className="card-content">
-            <div className="card-text">
+              <div className="card-text">
                 <h3>Desempenho</h3>
                 <p>50%</p>
                 <a href="#">Ver Desempenho</a>
@@ -66,9 +65,7 @@ export default function Responsaveis() {
           </div>
 
           <div className="indicator-card card-5">
-            <h3>Calendário</h3>
-            <p>Próximos eventos</p>
-            <a href="#">Acessar</a>
+            <Calendar /> {/* Integrando o componente Calendar */}
           </div>
 
           <div className="indicator-card card-6">
@@ -83,9 +80,6 @@ export default function Responsaveis() {
           </div>
         </div>
       </div>
-
-
-
     </div>
   );
 }

@@ -1,0 +1,36 @@
+/* Calendar.css */
+
+/* Define a cor de fundo do calendário */
+.fc {
+    background-color: #236DB1; /* Cor de fundo do calendário */
+    color: white; /* Cor do texto */
+  }
+  
+  /* Estilos do cabeçalho do calendário */
+  .fc-toolbar {
+    background-color: #1A5D88; /* Cor de fundo do cabeçalho */
+    color: white; /* Cor do texto */
+  }
+  
+  /* Estilos para os dias do calendário */
+  .fc-daygrid-day {
+    color: white; /* Cor do texto dos dias */
+  }
+  
+  /* Estilos para os eventos */
+  .fc-event {
+    background-color: #1A5D88; /* Cor de fundo dos eventos */
+    color: white; /* Cor do texto dos eventos */
+    border: none; /* Remove a borda dos eventos */
+  }
+  
+  /* Estilos ao passar o mouse sobre os eventos */
+  .fc-event:hover {
+    background-color: #1E7BA1; /* Cor ao passar o mouse */
+  }
+  
+  /* Estilo para o texto do título do evento */
+  .fc-event-title {
+    color: white; /* Cor do texto do título do evento */
+  }
+  

@@ -91,6 +91,9 @@
 
 .card-5 {
   grid-column: span 1;
+  height: 100%; /* Faz o card ocupar toda a altura do container pai */
+  display: flex; /* Habilita o flexbox */
+  flex-direction: column; /* Alinha o conteúdo verticalmente */
 }
 
 .card-6 {
