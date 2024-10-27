@@ -104,6 +104,7 @@
   height: 100%; /* Faz o card ocupar toda a altura do container pai */
   display: flex; 
   flex-direction: column; /* Alinha o conteúdo verticalmente */
+  background-color: #236DB1;
 }
 
 .card-6 {

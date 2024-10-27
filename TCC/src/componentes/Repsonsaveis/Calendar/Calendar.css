@@ -10,7 +10,7 @@
 
 /* Estilos do cabeçalho do calendário */
 .fc-toolbar {
-    background-color: #1A5D88; /* Cor de fundo do cabeçalho */
+    background-color: #236DB1; /* Cor de fundo do cabeçalho */
     color: white; /* Cor do texto */
     font-size: 0.9em; /* Reduz o tamanho da fonte do cabeçalho */
 }
@@ -27,15 +27,8 @@
 
 /* Estilos para os eventos */
 .fc-event {
-    background-color: #1A5D88; /* Cor de fundo dos eventos */
     color: white; /* Cor do texto dos eventos */
     border: none; /* Remove a borda dos eventos */
-    border-radius: 5px; /* Bordas arredondadas para eventos */
-}
-
-/* Estilos ao passar o mouse sobre os eventos */
-.fc-event:hover {
-    background-color: #1E7BA1; /* Cor ao passar o mouse */
 }
 
 /* Estilo para o texto do título do evento */
