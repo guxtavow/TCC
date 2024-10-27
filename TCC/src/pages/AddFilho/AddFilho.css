@@ -1,0 +1,79 @@
+/* Estilos gerais do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10%;
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #fcfbfb;
+  }
+  
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+    color: #000000;
+    margin-top: 10%;
+    margin-left: 5%;
+  }
+  
+  #Circulo {
+    margin: 0 auto 20px;
+    width: 200px;
+  }
+  
+  h3 {
+    max-width: 20vw;
+    text-align: left;
+    font-size: 1.5vw;
+    margin: 3vh 0;
+    color: black;
+  }
+  
+  h4 {
+    margin-left: -93%;
+    color: black;
+  }
+  
+  h5 {
+    margin-left: -33%;
+    color: black;
+  }
+  
+  .Atividades {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+  }
+  
+  .frase {
+    font-size: 1.5vw;
+  }
+  
+  .add {
+    width: 13%;
+    height: 5vh;
+    font-size: 1.2vw;
+    color: #000000;
+    background: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    margin-left: 0.1%;
+    margin-top: 2%;
+    margin-block-end: 10%;
+  }
+  
+  .input-box {
+    width: 20%;
+    height: 6vh;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    margin: 1vh 0;
+    box-sizing: border-box;
+    margin-right: 10%;
+  }
+  

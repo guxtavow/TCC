@@ -10,26 +10,20 @@ import LoginScreen from './pages/LoginScreen/LoginScreen';
 import Cadastro from './pages/Cadastro/Cadastro';
 import Vantagens from './pages/Vantagens/vantagens';
 import Games from './pages/Games/Games';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import EditarResp from './pages/EditarResp/EditarResp';
+import EditarProf from './pages/EditarProf/EditarProf';
+import AddFilho from './pages/AddFilho/AddFilho';
+
 
 
 
 function App() {
   return (
-    <Router>
       <div className="App">
           <Header />
-            <Routes>  
-              <Route path="/" element={<Home />} />
-              <Route path="/responsaveis" element={<Responsaveis />} /> 
-              <Route path="/sobre" element={<Sobre />} />
-              <Route path="/vantagens" element={<Vantagens />} />
-              <Route path="/chatbot" element={<Chatbot />} />
-              <Route path="/Games" element={<Games />} />
-            </Routes>
+          <AddFilho />
           <Footer />
       </div>
-    </Router>
 
   );
 }
