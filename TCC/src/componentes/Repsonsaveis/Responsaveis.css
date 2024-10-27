@@ -93,6 +93,10 @@
 
 .card-4 {
   grid-column: span 2; /* Ocupa duas colunas */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #528FC7;
 }
 
 .card-5 {
@@ -139,4 +143,56 @@
 .indicator-card a:hover {
   color: #555; /* Cor para o efeito hover */
   text-decoration: underline; /* Adiciona o sublinhado ao passar o mouse */
+}
+.left-side {
+  width: 60%; /* Lado do gráfico */
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.perguntas-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.download-button {
+  background-color: #FAD85D;
+  color: #528FC7;
+  border: none;
+  border-radius: 12px; /* Bordas mais arredondadas */
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #ffca53; /* Tom mais escuro ao passar o mouse */
+}
+
+.year-button {
+  background-color: transparent; /* Fundo transparente */
+  color: #FFFFFF; /* Cor do texto branco */
+  border: 2px solid #525252; /* Borda mais arredondada com cor #525252 */
+  border-radius: 12px; /* Bordas arredondadas */
+  padding: 8px 12px; /* Ajuste de padding para o botão */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+}
+
+.year-button:hover {
+  background-color: #525252; /* Fundo escuro ao passar o mouse */
+  color: #FFFFFF; /* Manter a cor do texto branco */
 }

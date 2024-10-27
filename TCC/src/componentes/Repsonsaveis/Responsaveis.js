@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react'; // Adicione useState
 import './Responsaveis.css';
 import leftImage from './elements/imagem1.png';
 import rightImage from './elements/imagem2.png';
@@ -7,7 +7,16 @@ import concluidas from './elements/concluidos.png';
 import desempenho from './elements/desempenho.png';
 import Calendar from './Calendar/Calendar';
 
+import PerguntasGrafico from './PerguntasGrafico/PerguntasGrafico';
+import perguntasImage from './elements/perguntas.png';
+
 export default function Responsaveis() {
+  const [ano, setAno] = useState('2024'); // Mova o estado para dentro do componente
+
+  const handleDownload = () => {
+    alert('Baixar gráfico em Excel (implementar essa funcionalidade)');
+  };
+
   return (
     <div className="responsible-container">
       <div className="performance-indicator">
@@ -58,10 +67,22 @@ export default function Responsaveis() {
             </div>
           </div>
 
+          {/*Estrutura do Card 4*/}
           <div className="indicator-card card-4">
-            <h3>Perguntas Respondidas</h3>
-            <p>150</p>
-            <a href="#">Ver mais</a>
+            <div className="left-side">
+              <PerguntasGrafico />
+            </div>
+            <div className="right-side">
+              <div className="dropdown">
+              <select id="ano" value={ano} onChange={(e) => setAno(e.target.value)} className="year-button">
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+              </select>
+                <button onClick={handleDownload} className="download-button">Baixar Gráfico</button>
+              </div>
+              <img src={perguntasImage} alt="Perguntas" className="perguntas-image" />
+            </div>
           </div>
 
           <div className="indicator-card card-5">
