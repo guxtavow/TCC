@@ -22,19 +22,19 @@ export default function Responsaveis() {
       <div className="dashboard">
         <div className="grid-container">
           <div className="indicator-card card-1">
-            <h3>Atividades</h3>
-            <p>12</p>
-            <a href="#">Ver mais</a>
+            <h3>Quandidade de Atividades</h3>
+            <p>50</p>
+            <a href="#">Ver Aividades</a>
           </div>
           <div className="indicator-card card-2">
-            <h3>Concluídas</h3>
-            <p>8</p>
-            <a href="#">Ver mais</a>
+            <h3>Atividades Concluídas</h3>
+            <p>25</p>
+            <a href="#">Ver Atividades</a>
           </div>
           <div className="indicator-card card-3">
             <h3>Desempenho</h3>
-            <p>85%</p>
-            <a href="#">Ver mais</a>
+            <p>50%</p>
+            <a href="#">Ver Desempenho</a>
           </div>
 
           <div className="indicator-card card-4">
