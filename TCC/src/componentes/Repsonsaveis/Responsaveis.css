@@ -1,84 +1,7 @@
-/* Container principal dos indicadores */
-.indicators-page {
-  padding: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-  align-items: flex-start;
-  position: relative;
-}
-
-/* Fileiras de cards */
-.first-row, .second-row, .third-row, .fourth-row {
-  display: flex;
-  width: calc(100% - 350px); /* Mantém espaço para o card de feedback */
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-/* Card de feedback */
-.feedback {
-  width: 330px;
-  position: absolute;
-  top: 0;
-  right: 40px;
-  bottom: 0;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.feedback-card {
-  background-color: #ADD8E6;
-  width: 100%;
-  height: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  border-radius: 20px;
-  margin-top: 40px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo dos cards */
-.indicator-card {
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 280px;
-  min-height: 160px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  font-family: 'Arial', sans-serif;
-  transition: transform 0.3s, box-shadow 0.3s;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-/* Efeito hover nos cards */
-.indicator-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Cores específicas para cada card */
-.card-1 { background-color: #0BF4C8; }
-.card-2 { background-color: #FAD85D; }
-.card-3 { background-color: #F2A0FF; }
-.card-4 { background-color: #87CEEB; flex-grow: 1; margin-right: 20px; }
-.card-5 { background-color: #FFE4B5; width: 280px; }
-.card-6 { background-color: #2F4F4F; flex-grow: 1; }
-.card-7 { background-color: #DB7093; width: 280px; }
-.card-8 { background-color: #FFB6C1; width: 280px; }
-
-/* Ajuste para a seção de desempenho */
 .performance-indicator {
   padding: 20px;
-  border-radius: 8px;
   margin: 20px;
+  text-align: center;
 }
 
 .header-content {
@@ -91,7 +14,6 @@
 .header-content h3 {
   margin: 0 20px;
   font-size: 24px;
-  text-align: center;
 }
 
 .left-image, .right-image {
@@ -101,45 +23,70 @@
 
 .performance-indicator p {
   font-size: 16px;
-  text-align: center;
 }
 
-/* Conteúdo do card */
-.card-content {
+.responsible-container {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  flex-direction: column;
   align-items: center;
 }
 
-.card-details {
-  flex: 1;
+.dashboard {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 25px;
+}
+
+.dashboard h3, .dashboard p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.grid-container {
+  display: grid;
+  width: 100%;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 0.5fr;
+}
+
+/* Estilo geral dos cards */
+.indicator-card, .vertical-card {
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 15px;
+  transition: transform 0.5s ease;
 }
 
-.card-icon {
-  width: 60px;
-  height: 60px;
-  margin-left: 10px;
+.indicator-card:hover, .vertical-card:hover {
+  transform: translateY(-3.5px);
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-  .indicators-page {
-    flex-direction: column; /* Empilha os cards em uma coluna */
-    align-items: center; /* Centraliza os cards */
-  }
+/* Estilos específicos para cada posição de card */
+.card-1, .card-2, .card-3 {
+  grid-column: span 1;
+}
 
-  .first-row, .second-row, .third-row, .fourth-row, .feedback {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.card-4 {
+  grid-column: span 2;
+}
 
-  .indicator-card {
-    width: 90%; /* Deixa o card ocupar quase toda a largura do container */
-    max-width: 350px; /* Limita a largura do card */
-    margin-bottom: 20px; /* Espaçamento entre os cards empilhados */
-  }
+.card-5 {
+  grid-column: span 1;
+}
+
+.card-6 {
+  grid-column: span 3;
+}
+
+/* Card vertical na direita */
+.vertical-card {
+  grid-column: 4 / 5;
+  grid-row: 1 / 4;
 }
