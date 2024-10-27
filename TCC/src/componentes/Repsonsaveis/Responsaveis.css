@@ -136,11 +136,13 @@
   text-decoration: underline; /* Adiciona o sublinhado ao passar o mouse */
 }
 
-.responsive-image {
-  width: 100%; /* A imagem ocupará 100% da largura do card */
-  height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+.card-6, .vertical-card {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
-
 /* Ajustes adicionais para telas menores */
 @media (max-width: 768px) {
   .responsive-image {

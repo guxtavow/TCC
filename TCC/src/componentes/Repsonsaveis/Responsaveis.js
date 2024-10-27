@@ -6,6 +6,10 @@ import atividades from './elements/quantidades.png';
 import concluidas from './elements/concluidos.png';
 import desempenho from './elements/desempenho.png';
 import perguntas from './elements/perguntas.png';
+import duvidas from './elements/duvidas.png';
+import feedback from './elements/feedback.png';
+
+
 
 export default function Responsaveis() {
   return (
@@ -75,6 +79,7 @@ export default function Responsaveis() {
             <a href="#">Acessar</a>
           </div>
 
+          {/*
           <div className="indicator-card card-6">
             <h3>Dúvidas</h3>
             <p>5</p>
@@ -85,8 +90,19 @@ export default function Responsaveis() {
             <h3>Feedback</h3>
             <p>Sugestões e mais</p>
           </div>
+       */}
+          <div className="indicator-card card-6">
+            <img src={duvidas} alt="Dúvidas" className="responsive-image" />
+          </div>
+
+          <div className="vertical-card">
+            <img src={feedback} alt="Feedback" className="responsive-image" />
+          </div>
         </div>
       </div>
+
+
+
     </div>
   );
 }
