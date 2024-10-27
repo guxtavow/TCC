@@ -8,11 +8,11 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
 const PerguntasGrafico = () => {
   const data = {
-    labels: ['Respondidas', 'Em Aberto', 'Não Respondidas'],
+    labels: ['MySQL', 'Java', 'Python'],
     datasets: [
       {
-        label: 'Perguntas',
-        data: [150, 50, 20],
+        label: 'Linguagens',
+        data: [50, 30, 5],
         backgroundColor: ['#505050', '#949498', '#1C1C1C'], // Cores específicas para cada tipo de pergunta
         borderRadius: 8, // Arredondamento das barras
       },
@@ -30,7 +30,7 @@ const PerguntasGrafico = () => {
       },
       title: {
         display: true,
-        text: 'Perguntas Respondidas',
+        text: 'Linguagens mais utilizadas',
         align: 'start', // Alinhamento do título à esquerda
         color: 'white', // Cor do título
         font: {
@@ -43,10 +43,16 @@ const PerguntasGrafico = () => {
         grid: {
           display: false, // Remove as linhas de grade no eixo X
         },
+        ticks: {
+          color: '#000000', // Cor das etiquetas do eixo X (MySQL, Java, Python)
+        },
       },
       y: {
         grid: {
           display: false, // Remove as linhas de grade no eixo Y
+        },
+        ticks: {
+          color: '#000000', // Cor dos números no eixo Y
         },
       },
     },
