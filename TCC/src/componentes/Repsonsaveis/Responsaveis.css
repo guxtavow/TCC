@@ -1,3 +1,11 @@
+/* Container principal */
+.responsible-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Indicador de desempenho */
 .performance-indicator {
   padding: 20px;
   margin: 20px;
@@ -16,7 +24,8 @@
   font-size: 24px;
 }
 
-.left-image, .right-image {
+.left-image,
+.right-image {
   width: 40px;
   height: 40px;
 }
@@ -25,12 +34,7 @@
   font-size: 16px;
 }
 
-.responsible-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
+/* Dashboard */
 .dashboard {
   display: flex;
   justify-content: center;
@@ -38,66 +42,68 @@
   padding: 25px;
 }
 
-.dashboard h3, .dashboard p {
-  margin: 0px;
-  padding: 0px;
+.dashboard h3,
+.dashboard p {
+  margin: 0;
+  padding: 0;
 }
 
+/* Grade do dashboard */
 .grid-container {
   display: grid;
   width: 100%;
   gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr 0.5fr;
+  grid-template-columns: 1fr 1fr 1fr 0.5fr; /* Três cartões + um vertical */
 }
 
 /* Estilo geral dos cards */
-.indicator-card, .vertical-card {
+.indicator-card,
+.vertical-card {
   padding: 15px;
   background-color: #f5f5f5;
-  border-radius: 8px;
+  border-radius: 15px;
   text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  border-radius: 15px;
   transition: transform 0.5s ease;
 }
 
-.indicator-card:hover, .vertical-card:hover {
+.indicator-card:hover,
+.vertical-card:hover {
   transform: translateY(-3.5px);
 }
 
 /* Estilos específicos para cada posição de card */
-.card-1, .card-2, .card-3 {
-  grid-column: span 1;
-}
-
 .card-1 {
-  background-color: #0BF4C8;
+  grid-column: span 1;
+  background-color: #0BF4C8; /* Cor de fundo do cartão 1 */
 }
 
 .card-2 {
-  background-color: #FAD85D;
+  grid-column: span 1;
+  background-color: #FAD85D; /* Cor de fundo do cartão 2 */
 }
 
 .card-3 {
-  background-color: #F2A0FF;
+  grid-column: span 1;
+  background-color: #F2A0FF; /* Cor de fundo do cartão 3 */
 }
 
 .card-4 {
-  grid-column: span 2;
+  grid-column: span 2; /* Ocupa duas colunas */
 }
 
 .card-5 {
   grid-column: span 1;
   height: 100%; /* Faz o card ocupar toda a altura do container pai */
-  display: flex; /* Habilita o flexbox */
+  display: flex; 
   flex-direction: column; /* Alinha o conteúdo verticalmente */
 }
 
 .card-6 {
-  grid-column: span 3;
+  grid-column: span 3; /* Ocupa três colunas */
 }
 
 /* Card vertical na direita */
@@ -105,6 +111,8 @@
   grid-column: 4 / 5;
   grid-row: 1 / 4;
 }
+
+/* Conteúdo do card */
 .card-content {
   display: flex;
   align-items: center;
@@ -128,8 +136,7 @@
   color: black; /* Define a cor preta */
 }
 
-/* Estilo hover para os links */
 .indicator-card a:hover {
-  color: #555; /* Coloque uma cor mais clara para o efeito hover, se desejar */
+  color: #555; /* Cor para o efeito hover */
   text-decoration: underline; /* Adiciona o sublinhado ao passar o mouse */
 }
