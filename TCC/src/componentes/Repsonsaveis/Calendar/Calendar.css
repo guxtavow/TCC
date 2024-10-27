@@ -1,36 +1,49 @@
-/* Calendar.css */
-
-/* Define a cor de fundo do calendário */
+/* Define a largura e altura do calendário */
 .fc {
-    background-color: #236DB1; /* Cor de fundo do calendário */
-    color: white; /* Cor do texto */
-  }
-  
-  /* Estilos do cabeçalho do calendário */
-  .fc-toolbar {
+    background-color: #236DB1;
+    color: white; 
+    border-radius: 15px;
+    overflow: hidden; 
+    width: 100%;  /* Defina a largura fixa */
+    height: 100%; /* Defina a altura fixa */
+}
+
+/* Estilos do cabeçalho do calendário */
+.fc-toolbar {
     background-color: #1A5D88; /* Cor de fundo do cabeçalho */
     color: white; /* Cor do texto */
-  }
-  
-  /* Estilos para os dias do calendário */
-  .fc-daygrid-day {
+    font-size: 0.9em; /* Reduz o tamanho da fonte do cabeçalho */
+}
+
+/* Estilos para os dias do calendário */
+.fc-daygrid-day {
     color: white; /* Cor do texto dos dias */
-  }
-  
-  /* Estilos para os eventos */
-  .fc-event {
+}
+
+/* Adiciona uma borda para os dias quando são selecionados */
+.fc-daygrid-day.fc-day-selected {
+    background-color: rgba(255, 255, 255, 0.2); /* Leve destaque ao selecionar */
+}
+
+/* Estilos para os eventos */
+.fc-event {
     background-color: #1A5D88; /* Cor de fundo dos eventos */
     color: white; /* Cor do texto dos eventos */
     border: none; /* Remove a borda dos eventos */
-  }
-  
-  /* Estilos ao passar o mouse sobre os eventos */
-  .fc-event:hover {
+    border-radius: 5px; /* Bordas arredondadas para eventos */
+}
+
+/* Estilos ao passar o mouse sobre os eventos */
+.fc-event:hover {
     background-color: #1E7BA1; /* Cor ao passar o mouse */
-  }
-  
-  /* Estilo para o texto do título do evento */
-  .fc-event-title {
+}
+
+/* Estilo para o texto do título do evento */
+.fc-event-title {
     color: white; /* Cor do texto do título do evento */
-  }
-  
+}
+
+/* Estilos para os dias da semana */
+.fc-daygrid-week-day {
+    color: white; /* Cor dos dias da semana */
+}
