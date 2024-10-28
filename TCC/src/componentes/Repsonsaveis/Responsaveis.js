@@ -2,6 +2,7 @@ import React, { useState } from 'react'; // Adicione useState
 import './Responsaveis.css';
 import Calendar from './Calendar/Calendar';
 import PerguntasGrafico from './PerguntasGrafico/PerguntasGrafico';
+import FeedbackCard from './Feedback/FeedbackCard'; 
 
 import leftImage from './elements/imagem1.png';
 import rightImage from './elements/imagem2.png';
@@ -182,8 +183,9 @@ export default function Responsaveis() {
           </div>
 
           <div className="vertical-card">
-            <h3>Feedback</h3>
-            <p>Sugestões e mais</p>
+            <h3>TESTE FEEDBACK</h3>
+            {/* <FeedbackCard />*/}
+            <FeedbackCard />
           </div>
         </div>
       </div>
