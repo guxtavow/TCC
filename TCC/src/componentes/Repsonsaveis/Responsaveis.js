@@ -12,6 +12,7 @@ import desempenho from './elements/desempenho.png';
 import perguntasImage from './elements/perguntas.png';
 import perfil from './elements/perfil.png'
 import filho from './elements/filho.png'
+import duvidas from './elements/duvidas.png';
 
 export default function Responsaveis() {
   const [ano, setAno] = useState('2024'); // Mova o estado para dentro do componente
@@ -179,6 +180,17 @@ export default function Responsaveis() {
                 <a href="#">Adicionar</a>
               </div>
               <img src={filho} alt="Adicionar Perfil" className="card-icon" />
+            </div>
+          </div>
+
+          {/* Novo Card 9 */}
+          <div className="indicator-card card-9">
+            <div className="card-content">
+              <div className="card-text">
+                <h3>Dúvidas</h3>
+                <a href="#">Ver dúvidas</a>
+              </div>
+              <img src={duvidas} alt="Duvidas" className="card-icon" />
             </div>
           </div>
 

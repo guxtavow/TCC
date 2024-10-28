@@ -108,6 +108,10 @@
   background-color: #F2A0FF;
 }
 
+.card-9 {
+  background-color: #FCDF78; /* Use a mesma cor do card 8 ou personalize */
+}
+
 .vertical-card {
   grid-column: 4;
   grid-row: 1 / 5;
@@ -116,7 +120,7 @@
 .card-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .card-text {
