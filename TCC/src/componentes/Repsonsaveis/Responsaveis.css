@@ -1,11 +1,9 @@
-/* Container principal */
 .responsible-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Indicador de desempenho */
 .performance-indicator {
   padding: 20px;
   margin: 20px;
@@ -34,7 +32,6 @@
   font-size: 16px;
 }
 
-/* Dashboard */
 .dashboard {
   display: flex;
   justify-content: center;
@@ -48,16 +45,14 @@
   padding: 0;
 }
 
-/* Grade do dashboard */
 .grid-container {
   display: grid;
   width: 100%;
   gap: 10px;
-  grid-template-columns: repeat(4, 1fr); /* Quatro colunas iguais */
+  grid-template-columns: repeat(4, 1fr);
 }
 
-/* Estilo geral dos cards */
-.indicator-card{
+.indicator-card {
   padding: 15px;
   background-color: #f5f5f5;
   border-radius: 15px;
@@ -74,21 +69,20 @@
   transform: translateY(-3.5px);
 }
 
-/* Estilos específicos para cada posição de card */
 .card-1 {
-  background-color: #0BF4C8; /* Cor de fundo do cartão 1 */
+  background-color: #0BF4C8;
 }
 
 .card-2 {
-  background-color: #FAD85D; /* Cor de fundo do cartão 2 */
+  background-color: #FAD85D;
 }
 
 .card-3 {
-  background-color: #F2A0FF; /* Cor de fundo do cartão 3 */
+  background-color: #F2A0FF;
 }
 
 .card-4 {
-  grid-column: span 2; /* Ocupa duas colunas */
+  grid-column: span 2;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -96,35 +90,33 @@
 }
 
 .card-5 {
-  height: 100%; /* Faz o card ocupar toda a altura do container pai */
+  height: 100%;
   display: flex; 
-  flex-direction: column; /* Alinha o conteúdo verticalmente */
+  flex-direction: column; 
   background-color: #236DB1;
 }
 
 .card-6 {
-  grid-column: span 3; /* Ocupa três colunas */
+  grid-column: span 3;
 }
 
 .card-7 {
-  background-color: #F2A0FF; /* Cor de fundo do cartão 7 */
+  background-color: #F2A0FF;
 }
 
 .card-8 {
-  background-color: #F2A0FF; /* Cor de fundo do cartão 8 */
+  background-color: #F2A0FF;
 }
 
-/* Card vertical na direita */
 .vertical-card {
-  grid-column: 4; /* Continua na coluna 4 */
-  grid-row: 1 / 5; /* Certifique-se de que ocupa o espaço verticalmente */
+  grid-column: 4;
+  grid-row: 1 / 5;
 }
 
-/* Conteúdo do card */
 .card-content {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Move a imagem para a direita */
+  justify-content: space-between;
 }
 
 .card-text {
@@ -133,25 +125,22 @@
   align-items: flex-start;
 }
 
-/* Ajuste do tamanho da imagem e espaçamento à esquerda */
 .card-icon {
-  width: 30%; /* Aumenta o tamanho da imagem */
-  margin-left: 10px; /* Adiciona espaço entre o texto e a imagem */
+  width: 30%;
+  margin-left: 10px;
 }
 
-/* Estilo para os links nos cards */
 .indicator-card a {
-  color: black; /* Define a cor preta */
+  color: black;
 }
 
 .indicator-card a:hover {
-  color: #555; /* Cor para o efeito hover */
-  text-decoration: underline; /* Adiciona o sublinhado ao passar o mouse */
+  color: #555;
+  text-decoration: underline;
 }
 
-/* Estilo do gráfico e conteúdo do card */
 .left-side {
-  width: 60%; /* Lado do gráfico */
+  width: 60%;
 }
 
 .right-side {
@@ -159,7 +148,6 @@
   flex-direction: column;
 }
 
-/* Estilos do dropdown e imagens */
 .dropdown {
   display: flex;
   align-items: center;
@@ -172,12 +160,11 @@
   height: auto;
 }
 
-/* Estilo do botão de download */
 .download-button {
   background-color: #FAD85D;
   color: #528FC7;
   border: none;
-  border-radius: 12px; /* Bordas mais arredondadas */
+  border-radius: 12px;
   padding: 8px 16px;
   font-size: 16px;
   cursor: pointer;
@@ -185,32 +172,30 @@
 }
 
 .download-button:hover {
-  background-color: #ffca53; /* Tom mais escuro ao passar o mouse */
+  background-color: #ffca53;
 }
 
-/* Estilo do botão de ano */
 .year-button {
-  background-color: transparent; /* Fundo transparente */
-  color: #FFFFFF; /* Cor do texto branco */
-  border: 2px solid #525252; /* Borda mais arredondada com cor #525252 */
-  border-radius: 12px; /* Bordas arredondadas */
-  padding: 8px 12px; /* Ajuste de padding para o botão */
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 2px solid #525252;
+  border-radius: 12px;
+  padding: 8px 12px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .year-button:hover {
-  background-color: #525252; /* Fundo escuro ao passar o mouse */
-  color: #FFFFFF; /* Manter a cor do texto branco */
+  background-color: #525252;
+  color: #FFFFFF;
 }
 
-/* Estilos da tabela */
 .chat-history {
   margin-top: 20px;
   padding: 15px;
   border-radius: 12px;
-  width: 100%; /* Faz a tabela ocupar 100% do espaço do card */
+  width: 100%;
 }
 
 .chat-header {
@@ -231,76 +216,72 @@
   margin-right: 10px;
 }
 
-/* Estilizando a tabela */
 .chat-table {
   width: 100%;
-  border-collapse: collapse; /* Remove espaços entre as células */
+  border-collapse: collapse;
   margin-top: 10px;
-  background-color: transparent; /* Fundo da tabela transparente */
-  border-radius: 15px; /* Bordas arredondadas para a tabela */
-  overflow: hidden; /* Garante que as bordas arredondadas sejam visíveis */
+  background-color: transparent;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .chat-table thead {
-  background-color: #8A8A8A; /* Cor de fundo do cabeçalho */
-  color: #ffffff; /* Cor do texto do cabeçalho */
+  background-color: #8A8A8A;
+  color: #ffffff;
 }
 
-/* Estilo do cabeçalho */
 .chat-table th {
-  background-color: #3F3F3F; /* Mude para a cor desejada (exemplo: verde) */
-  color: white; /* Cor do texto do cabeçalho */
+  background-color: #3F3F3F;
+  color: white;
 }
 
-/* Estilo ao passar o mouse */
 .chat-table th:hover {
-  background-color: #8A8A8A; /* Cor de fundo ao passar o mouse */
-  color: black; /* Cor do texto ao passar o mouse */
+  background-color: #8A8A8A;
+  color: black;
 }
 
 .chat-table th, .chat-table td {
-  padding: 10px; /* Adiciona espaço interno nas células */
-  text-align: left; /* Alinha o texto à esquerda */
-  color: #FFFFFF; /* Cor do texto das informações gerais */
+  padding: 10px;
+  text-align: left;
+  color: #FFFFFF;
 }
 
 .chat-table tbody tr:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.1); /* Cor de fundo para linhas pares com transparência */
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .chat-table tbody tr:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Cor de fundo ao passar o mouse */
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .chat-table tr:nth-child(even) {
-  background-color: #f9f9f9; /* Reforça a cor de fundo das linhas pares */
+  background-color: #f9f9f9;
 }
 
 .chat-table tr:hover {
-  background-color: #f1f1f1; /* Cor de fundo ao passar o mouse */
+  background-color: #f1f1f1;
 }
 
-/* Estilo do card específico com a tabela */
 .indicator-card.card-6 {
-  background-color: #1B1B1B; /* Cor de fundo do card */
-  border-radius: 15px; /* Bordas mais arredondadas */
+  background-color: #1B1B1B;
+  border-radius: 15px;
 }
 
 .historico-chat {
-  color: #FFFFFF; /* Cor branca */
+  color: #FFFFFF;
 }
 
 .filter-dropdown {
-  border-radius: 12px; /* Bordas mais arredondadas */
-  padding: 10px; /* Espaço interno */
-  border: 1px solid #ccc; /* Cor da borda */
-  background-color: transparent; /* Fundo transparente */
-  color: white; /* Cor do texto */
-  width: auto; /* Ajusta ao conteúdo */
-  margin-right: 10px; /* Espaço entre o dropdown e o botão */
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  color: white;
+  width: auto;
+  margin-right: 10px;
 }
 
 .filter-dropdown option {
-  background-color: transparent; /* Fundo transparente das opções */
-  color: black; /* Cor do texto das opções */
+  background-color: transparent;
+  color: black;
 }
