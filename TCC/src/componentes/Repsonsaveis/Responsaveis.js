@@ -19,6 +19,19 @@ export default function Responsaveis() {
     alert('Baixar gráfico em Excel (implementar essa funcionalidade)');
   };
 
+  const [filter, setFilter] = useState(''); // Estado para o filtro
+
+  const handleDownloadChat = () => {
+    alert('Baixar histórico do chat (implementar essa funcionalidade)');
+  };
+
+  // Dados simulados para a tabela
+  const chatHistory = [
+    { id: 1, aluno: 'João Silva', date: '2024-10-01', duvida: 'Como acessar o material?' },
+    { id: 2, aluno: 'Maria Oliveira', date: '2024-10-02', duvida: 'Quando é a próxima prova?' },
+    { id: 3, aluno: 'Pedro Santos', date: '2024-10-03', duvida: 'Posso recuperar a nota?' },
+  ];
+
   return (
     <div className="responsible-container">
       <div className="performance-indicator">
@@ -92,9 +105,41 @@ export default function Responsaveis() {
           </div>
 
           <div className="indicator-card card-6">
-            <h3>Dúvidas</h3>
-            <p>5</p>
-            <a href="#">Ver todas</a>
+            <div className="chat-history">
+              <div className="chat-header">
+                <h3>Histórico do Chat</h3>
+                <div className="chat-filters">
+                  <input
+                    type="text"
+                    placeholder="Filtro"
+                    value={filter}
+                    onChange={(e) => setFilter(e.target.value)}
+                    className="filter-input"
+                  />
+                  <button onClick={handleDownloadChat} className="download-button">Baixar</button>
+                </div>
+              </div>
+              <table className="chat-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Aluno</th>
+                    <th>Date</th>
+                    <th>Dúvida</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {chatHistory.filter(chat => chat.aluno.toLowerCase().includes(filter.toLowerCase())).map(chat => (
+                    <tr key={chat.id}>
+                      <td>{chat.id}</td>
+                      <td>{chat.aluno}</td>
+                      <td>{chat.date}</td>
+                      <td>{chat.duvida}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <div className="indicator-card card-7">

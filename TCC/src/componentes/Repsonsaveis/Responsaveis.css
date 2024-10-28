@@ -53,7 +53,7 @@
   display: grid;
   width: 100%;
   gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr 0.5fr; /* Três cartões + um vertical */
+  grid-template-columns: repeat(4, 1fr); /* Quatro colunas iguais */
 }
 
 /* Estilo geral dos cards */
@@ -77,17 +77,14 @@
 
 /* Estilos específicos para cada posição de card */
 .card-1 {
-  grid-column: span 1;
   background-color: #0BF4C8; /* Cor de fundo do cartão 1 */
 }
 
 .card-2 {
-  grid-column: span 1;
   background-color: #FAD85D; /* Cor de fundo do cartão 2 */
 }
 
 .card-3 {
-  grid-column: span 1;
   background-color: #F2A0FF; /* Cor de fundo do cartão 3 */
 }
 
@@ -100,7 +97,6 @@
 }
 
 .card-5 {
-  grid-column: span 1;
   height: 100%; /* Faz o card ocupar toda a altura do container pai */
   display: flex; 
   flex-direction: column; /* Alinha o conteúdo verticalmente */
@@ -112,12 +108,10 @@
 }
 
 .card-7 {
-  grid-column: 2 / 3; /* Ocupa a coluna 2 */
   background-color: #F2A0FF; /* Cor de fundo do cartão 7 */
 }
 
 .card-8 {
-  grid-column: 3 / 4; /* Ocupa a coluna 3 */
   background-color: #F2A0FF; /* Cor de fundo do cartão 8 */
 }
 
@@ -155,6 +149,8 @@
   color: #555; /* Cor para o efeito hover */
   text-decoration: underline; /* Adiciona o sublinhado ao passar o mouse */
 }
+
+/* Estilo do gráfico e conteúdo do card */
 .left-side {
   width: 60%; /* Lado do gráfico */
 }
@@ -162,9 +158,9 @@
 .right-side {
   display: flex;
   flex-direction: column;
-
 }
 
+/* Estilos do dropdown e imagens */
 .dropdown {
   display: flex;
   align-items: center;
@@ -177,6 +173,7 @@
   height: auto;
 }
 
+/* Estilo do botão de download */
 .download-button {
   background-color: #FAD85D;
   color: #528FC7;
@@ -192,6 +189,7 @@
   background-color: #ffca53; /* Tom mais escuro ao passar o mouse */
 }
 
+/* Estilo do botão de ano */
 .year-button {
   background-color: transparent; /* Fundo transparente */
   color: #FFFFFF; /* Cor do texto branco */
@@ -206,4 +204,75 @@
 .year-button:hover {
   background-color: #525252; /* Fundo escuro ao passar o mouse */
   color: #FFFFFF; /* Manter a cor do texto branco */
+}
+
+/* Estilos da tabela */
+.chat-history {
+  margin-top: 20px;
+  background-color: #f5f5f5; /* Cor de fundo da tabela */
+  padding: 15px;
+  border-radius: 12px;
+  width: 100%; /* Faz a tabela ocupar 100% do espaço do card */
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-filters {
+  display: flex;
+  align-items: center;
+}
+
+.filter-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+/* Estilizando a tabela */
+.chat-table {
+  width: 100%;
+  border-collapse: collapse; /* Remove espaços entre as bordas das células */
+  margin-top: 10px;
+}
+
+.chat-table thead {
+  background-color: #505050; /* Cor de fundo do cabeçalho */
+  color: #ffffff; /* Cor do texto do cabeçalho */
+}
+
+.chat-table th, .chat-table td {
+  padding: 10px; /* Adiciona espaço interno nas células */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.chat-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Cor de fundo para linhas pares */
+}
+
+.chat-table tbody tr:hover {
+  background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
+}
+
+.chat-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Reforça a cor de fundo das linhas pares */
+}
+
+.chat-table tr:hover {
+  background-color: #f1f1f1; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo do card específico com a tabela */
+.indicator-card.card-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px; /* Adiciona espaço interno */
+  border-radius: 10px; /* Arredonda os cantos */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para destaque */
+  background-color: #f9f9f9; /* Cor de fundo do card */
 }
