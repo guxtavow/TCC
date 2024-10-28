@@ -9,7 +9,10 @@ CREATE TABLE usuario (
     tipo ENUM('Admin', 'Aluno') NOT NULL,
     data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
     nivel_atual ENUM('Inicial', 'Intermediário', 'Avançado') DEFAULT 'Inicial' NOT NULL,
-    ultimo_login DATETIME
+    ultimo_login DATETIME,
+    celular VARCHAR(15),
+    instituicao_ensino VARCHAR(100),
+    grau_parentesco VARCHAR(50)
 );
 
 -- Tabela Chat
