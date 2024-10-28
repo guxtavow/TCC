@@ -33,6 +33,17 @@ export default function Responsaveis() {
     { id: 4, aluno: 'Gustavo A.A.', date: '2024-10-04', duvida: 'Quando é a próxima prova?' },
     { id: 5, aluno: 'Jaqueline C.M.', date: '2024-10-05', duvida: 'Posso recuperar a nota?' },
   ];
+  
+  // Lista de alunos para o filtro
+  const alunos = [
+    { id: 1, nome: 'Ariel B.P.' },
+    { id: 2, nome: 'Maria Oliveira' },
+    { id: 3, nome: 'Pedro Santos' },
+    { id: 4, nome: 'Danilo N.D.' },
+    { id: 5, nome: 'Eduardo S.S.' },
+    { id: 6, nome: 'Gustavo A.A.' },
+    { id: 7, nome: 'Jaqueline C.M.' },
+  ];
 
   return (
     <div className="responsible-container">
@@ -109,18 +120,18 @@ export default function Responsaveis() {
           <div className="indicator-card card-6">
             <div className="chat-history">
               <div className="chat-header">
-              <h3 class="historico-chat">Histórico do chat</h3>
+                <h3 className="historico-chat">Histórico do chat</h3>
                 <div className="chat-filters">
-                <select
-                  value={filter}
-                  onChange={(e) => setFilter(e.target.value)}
-                  className="filter-dropdown"
-                >
-                  <option value="">Todos</option>
-                  <option value="João Silva">João Silva</option>
-                  <option value="Maria Oliveira">Maria Oliveira</option>
-                  <option value="Pedro Santos">Pedro Santos</option>
-                </select>
+                  <select
+                    value={filter}
+                    onChange={(e) => setFilter(e.target.value)}
+                    className="filter-dropdown"
+                  >
+                    <option value="">Todos</option>
+                    {alunos.map(aluno => (
+                      <option key={aluno.id} value={aluno.nome}>{aluno.nome}</option>
+                    ))}
+                  </select>
                   <button onClick={handleDownloadChat} className="download-button">Baixar</button>
                 </div>
               </div>
@@ -134,20 +145,21 @@ export default function Responsaveis() {
                   </tr>
                 </thead>
                 <tbody>
-                {chatHistory
-                  .filter(chat => chat.aluno.includes(filter)) // Filtrando com base na seleção do dropdown
-                  .map(chat => (
-                    <tr key={chat.id}>
-                      <td>{chat.id}</td>
-                      <td>{chat.aluno}</td>
-                      <td>{chat.date}</td>
-                      <td>{chat.duvida}</td>
-                    </tr>
-                ))}
+                  {chatHistory
+                    .filter(chat => filter === "" || chat.aluno.includes(filter)) // Filtrando com base na seleção do dropdown
+                    .map(chat => (
+                      <tr key={chat.id}>
+                        <td>{chat.id}</td>
+                        <td>{chat.aluno}</td>
+                        <td>{chat.date}</td>
+                        <td>{chat.duvida}</td>
+                      </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
           </div>
+
 
           <div className="indicator-card card-7">
             <div className="card-content">
