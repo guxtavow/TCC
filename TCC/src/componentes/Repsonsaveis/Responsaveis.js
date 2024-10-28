@@ -27,9 +27,11 @@ export default function Responsaveis() {
 
   // Dados simulados para a tabela
   const chatHistory = [
-    { id: 1, aluno: 'João Silva', date: '2024-10-01', duvida: 'Como acessar o material?' },
-    { id: 2, aluno: 'Maria Oliveira', date: '2024-10-02', duvida: 'Quando é a próxima prova?' },
-    { id: 3, aluno: 'Pedro Santos', date: '2024-10-03', duvida: 'Posso recuperar a nota?' },
+    { id: 1, aluno: 'Ariel B.P.', date: '2024-10-01', duvida: 'Como acessar o material?' },
+    { id: 2, aluno: 'Danilo N.D.', date: '2024-10-02', duvida: 'Quando é a próxima prova?' },
+    { id: 3, aluno: 'Eduardo S.S.', date: '2024-10-03', duvida: 'Posso recuperar a nota?' },
+    { id: 4, aluno: 'Gustavo A.A.', date: '2024-10-04', duvida: 'Quando é a próxima prova?' },
+    { id: 5, aluno: 'Jaqueline C.M.', date: '2024-10-05', duvida: 'Posso recuperar a nota?' },
   ];
 
   return (
@@ -107,15 +109,18 @@ export default function Responsaveis() {
           <div className="indicator-card card-6">
             <div className="chat-history">
               <div className="chat-header">
-                <h3>Histórico do Chat</h3>
+              <h3 class="historico-chat">Histórico do chat</h3>
                 <div className="chat-filters">
-                  <input
-                    type="text"
-                    placeholder="Filtro"
-                    value={filter}
-                    onChange={(e) => setFilter(e.target.value)}
-                    className="filter-input"
-                  />
+                <select
+                  value={filter}
+                  onChange={(e) => setFilter(e.target.value)}
+                  className="filter-dropdown"
+                >
+                  <option value="">Todos</option>
+                  <option value="João Silva">João Silva</option>
+                  <option value="Maria Oliveira">Maria Oliveira</option>
+                  <option value="Pedro Santos">Pedro Santos</option>
+                </select>
                   <button onClick={handleDownloadChat} className="download-button">Baixar</button>
                 </div>
               </div>
@@ -129,14 +134,16 @@ export default function Responsaveis() {
                   </tr>
                 </thead>
                 <tbody>
-                  {chatHistory.filter(chat => chat.aluno.toLowerCase().includes(filter.toLowerCase())).map(chat => (
+                {chatHistory
+                  .filter(chat => chat.aluno.includes(filter)) // Filtrando com base na seleção do dropdown
+                  .map(chat => (
                     <tr key={chat.id}>
                       <td>{chat.id}</td>
                       <td>{chat.aluno}</td>
                       <td>{chat.date}</td>
                       <td>{chat.duvida}</td>
                     </tr>
-                  ))}
+                ))}
                 </tbody>
               </table>
             </div>
