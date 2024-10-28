@@ -1,13 +1,12 @@
 import React from 'react';
 import { Pie } from 'react-chartjs-2';
 import { ArcElement, Tooltip, Legend, Chart } from 'chart.js'; 
+import ChartDataLabels from 'chartjs-plugin-datalabels'; // Importe o plugin
 import { Dropdown, Menu } from 'antd';
 import './FeedbackCard.css'; // Ajuste o caminho conforme necessário
 
-
-
 // Registre os elementos que você vai usar
-Chart.register(ArcElement, Tooltip, Legend);
+Chart.register(ArcElement, Tooltip, Legend, ChartDataLabels); // Registre o plugin
 
 const FeedbackCard = () => {
   // Dados do gráfico de pizza
@@ -22,6 +21,11 @@ const FeedbackCard = () => {
     ],
   };
 
+  // Valores dos jogos
+  const jogosConcluidos = pieData.datasets[0].data[0]; // 30
+  const jogosEmAndamento = pieData.datasets[0].data[1]; // 20
+  const jogosIniciados = pieData.datasets[0].data[2]; // 50
+
   // Configurações do gráfico
   const pieOptions = {
     responsive: true,
@@ -32,9 +36,19 @@ const FeedbackCard = () => {
         labels: {
           color: '#FFFFFF', // Cor da legenda
           font: {
-            size: 9, // Tamanho da fonte da legenda
+            size: 12, // Aumente o tamanho da fonte da legenda
           },
         },
+      },
+      datalabels: {
+        color: '#FFFFFF', // Cor dos rótulos
+        formatter: (value, context) => {
+          const total = context.chart._active.reduce((sum, {index}) => sum + context.chart.data.datasets[0].data[index], 0);
+          const percentage = ((value / total) * 100).toFixed(0); // Cálculo da porcentagem
+          return `${percentage}%`; // Retorna o valor em porcentagem
+        },
+        anchor: 'end', // Posiciona o rótulo no final do segmento
+        align: 'start', // Alinha o rótulo ao início
       },
     },
   };
@@ -62,9 +76,9 @@ const FeedbackCard = () => {
           <button className="dropdown-button">Selecionar Data</button>
         </Dropdown>
         <div className="counts">
-          <p>Jogos Concluídos: <strong>30</strong></p>
-          <p>Jogos em andamento: <strong>20</strong></p>
-          <p>Jogos iniciados: <strong>50</strong></p>
+          <p>Jogos Concluídos: <strong>{jogosConcluidos}</strong></p>
+          <p>Jogos em andamento: <strong>{jogosEmAndamento}</strong></p>
+          <p>Jogos iniciados: <strong>{jogosIniciados}</strong></p>
         </div>
       </div>
     </div>

@@ -57,8 +57,7 @@
 }
 
 /* Estilo geral dos cards */
-.indicator-card,
-.vertical-card {
+.indicator-card{
   padding: 15px;
   background-color: #f5f5f5;
   border-radius: 15px;
