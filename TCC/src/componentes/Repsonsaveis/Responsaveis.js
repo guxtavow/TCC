@@ -183,8 +183,6 @@ export default function Responsaveis() {
           </div>
 
           <div className="vertical-card">
-            <h3>TESTE FEEDBACK</h3>
-            {/* <FeedbackCard />*/}
             <FeedbackCard />
           </div>
         </div>

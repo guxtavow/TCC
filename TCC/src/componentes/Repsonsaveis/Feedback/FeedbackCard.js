@@ -1,8 +1,10 @@
-// FeedbackCard.js
 import React from 'react';
 import { Pie } from 'react-chartjs-2';
-import { ArcElement, Tooltip, Legend, Chart } from 'chart.js'; // Adicione Chart aqui
+import { ArcElement, Tooltip, Legend, Chart } from 'chart.js'; 
 import { Dropdown, Menu } from 'antd';
+import './FeedbackCard.css'; // Ajuste o caminho conforme necessário
+
+
 
 // Registre os elementos que você vai usar
 Chart.register(ArcElement, Tooltip, Legend);
@@ -14,7 +16,7 @@ const FeedbackCard = () => {
     datasets: [
       {
         data: [30, 20, 50],
-        backgroundColor: ['#4CAF50', '#FFC107', '#FF5722'],
+        backgroundColor: ['#3ABEFF', '#FF3C38', '#FFCF4D'], // Atualizadas as cores do gráfico
         borderWidth: 0,
       },
     ],
@@ -24,7 +26,16 @@ const FeedbackCard = () => {
   const pieOptions = {
     responsive: true,
     plugins: {
-      legend: { display: true, position: 'bottom' },
+      legend: {
+        display: true,
+        position: 'bottom',
+        labels: {
+          color: '#FFFFFF', // Cor da legenda
+          font: {
+            size: 9, // Tamanho da fonte da legenda
+          },
+        },
+      },
     },
   };
 
@@ -38,19 +49,19 @@ const FeedbackCard = () => {
   );
 
   return (
-    <div className="feedback-card" style={styles.cardContainer}>
+    <div className="feedback-card">
       {/* Parte Superior: Gráfico de Pizza */}
-      <div style={styles.pieContainer}>
-        <h3 style={styles.title}>Análise de Jogos</h3>
+      <div className="pie-container">
+        <h3 className="title">Análise de Jogos</h3>
         <Pie data={pieData} options={pieOptions} />
       </div>
 
       {/* Parte Inferior: Filtro de Data e Contadores */}
-      <div style={styles.statsContainer}>
+      <div className="stats-container">
         <Dropdown overlay={dateMenu} placement="bottomLeft">
-          <button style={styles.dropdownButton}>Selecionar Data</button>
+          <button className="dropdown-button">Selecionar Data</button>
         </Dropdown>
-        <div style={styles.counts}>
+        <div className="counts">
           <p>Jogos Concluídos: <strong>30</strong></p>
           <p>Jogos em andamento: <strong>20</strong></p>
           <p>Jogos iniciados: <strong>50</strong></p>
@@ -58,46 +69,6 @@ const FeedbackCard = () => {
       </div>
     </div>
   );
-};
-
-const styles = {
-  cardContainer: {
-    backgroundColor: '#1B1B1B',
-    padding: '20px',
-    borderRadius: '10px',
-    color: '#FFFFFF',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    width: '100%',
-    maxWidth: '400px',
-  },
-  pieContainer: {
-    width: '100%',
-    marginBottom: '20px',
-  },
-  title: {
-    color: '#FFFFFF',
-    textAlign: 'center',
-    marginBottom: '10px',
-  },
-  statsContainer: {
-    width: '100%',
-    textAlign: 'center',
-  },
-  dropdownButton: {
-    backgroundColor: '#333',
-    color: '#FFFFFF',
-    padding: '8px 16px',
-    border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
-    marginBottom: '15px',
-  },
-  counts: {
-    textAlign: 'left',
-    color: '#8A8A8A',
-  },
 };
 
 export default FeedbackCard;

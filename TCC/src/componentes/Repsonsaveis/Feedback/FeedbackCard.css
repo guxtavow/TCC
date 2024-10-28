@@ -1,0 +1,43 @@
+.feedback-card {
+    background-color: #528FC7; /* Cor de fundo atualizada */
+    padding: 50px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%; /* Ocupe toda a altura disponível */
+}
+
+.pie-container {
+    margin-bottom: 20px;
+    
+}
+
+.pie-container .title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.stats-container {
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown-button {
+    background-color: #333;
+    color: #FFFFFF;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    margin-top: 50%;
+
+}
+
+.counts {
+    text-align: left;
+    color: #333;
+    margin-top: 20px;
+}
