@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import './Cadastro.css'; // Importa o arquivo CSS para estilização
 import { FcGoogle } from "react-icons/fc"; // Importa o ícone do Google
 import logo2 from "./elements/login2.png"; // Importa uma imagem
 import GoogleIcon2 from "./elements/abelha2.png"; // Importa outra imagem
+import ApiCadastro from "./CadastroApi"; // Importe sua função de API
 
 const Cadastro = () => {
+    const [nome, setNome] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmar_senha, setConfirmarSenha] = useState("");
+    const [tipo_usuario, setTipoUsuario] = useState("");
+    const [celular, setCelular] = useState("");
+    
+    const handleSubmit = async (event) => {
+        event.preventDefault(); // Evita o comportamento padrão do formulário
+
+        const data = await ApiCadastro(nome, email, password, confirmar_senha, tipo_usuario, celular);
+
+        // Aqui você pode lidar com a resposta da API
+        if (data.mensagem) {
+            alert(data.mensagem); // Mostra a mensagem recebida da API
+        }
+    };
+
     return (
         <div className="wrapper"> {/* Contêiner principal da página */}
             <form action=""> {/* Início do formulário de cadastro */}
