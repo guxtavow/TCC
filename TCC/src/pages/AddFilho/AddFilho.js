@@ -18,9 +18,9 @@ export default function AddFilho() {
         <div>
             <form action="">
                 {/* Subtítulo */}
-                <h1> <LuPencilLine/> Adicionar Filho <LuPencilLine/></h1>
-                <h4>Nome:</h4>
-                <div className="input-box">
+                <h1 className='titulo3'> <LuPencilLine/> Adicionar Filho <LuPencilLine/></h1>
+                <h4 className='name2'>Nome:</h4>
+                <div className="input-box4">
                     <input 
                         type="text" 
                         placeholder="Edi Carlos Junior" 
@@ -28,8 +28,8 @@ export default function AddFilho() {
                     />
                 </div>
 
-                <h4>E-mail:</h4>
-                <div className="input-box">
+                <h4 className='email2'>E-mail:</h4>
+                <div className="input-box4">
                     <input 
                         type="text" 
                         placeholder="edicarlos@teste.com" 
@@ -37,16 +37,16 @@ export default function AddFilho() {
                     />
                 </div>
 
-                <h5>Data de Nascimento</h5>
-                <div className="input-box">
+                <h5 className='date'>Data de Nascimento</h5>
+                <div className="input-box4">
                     <input 
                         type="text" 
                         placeholder="30/06/2018" 
                         required 
                     />
                     </div>
-                <h4>Senha</h4>
-                <div className="input-box">
+                <h4 className='senha4'>Senha</h4>
+                <div className="input-box4">
                     <input 
                         type={showPassword ? "text" : "password"} 
                         placeholder="Insira uma Senha" 
@@ -56,9 +56,10 @@ export default function AddFilho() {
                         icon={showPassword ? faEyeSlash : faEye}
                         onClick={togglePasswordVisibility}
                         style={{
+                            color: 'black',
                             position: "absolute",
                             right: "74vw",
-                            top: "76.4%",
+                            top: "76.2%",
                             transform: "translateY(-50%)",
                             cursor: "pointer",
                         }}

@@ -19,8 +19,8 @@ export default function EditarResp() {
         <div>
             <form action="">
                 {/* Subtítulo */}
-                <h1> <LuPencilLine/>  Editar Informações <LuPencilLine/></h1>
-                <h4>Nome:</h4>
+                <h1 className='titulo1'> <LuPencilLine/>  Editar Informações <LuPencilLine/></h1>
+                <h4 className='name1'>Nome:</h4>
                 <div className="input-box">
                     <input 
                         type="text" 
@@ -29,7 +29,7 @@ export default function EditarResp() {
                     />
                 </div>
 
-                <h4>E-mail:</h4>
+                <h4 className='email1'>E-mail:</h4>
                 <div className="input-box">
                     <input 
                         type="text" 
@@ -38,7 +38,7 @@ export default function EditarResp() {
                     />
                 </div>
 
-                <h4>Celular:</h4>
+                <h4 className='celular1'>Celular:</h4>
                 <div className="input-box">
                     <input 
                         type="text" 
@@ -57,9 +57,10 @@ export default function EditarResp() {
                         icon={showPassword ? faEyeSlash : faEye}
                         onClick={togglePasswordVisibility}
                         style={{
+                            color: 'black',
                             position: "absolute",
-                            right: "34vw",
-                            top: "77.2%",
+                            right: "33vw",
+                            top: "76.5vh",
                             transform: "translateY(-50%)",
                             cursor: "pointer",
                         }}
@@ -76,9 +77,10 @@ export default function EditarResp() {
                         icon={showPassword ? faEyeSlash : faEye}
                         onClick={togglePasswordVisibility}
                         style={{
+                            color: 'black',
                             position: "absolute",
-                            right: "34vw",
-                            top: "91.2%",
+                            right: "33vw",
+                            top: "90.5%",
                             transform: "translateY(-50%)",
                             cursor: "pointer",
                         }}
@@ -96,9 +98,10 @@ export default function EditarResp() {
                         icon={showPassword ? faEyeSlash : faEye}
                         onClick={togglePasswordVisibility}
                         style={{
+                            color: 'black',
                             position: "absolute",
-                            right: "34vw",
-                            top: "105%",
+                            right: "33vw",
+                            top: "104vh",
                             transform: "translateY(-50%)",
                             cursor: "pointer",
                         }}
@@ -106,9 +109,9 @@ export default function EditarResp() {
                 </div>                
                 <div className='card'>
                 <img src={Circulo} alt='forma' id='Circulo' style={{ width: '200px'}} />
-                <h2>Ed Carlos <LuPencilLine /></h2>
+                <h2 className='pessoa1'>Ed Carlos <LuPencilLine /></h2>
                 {/* Campos de entrada de dados */}
-                <h3>Você é?</h3>
+                <h3 className='quem1'>Você é?</h3>
                 <div className="input-box1">
                     <input 
                         type="text" 
