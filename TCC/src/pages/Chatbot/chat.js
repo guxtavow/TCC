@@ -106,8 +106,8 @@ export default function Chatbot(){
                 }}
                      >
                     <div className='ChatBox'>
-                        <div className='chat-messages'>
-                            <button onClick={LimparChat} title='Limpar Chat' className='botao-limpar'>{refresh}</button>
+                    <button onClick={LimparChat} title='Limpar Chat' className='botao-limpar'>{refresh}</button>
+                        <div className='chat-messages'>                
                             {chatMessages.map((msg, index) => (
                                 <div key={index} className={msg.sender === 'chatbot' ? 'bot-message' : 'user-message'} >
                                     {msg.message}
