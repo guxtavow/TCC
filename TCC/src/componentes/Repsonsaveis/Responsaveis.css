@@ -111,10 +111,20 @@
   grid-column: span 3; /* Ocupa três colunas */
 }
 
+.card-7 {
+  grid-column: 2 / 3; /* Ocupa a coluna 2 */
+  background-color: #0BF4C8; /* Cor de fundo do cartão 7 */
+}
+
+.card-8 {
+  grid-column: 3 / 4; /* Ocupa a coluna 3 */
+  background-color: #FAD85D; /* Cor de fundo do cartão 8 */
+}
+
 /* Card vertical na direita */
 .vertical-card {
-  grid-column: 4 / 5;
-  grid-row: 1 / 4;
+  grid-column: 4; /* Continua na coluna 4 */
+  grid-row: 1 / 5; /* Certifique-se de que ocupa o espaço verticalmente */
 }
 
 /* Conteúdo do card */

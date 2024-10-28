@@ -8,7 +8,11 @@
   /* Estilização do gráfico */
   .chart-container {
     position: relative;
-    width: 100%;
+    width: 100%; /* Mantenha o gráfico ocupando 100% do espaço disponível */
+    height: 500px; /* Defina uma altura fixa para o gráfico */
+    display: flex; /* Use flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza o gráfico horizontalmente */
+    align-items: center; /* Centraliza o gráfico verticalmente */
   }
   
   /* Estilo de cores das legendas */

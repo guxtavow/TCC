@@ -95,6 +95,26 @@ export default function Responsaveis() {
             <a href="#">Ver todas</a>
           </div>
 
+          <div className="indicator-card card-7">
+            <div className="card-content">
+              <div className="card-text">
+                <h3>Editar Perfil</h3>
+                <a href="#">Editar</a>
+              </div>
+              <img src={perguntasImage} alt="Editar Perfil" className="card-icon" />
+            </div>
+          </div>
+
+          <div className="indicator-card card-8">
+            <div className="card-content">
+              <div className="card-text">
+                <h3>Adicionar Perfil</h3>
+                <a href="#">Adicionar</a>
+              </div>
+              <img src={perguntasImage} alt="Adicionar Perfil" className="card-icon" />
+            </div>
+          </div>
+
           <div className="vertical-card">
             <h3>Feedback</h3>
             <p>Sugestões e mais</p>

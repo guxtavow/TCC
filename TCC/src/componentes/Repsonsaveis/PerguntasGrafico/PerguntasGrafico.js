@@ -20,7 +20,7 @@ const PerguntasGrafico = () => {
   };
 
   const options = {
-    responsive: true,
+    responsive: true, // Mantém o gráfico em tamanho fixo
     plugins: {
       legend: {
         position: 'top',
