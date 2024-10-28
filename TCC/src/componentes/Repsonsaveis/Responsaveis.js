@@ -1,14 +1,16 @@
 import React, { useState } from 'react'; // Adicione useState
 import './Responsaveis.css';
+import Calendar from './Calendar/Calendar';
+import PerguntasGrafico from './PerguntasGrafico/PerguntasGrafico';
+
 import leftImage from './elements/imagem1.png';
 import rightImage from './elements/imagem2.png';
 import atividades from './elements/quantidades.png';
 import concluidas from './elements/concluidos.png';
 import desempenho from './elements/desempenho.png';
-import Calendar from './Calendar/Calendar';
-
-import PerguntasGrafico from './PerguntasGrafico/PerguntasGrafico';
 import perguntasImage from './elements/perguntas.png';
+import perfil from './elements/perfil.png'
+import filho from './elements/filho.png'
 
 export default function Responsaveis() {
   const [ano, setAno] = useState('2024'); // Mova o estado para dentro do componente
@@ -101,7 +103,7 @@ export default function Responsaveis() {
                 <h3>Editar Perfil</h3>
                 <a href="#">Editar</a>
               </div>
-              <img src={perguntasImage} alt="Editar Perfil" className="card-icon" />
+              <img src={perfil} alt="Editar Perfil" className="card-icon" />
             </div>
           </div>
 
@@ -111,7 +113,7 @@ export default function Responsaveis() {
                 <h3>Adicionar Perfil</h3>
                 <a href="#">Adicionar</a>
               </div>
-              <img src={perguntasImage} alt="Adicionar Perfil" className="card-icon" />
+              <img src={filho} alt="Adicionar Perfil" className="card-icon" />
             </div>
           </div>
 

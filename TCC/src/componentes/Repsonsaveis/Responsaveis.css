@@ -113,12 +113,12 @@
 
 .card-7 {
   grid-column: 2 / 3; /* Ocupa a coluna 2 */
-  background-color: #0BF4C8; /* Cor de fundo do cartão 7 */
+  background-color: #F2A0FF; /* Cor de fundo do cartão 7 */
 }
 
 .card-8 {
   grid-column: 3 / 4; /* Ocupa a coluna 3 */
-  background-color: #FAD85D; /* Cor de fundo do cartão 8 */
+  background-color: #F2A0FF; /* Cor de fundo do cartão 8 */
 }
 
 /* Card vertical na direita */
