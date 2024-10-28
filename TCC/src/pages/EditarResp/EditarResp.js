@@ -1,10 +1,19 @@
 // Importa o arquivo CSS que contém os estilos da página
 import './EditarResp.css';
+import React, { useState } from "react";
 import Circulo from './elements/Circulo.png';
 import { LuPencilLine } from "react-icons/lu";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 // Cria um componente chamado Vantagens
 export default function EditarResp() {
+
+    const [showPassword, setShowPassword] = useState(false);
+
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
 
   return (
         <div>
@@ -37,6 +46,64 @@ export default function EditarResp() {
                         required 
                     />
                 </div>
+                <h4 className='Senha'>Senha Atual:</h4>
+                <div className="input-box2">
+                    <input 
+                        type={showPassword ? "text" : "password"} 
+                        placeholder="Insira sua Senha Atual" 
+                        required 
+                    />
+                    <FontAwesomeIcon
+                        icon={showPassword ? faEyeSlash : faEye}
+                        onClick={togglePasswordVisibility}
+                        style={{
+                            position: "absolute",
+                            right: "34vw",
+                            top: "77.2%",
+                            transform: "translateY(-50%)",
+                            cursor: "pointer",
+                        }}
+                    />
+                </div>                
+                <h4 className='Senha1'>Nova Senha:</h4>
+                <div className="input-box2">
+                    <input 
+                        type={showPassword ? "text" : "password"} 
+                        placeholder="Crie sua nova senha" 
+                        required 
+                    />
+                    <FontAwesomeIcon
+                        icon={showPassword ? faEyeSlash : faEye}
+                        onClick={togglePasswordVisibility}
+                        style={{
+                            position: "absolute",
+                            right: "34vw",
+                            top: "91.2%",
+                            transform: "translateY(-50%)",
+                            cursor: "pointer",
+                        }}
+                    />
+                </div>
+
+                <h4 className='Senha2'>Confirme sua Senha:</h4>
+                <div className="input-box2">
+                    <input 
+                        type={showPassword ? "text" : "password"} 
+                        placeholder="Confirme sua senha" 
+                        required 
+                    />
+                    <FontAwesomeIcon
+                        icon={showPassword ? faEyeSlash : faEye}
+                        onClick={togglePasswordVisibility}
+                        style={{
+                            position: "absolute",
+                            right: "34vw",
+                            top: "105%",
+                            transform: "translateY(-50%)",
+                            cursor: "pointer",
+                        }}
+                    />
+                </div>                
                 <div className='card'>
                 <img src={Circulo} alt='forma' id='Circulo' style={{ width: '200px'}} />
                 <h2>Ed Carlos <LuPencilLine /></h2>

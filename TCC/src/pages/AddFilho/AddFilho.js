@@ -1,9 +1,18 @@
 // Importa o arquivo CSS que contém os estilos da página
 import './AddFilho.css';
+import React, { useState } from "react";
 import { LuPencilLine } from "react-icons/lu";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 // Cria um componente chamado Vantagens
 export default function AddFilho() {
+
+    const [showPassword, setShowPassword] = useState(false);
+
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
 
   return (
         <div>
@@ -36,6 +45,25 @@ export default function AddFilho() {
                         required 
                     />
                     </div>
+                <h4>Senha</h4>
+                <div className="input-box">
+                    <input 
+                        type={showPassword ? "text" : "password"} 
+                        placeholder="Insira uma Senha" 
+                        required 
+                    />
+                    <FontAwesomeIcon
+                        icon={showPassword ? faEyeSlash : faEye}
+                        onClick={togglePasswordVisibility}
+                        style={{
+                            position: "absolute",
+                            right: "74vw",
+                            top: "76.4%",
+                            transform: "translateY(-50%)",
+                            cursor: "pointer",
+                        }}
+                    />
+                </div>                         
                 {/* Botão de envio */}
                 <button className='add' type="submit"><b>Adicionar</b></button>
                 <br />
