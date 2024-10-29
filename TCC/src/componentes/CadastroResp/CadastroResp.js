@@ -16,30 +16,6 @@ const CadastroProf = () => {
 
     return (
         <div>                    
-            {/* Instrução para seleção de perfil */}
-            <p className="perfis"><b>Escolha o perfil de acesso:</b></p>
-
-            {/* Botões de seleção de perfil */}
-                <div className="button-group">
-                    <button 
-                        className="btn"
-                        style={{ backgroundColor: professorBtnColor }} 
-                        onMouseEnter={() => setProfessorBtnColor('#FF8A6E')}
-                        onMouseLeave={() => setProfessorBtnColor('#FF5D3B')}
-                        onClick={() => console.log('Botão Professor clicado')}
-                    >
-                        Professor
-                    </button>
-                    <button 
-                        className="btn"
-                        style={{ backgroundColor: responsavelBtnColor }} 
-                        onMouseEnter={() => setResponsavelBtnColor('#FF8A6E')}
-                        onMouseLeave={() => setResponsavelBtnColor('#FF5D3B')}
-                        onClick={() => console.log('Botão Responsável clicado')}
-                    >
-                        Responsável
-                    </button>
-                </div>
             <form>
                 {/* Cabeçalho principal */}
                 <h1>
@@ -51,9 +27,34 @@ const CadastroProf = () => {
 
                 {/* Imagem principal */}
                 <img src={logo2} alt="foto" title="foto" />
+                
 
                 {/* Subtítulo */}
                 <h2>Crie sua conta agora</h2>
+                           {/* Instrução para seleção de perfil */}
+            <p className="perfis"><b>Escolha o perfil de acesso:</b></p>
+
+                {/* Botões de seleção de perfil */}
+                    <div className="button-group">
+                        <button 
+                            className="btn"
+                            style={{ backgroundColor: professorBtnColor }} 
+                            onMouseEnter={() => setProfessorBtnColor('#FF8A6E')}
+                            onMouseLeave={() => setProfessorBtnColor('#FF5D3B')}
+                            onClick={() => console.log('Botão Professor clicado')}
+                        >
+                            Professor
+                        </button>
+                        <button 
+                            className="btn"
+                            style={{ backgroundColor: responsavelBtnColor }} 
+                            onMouseEnter={() => setResponsavelBtnColor('#FF8A6E')}
+                            onMouseLeave={() => setResponsavelBtnColor('#FF5D3B')}
+                            onClick={() => console.log('Botão Responsável clicado')}
+                        >
+                            Responsável
+                        </button>
+                    </div>
 
                 {/* Campos de entrada de dados */}
                 <h4>Nome Completo *</h4>

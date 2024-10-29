@@ -11,7 +11,7 @@ import CadastroResp from './componentes/CadastroResp/CadastroResp'
 function App() {
   return (
     <div className="App">
-      <CadastroProf />
+      <CadastroResp />
     </div>
   );
 }
