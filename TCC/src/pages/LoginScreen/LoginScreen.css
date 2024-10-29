@@ -29,13 +29,15 @@ a{
     max-width: 15vw; /* Define a largura máxima como 15% da largura da janela de visualização */
     font-size: 2.5vw; /* Define o tamanho da fonte como 2.5% da largura da janela de visualização */
     color: #333333; /* Define a cor do texto */
-    margin: 1vh 3%; /* Define a margem superior e inferior como 1% da altura da janela de visualização e 3% nas laterais */
+    margin: 1vh 4%; /* Define a margem superior e inferior como 1% da altura da janela de visualização e 3% nas laterais */
 }
 
 /* Estiliza o subtítulo h2 */
 .wrapper h2 {
     font-size: 3.5vw; /* Define o tamanho da fonte como 3.5% da largura da janela de visualização */
     max-width: 25vw; /* Define a largura máxima como 25% da largura da janela de visualização */
+    text-align: left; /* Alinha o texto do h2 à esquerda */
+    margin-left: 0; /* Remove qualquer margem à esquerda */
 }
 
 /* Estiliza o subtítulo h3 */
@@ -59,6 +61,8 @@ a{
 .wrapper h5 {
     font-size: 2vw; /* Define o tamanho da fonte como 2% da largura da janela de visualização */
     max-width: 6vw; /* Define a largura máxima como 6% da largura da janela de visualização */
+    text-align: left; /* Alinha o texto do h2 à esquerda */
+    margin-left: 0; /* Remove qualquer margem à esquerda */
 }
 
 /* Estiliza as caixas de entrada */
@@ -119,12 +123,6 @@ a{
     align-items: center; /* Centraliza o conteúdo verticalmente */
     border: none; /* Remove a borda */
     border-radius: 5px; /* Adiciona bordas arredondadas */
-}
-
-/* Estiliza o ícone dentro do botão */
-.icon {
-    margin-right: 1vw; /* Adiciona uma margem à direita do ícone */
-    font-size: 2vw; /* Define o tamanho da fonte do ícone */
 }
 
 /* Estiliza o link para registro */
