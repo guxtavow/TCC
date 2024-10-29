@@ -9,6 +9,8 @@ import Sobre from './pages/Sobre/Sobre';
 import Chatbot from './pages/Chatbot/chat';
 import LoginScreen from './pages/LoginScreen/LoginScreen';
 import Vantagens from './pages/Vantagens/vantagens';
+//import CadastroResp from './componentes/CadastroResp/CadastroResp';
+//import CadastroProf from './componentes/CadastroProf/CadastroProf';
 import Games from './pages/Games/Games';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -18,7 +20,7 @@ function App() {
   return (
     <Router>
     <div className="App">
-      {window.location.pathname !== "/LoginScreen" && window.location.pathname !== "/Cadastro" && (
+      {window.location.pathname !== "/LoginScreen" &&  (
         <Header />
       )}
       <Routes>  
@@ -31,7 +33,7 @@ function App() {
         <Route path="/Games" element={<Games />} />
         <Route path="/LoginScreen" element={<LoginScreen />} />
       </Routes>
-      {window.location.pathname !== "/LoginScreen" && window.location.pathname !== "/Cadastro" && (
+      {window.location.pathname !== "/LoginScreen" &&  (
         <Footer />
       )}
     </div>
