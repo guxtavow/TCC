@@ -1,18 +1,17 @@
-import React, { useState } from 'react'; // Adicione useState
-import './Responsaveis.css';
-import Calendar from './Calendar/Calendar';
-import PerguntasGrafico from './PerguntasGrafico/PerguntasGrafico';
-import FeedbackCard from './Feedback/FeedbackCard'; 
-
-import leftImage from './elements/imagem1.png';
-import rightImage from './elements/imagem2.png';
+import leftImage from './elements/imagem1.png'
+import rightImage from './elements/imagem2.png'
 import atividades from './elements/quantidades.png';
 import concluidas from './elements/concluidos.png';
 import desempenho from './elements/desempenho.png';
 import perguntasImage from './elements/perguntas.png';
-import perfil from './elements/perfil.png'
-import filho from './elements/filho.png'
-import duvidas from './elements/duvidas.png';
+import perfil from './elements/perfil.png';
+import filho from './elements/filho.png';
+import duvidas from './elements/duvidas.png'
+import Calendar from './Calendar/Calendar';
+import PerguntasGrafico from './PerguntasGrafico/PerguntasGrafico';
+import FeedbackCard from './Feedback/FeedbackCard';
+import './Responsaveis.css';
+import React, { useState } from 'react'; // Adicione useState
 
 export default function Responsaveis() {
   const [ano, setAno] = useState('2024'); // Mova o estado para dentro do componente
