@@ -15,26 +15,11 @@ const CadastroProf = () => {
     };
 
     return (
-        <div>
-            <form action="">
-                {/* Cabeçalho principal */}
-                <h1>
-                    TechKids
-                    <img src={GoogleIcon2} alt="Google Icon" className="bee-icon" />
-                </h1>
+        <div>                    
+            {/* Instrução para seleção de perfil */}
+            <p className="perfis"><b>Escolha o perfil de acesso:</b></p>
 
-                <button className="Criar" type="submit">Login</button>
-
-                {/* Imagem principal */}
-                <img src={logo2} alt="foto" title="foto" />
-
-                {/* Subtítulo */}
-                <h2>Crie sua conta agora</h2>
-
-                {/* Instrução para seleção de perfil */}
-                <p className="perfis"><b>Escolha o perfil de acesso:</b></p>
-
-                {/* Botões de seleção de perfil */}
+            {/* Botões de seleção de perfil */}
                 <div className="button-group">
                     <button 
                         className="btn"
@@ -55,6 +40,20 @@ const CadastroProf = () => {
                         Responsável
                     </button>
                 </div>
+            <form>
+                {/* Cabeçalho principal */}
+                <h1>
+                    TechKids
+                    <img src={GoogleIcon2} alt="Google Icon" className="bee-icon" />
+                </h1>
+
+                <button className="Criar">Login</button>
+
+                {/* Imagem principal */}
+                <img src={logo2} alt="foto" title="foto" />
+
+                {/* Subtítulo */}
+                <h2>Crie sua conta agora</h2>
 
                 {/* Campos de entrada de dados */}
                 <h4>Nome Completo *</h4>
