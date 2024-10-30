@@ -82,7 +82,7 @@ return(
                     
                     <div className='Usuario'>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Cadastro"><b>Cadastre-se</b></a>
+                            <a class="nav-link" href="/CadastroProf"><b>Cadastre-se</b></a>
                         </li>
                         <button className='Login'><a className='nav-link' href="/LoginScreen"><b>Login</b></a></button>
                     </div>
