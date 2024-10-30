@@ -40,7 +40,7 @@
               <div className="button-container">
                 <button className="action-button" aria-label="Cadastro">
                   <img src={btnCadastro} alt="Botão Cadastro" className="button-icon" />
-                  <strong><a href='/Cadastro'>Cadastro</a></strong>
+                  <strong><a href='/CadastroProf'>Cadastro</a></strong>
                 </button>
                 <button className="action-button" aria-label="Entrar">
                   <img src={btnEntrar} alt="Botão Entrar" className="button-icon" />
