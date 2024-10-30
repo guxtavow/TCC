@@ -39,7 +39,7 @@ const LoginScreen = () => {
                     </h1>
                     <img src={logo} alt="Logo" id="Logo" />
     
-                    <button className="Conta" type="button"><a href="/Cadastro">Criar Conta</a></button>
+                    <button className="Conta" type="button"><a href="/CadastroProf">Criar Conta</a></button>
     
                     <h2 className="logue">Logue-se agora</h2>
                     

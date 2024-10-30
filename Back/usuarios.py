@@ -3,6 +3,7 @@ from flask import jsonify
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy import DateTime
 
 
 
@@ -18,9 +19,12 @@ class Usuario(Base):
     email = Column(String)
     senha = Column(String)
     tipo = Column(String)
-    data_cadastro = Column(Integer)
+    data_cadastro = Column(DateTime)
     ultimo_login = Column(Integer)
     nivel_atual = Column(String)
+    celular = Column(String)
+    instituicao_ensino = Column(String)
+    grau_parentesco = Column(String)
     
     def get_dados_formatados(self):
         return {
@@ -30,7 +34,10 @@ class Usuario(Base):
             "Tipo": self.tipo,
             "Data de Cadastro": self.data_cadastro,
             "Último Login": self.ultimo_login,
-            "Nível": self.nivel_atual
+            "Nível": self.nivel_atual,
+            "Celular": self.celular,
+            "Instituição de Ensino": self.instituicao_ensino,
+            "Grau de Parentesco": self.grau_parentesco
             }
         
 Session = sessionmaker(bind=engine)
