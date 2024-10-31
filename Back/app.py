@@ -33,5 +33,32 @@ def login():
 def criar_usuario():
     return
 
+@app.route("/editar-perfil/<int:usuario_id>", methods=["POST"])
+def editar_perfil(usuario_id):
+    session = Session()
+    usuario = session.query(Usuario).filter_by(id=usuario_id).first()
+
+    if not usuario:
+        session.close()
+        return jsonify({"erro": "Usuário não encontrado"}), 404
+
+    dados = request.json
+
+    # Atualizar os campos 
+    if "nome" in dados:
+        usuario.nome = dados["nome"]
+    if "email" in dados:
+        usuario.email = dados["email"]
+    if "telefone" in dados:
+        usuario.telefone = dados["telefone"]
+    if "senha" in dados:
+        usuario.senha = dados["senha"] 
+
+    # Salvar alterações
+    session.commit()
+    session.close()
+
+    return jsonify({"mensagem": "Perfil atualizado com sucesso"})
+    
 if __name__ == '__main__':
     app.run(debug=True)

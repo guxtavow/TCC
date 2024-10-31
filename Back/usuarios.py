@@ -21,6 +21,7 @@ class Usuario(Base):
     data_cadastro = Column(Integer)
     ultimo_login = Column(Integer)
     nivel_atual = Column(String)
+    telefone = Column(String)
     
     def get_dados_formatados(self):
         return {
@@ -30,10 +31,13 @@ class Usuario(Base):
             "Tipo": self.tipo,
             "Data de Cadastro": self.data_cadastro,
             "Último Login": self.ultimo_login,
-            "Nível": self.nivel_atual
+            "Nível": self.nivel_atual,
+            "Telefone": self.telefone
             }
         
 Session = sessionmaker(bind=engine)
+
+
 
 # Session = sessionmaker(bind=engine)
 # session = Session()
