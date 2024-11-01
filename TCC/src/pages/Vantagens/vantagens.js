@@ -26,13 +26,13 @@ export default function Vantagens() {
 
             <div>
                 {/* Texto explicando o TechBot */}
-                <p className='text1'>
+                <p className='text3'>
                     O TechBot, nosso chatbot inteligente, está preparado para responder exclusivamente a perguntas relacionadas à tecnologia.
                     Ele foi criado com o objetivo de ajudar as crianças a aprender, respondendo de uma maneira simples e clara, para que elas possam entender facilmente.
                     O TechBot foi programado para fornecer respostas educativas e apropriadas, sempre adaptadas à faixa etária da criança.
                 </p>
                 {/* Texto sobre jogos educativos */}
-                <p className='text1'>
+                <p className='text3'>
                     Além disso, o TECHKIDS também oferece jogos educativos focados em tecnologia, permitindo que as crianças aprendam enquanto brincam, de forma interativa e divertida.
                 </p>
                 
@@ -52,21 +52,21 @@ export default function Vantagens() {
                 {/* Seção de Recompensa */}
                 <div className="Recompensa">
                     {/* Imagem da menina */}
-                    <img src={Menina} alt='img3' id='menina' width='500px' />
-                    <div className="text2"> {/* Div para o texto da recompensa */}
+                    <img src={Menina} alt='img3' id='garota2' width='500px' />
+                    <div className="text4"> {/* Div para o texto da recompensa */}
                         {/* Título da seção */}
                         <h2><b>O que seu filho vai ganhar depois de estudar e se divertir no Techkids?</b></h2>
                         <br />
                         {/* Lista de vantagens com ícones */}
-                        <p className="texto">
+                        <p className="texto1">
                             <FaCheckCircle /> {/* Ícone de check */}
                             <b> Raciocínio lógico </b>: Resolver desafios de programação aprimora o pensamento crítico.
                         </p>
-                        <p className="texto">
+                        <p className="texto1">
                             <FaCheckCircle /> {/* Ícone de check */}
                             <b> Criatividade</b>: Aprender a criar e inovar no mundo digital.
                         </p>
-                        <p className="texto">
+                        <p className="texto1">
                             <FaCheckCircle /> {/* Ícone de check */}
                             <b>Confiança na tecnologia</b>: Familiarização com conceitos essenciais para o futuro.
                         </p>

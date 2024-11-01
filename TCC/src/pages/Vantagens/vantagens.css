@@ -48,7 +48,7 @@
 }
 
 /* Estilo para o texto com a classe 'text1' */
-.text1 {
+.text3 {
     font-size: large; /* Define o tamanho da fonte como grande */
     margin: auto; /* Centraliza o elemento */
     width: 90%; /* Largura do texto ocupa 90% da largura disponível */
@@ -72,27 +72,29 @@
     margin-block-end: 10%; /* Espaço na parte inferior */
 }
 
-/* Estilo para o elemento com o id 'menina' */
-#menina {
+/* Estilo para o elemento com o id 'garota' */
+#garota2 {
     height: 70vh; /* Altura do elemento é 70% da altura da janela */
     margin-bottom: -30px; /* Espaço negativo abaixo do elemento */
     border-radius: 30px; /* Bordas arredondadas */
     display: flex; /* Usar flexbox para organizar os itens dentro do elemento */
     margin-right: 0.1vw; /* Espaço à direita do elemento */
     background-color: #00547534; /* Cor de fundo do elemento */
+    margin-top: 7%;
 }
 
 /* Estilo para o texto dentro da classe 'text2' */
-.text2 {
+.text4 {
     width: 25vw; /* Largura do texto é 25% da largura da tela */
     flex-direction: column; /* Empilha os elementos verticalmente */
     align-items: flex-start; /* Alinha os itens à esquerda */
     text-align: left; /* Alinha o texto à esquerda */
-    margin-top: 10%; /* Espaço acima do texto */
+    margin-top: 12%; /* Espaço acima do texto */
+    margin-right: 15%;
 }
 
 /* Estilo para o texto com a classe 'texto' */
-.texto {
+.texto1 {
     display: flex; /* Usar flexbox para alinhar a imagem do check e o texto */
     align-items: center; /* Alinha a imagem e o texto verticalmente */
     margin: 5px 0; /* Espaço entre os parágrafos */
