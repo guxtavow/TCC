@@ -6,6 +6,7 @@ from usuarios import Usuario, Session
 from datetime import datetime
 
 
+
 app = Flask(__name__)
 CORS(app)
 
@@ -34,8 +35,6 @@ def login():
 @app.route('/cadastro', methods=['POST'])
 def cadastro():
     data = request.json
-    print(data)
-    
     nome = data.get("nome")
     email = data.get("email")
     senha = data.get("password")
@@ -44,6 +43,7 @@ def cadastro():
     celular = data.get("celular")
     instituicao_ensino = data.get("instituicao_ensino")
     grau_parentesco = data.get("grau_parentesco")
+    nivel_atual = data.get("nivel_atual")
     
     if senha != confirmar_senha:
         return jsonify({"error": "As senhas não coincidem"}), 400
@@ -56,24 +56,9 @@ def cadastro():
     else:
         return jsonify({"error": "Tipo de usuário inválido"}), 400
     
-    with Session() as session:
-        if session.query(Usuario).filter_by(email=email).first():
-            return jsonify({"error": "Este email já está cadastrado"}), 400
-
-        novo_usuario = Usuario(
-            nome=nome,
-            email=email,
-            senha=senha,
-            tipo=tipo,
-            celular=celular,
-            instituicao_ensino=instituicao_ensino if tipo == 'Professor' else None,
-            grau_parentesco=grau_parentesco if tipo == 'Responsável' else None,
-            data_cadastro=datetime.now()
-        )
-        
-        session.add(novo_usuario)
-        session.commit()
-        return jsonify({"message": "Usuário cadastrado com sucesso!"}), 201
+    # Chama a função de cadastro importada do arquivo usuarios.py
+    response, status = Usuario.cadastrar_usuario(nome, email, senha, tipo, celular, instituicao_ensino, grau_parentesco)
+    return jsonify(response, {"cadastrado":True }), status
 
 if __name__ == "__main__":
     app.run(debug=True)

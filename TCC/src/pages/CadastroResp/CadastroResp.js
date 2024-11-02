@@ -5,7 +5,7 @@ import logo2 from "./elements/login3.png"; // Importa uma imagem
 import GoogleIcon2 from "./elements/abelha3.png"; // Importa outra imagem
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import CadastroApi from '../../services/CadastroApi';
+import CadastroApi from '../../services/CadastroApi'
 
 const CadastroResp = () => {
     const [professorBtnColor, setProfessorBtnColor] = useState('#FF5D3B');
@@ -65,7 +65,7 @@ const CadastroResp = () => {
         try {
             const response = await CadastroApi(usuario);
     
-            if (response.status === 201) {
+            if (response.cadastrado === true) {
                 alert("Cadastro realizado com sucesso!");
                 navigate("/Login"); // Redireciona para a página de login
             } else {
