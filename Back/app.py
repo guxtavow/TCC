@@ -49,8 +49,8 @@ def editar_perfil(usuario_id):
         usuario.nome = dados["nome"]
     if "email" in dados:
         usuario.email = dados["email"]
-    if "telefone" in dados:
-        usuario.telefone = dados["telefone"]
+    # if "telefone" in dados:
+    #     usuario.telefone = dados["telefone"]
     if "senha" in dados:
         usuario.senha = dados["senha"] 
 
