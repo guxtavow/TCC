@@ -32,14 +32,14 @@ const LoginScreen = () => {
     
     return (
             <div>
-                <form>
+                <form onSubmit={LoginUsuario}>
                     <h1 className="NomeSite">
                         TechKids
                         <img src={GoogleIcon} alt="Ícone da abelha" className="bee-icon3" />
                     </h1>
                     <img src={logo} alt="Logo" id="Logo" />
     
-                    <button className="Conta" type="button"><a href="/Cadastro">Criar Conta</a></button>
+                    <button className="Conta" type="button"><a href="/CadastroProf">Criar Conta</a></button>
     
                     <h2 className="logue">Logue-se agora</h2>
                     
@@ -48,6 +48,8 @@ const LoginScreen = () => {
                         <input 
                             type="text" 
                             placeholder="Insira seu e-mail" 
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                             required 
                         />
                     </div>
@@ -57,6 +59,8 @@ const LoginScreen = () => {
                         <input 
                             type={showPassword ? "text" : "password"} 
                             placeholder="Entre com sua senha" 
+                            value={senha}
+                            onChange={(e) => setSenha(e.target.value)}
                             required 
                         />
                         <FontAwesomeIcon
@@ -81,6 +85,8 @@ const LoginScreen = () => {
                     
                     <button className="login" type="submit">Login</button>
                     
+                    {error && <p style={{ color: 'red' }}>{error}</p>}
+
                     <div className="register-link">
                         <p>Não é registrado? Clique no botão Criar Conta</p>
                     </div>
