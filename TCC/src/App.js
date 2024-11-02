@@ -8,8 +8,9 @@ import Footer from './componentes/footer/Footer';
 import Sobre from './pages/Sobre/Sobre';
 import Chatbot from './pages/Chatbot/chat';
 import LoginScreen from './pages/LoginScreen/LoginScreen';
-import Cadastro from './pages/Cadastro/Cadastro';
 import Vantagens from './pages/Vantagens/vantagens';
+import CadastroResp from './pages/CadastroResp/CadastroResp';
+import CadastroProf from './pages/CadastroProf/CadastroProf';
 import Games from './pages/Games/Games';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -19,7 +20,7 @@ function App() {
   return (
     <Router>
     <div className="App">
-      {window.location.pathname !== "/LoginScreen" && window.location.pathname !== "/Cadastro" && (
+      {window.location.pathname !== "/LoginScreen" && window.location.pathname !== "/CadastroProf" && window.location.pathname !== "/CadastroResp" &&   (
         <Header />
       )}
       <Routes>  
@@ -31,9 +32,10 @@ function App() {
         <Route path="/chatbot" element={<Chatbot />} />
         <Route path="/Games" element={<Games />} />
         <Route path="/LoginScreen" element={<LoginScreen />} />
-        <Route path="/Cadastro" element={<Cadastro />} />
+        <Route path="/CadastroProf" element={<CadastroProf />} />
+        <Route path="/CadastroResp" element={<CadastroResp />} />
       </Routes>
-      {window.location.pathname !== "/LoginScreen" && window.location.pathname !== "/Cadastro" && (
+      {window.location.pathname !== "/LoginScreen" && window.location.pathname !== "/CadastroProf" && window.location.pathname !== "/CadastroResp" &&  (
         <Footer />
       )}
     </div>

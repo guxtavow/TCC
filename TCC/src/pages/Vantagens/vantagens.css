@@ -1,122 +1,83 @@
-/* Classe que define o espaço acima do elemento com a classe 'vantagem' */
-.vantagem {
-    margin-top: 10vh; /* Adiciona um espaço no topo igual a 10% da altura da janela */
-}
-
 /* Estilo para a seção do Banner */
 .Banner {
-    /* Cria um gradiente que vai do transparente até a cor vermelha */
-    background-image: linear-gradient(to bottom, transparent 60%, #FF2B00 40%);
-    width: 100%; /* A largura do Banner ocupa toda a tela */
-    min-height: 20vh; /* A altura mínima do Banner é de 20% da altura da janela */
-    border: solid; /* Adiciona uma borda ao redor do Banner */
+    background-image: linear-gradient(to bottom, transparent 60%, #FF2B00 60%, #FF8800 100%);
+    max-width: 110vw; 
+    min-height: 60vh; 
+    max-height: 100vh; 
 }
 
 /* Classe para a seção de Vantagens */
 .Vantagens {
-    margin-top: 10vh; /* Adiciona espaço acima da seção de Vantagens */
+    margin-top: 10vh; 
 }
 
 /* Classe para as Bandeiras */
 .Bandeiras {
-    margin-top: 20vh; /* Adiciona espaço acima da seção de Bandeiras */
+    margin-top: 20vh; 
 }
 
-/* Estilo do Banner com altura máxima e um novo gradiente */
-.Banner {
-    min-height: 60vh; /* Altura mínima do Banner é 60% da altura da janela */
-    max-height: 100vh; /* Altura máxima do Banner é 100% da altura da janela */
-    /* Novo gradiente do transparente até o laranja */
-    background-image: linear-gradient(to bottom, transparent 60%, #FF2B00 60%, #FF8800 100%);
+/* Estilo para imagens */
+#garoto2 {
+    width: 400px; 
+    display: flex;
+    margin: -27.5% 0 0 12%; 
 }
 
-/* Estilo para o elemento com o id 'garoto1' */
-#garoto1 {
-    position: initial; /* O elemento irá seguir o fluxo normal do layout */
-    margin-top: 7.4vh; /* Adiciona espaço acima do elemento */
-    margin-right: 6vw; /* Adiciona espaço à direita do elemento */
-    border-radius: 40px; /* As bordas do elemento ficam arredondadas */
-    bottom: 0%; /* A posição inferior do elemento */
-}
-
-/* Estilo para o elemento com o id 'como' */
 #como {
-    position: initial; /* O elemento seguirá o fluxo normal do layout */
-    margin-top: 5vh; /* Adiciona espaço acima do elemento */
-    margin-bottom: 5vh; /* Adiciona espaço abaixo do elemento */
-    margin-right: 6vw; /* Adiciona espaço à direita do elemento */
+    width: 500px; 
+    margin: -65vh 0 5vh 30vw; 
 }
 
-/* Estilo para o texto com a classe 'text1' */
-.text1 {
-    font-size: large; /* Define o tamanho da fonte como grande */
-    margin: auto; /* Centraliza o elemento */
-    width: 90%; /* Largura do texto ocupa 90% da largura disponível */
-    text-align: center; /* Centraliza o texto */
-    font-size: x-large; /* Define o tamanho da fonte como muito grande */
-    /* Cria um efeito de sombra no texto */
+#ban1 {
+    width: 1300px; 
+}
+
+#menina1 {
+    height: 70vh; 
+    margin-bottom: -30px; 
+    border-radius: 30px; 
+    display: flex; 
+    margin-right: 0.1vw; 
+}
+
+/* Estilo para o texto */
+.text3 {
+    font-size: x-large; 
+    margin: auto; 
+    width: 90%; 
+    text-align: center; 
     text-shadow:
-    -6px 3px 90px #f2994a,
-    1px -1px 90px #f2994a,
-    -1px 1px 90px #f2994a,
-    1px 1px 50px #f2994a;
-    margin-top: 5%; /* Adiciona espaço acima do texto */
+   -1px  1px 90px #f2994a,
+    1px  1px 50px #f2994a;   
+    margin-top: 5%; 
 }
 
 /* Estilo para a seção de Recompensa */
 .Recompensa {
-    display: flex; /* Usar flexbox para organizar os itens dentro da seção */
-    margin-left: 10%; /* Espaço à esquerda */
-    margin-right: 5%; /* Espaço à direita */
-    justify-content: space-between; /* Distribui o espaço entre os elementos */
-    margin-block-end: 10%; /* Espaço na parte inferior */
+    display: flex; 
+    margin: 0 5% 10%; 
+    justify-content: space-between; 
 }
 
-/* Estilo para o elemento com o id 'menina' */
-#menina {
-    height: 70vh; /* Altura do elemento é 70% da altura da janela */
-    margin-bottom: -30px; /* Espaço negativo abaixo do elemento */
-    border-radius: 30px; /* Bordas arredondadas */
-    display: flex; /* Usar flexbox para organizar os itens dentro do elemento */
-    margin-right: 0.1vw; /* Espaço à direita do elemento */
-    background-color: #00547534; /* Cor de fundo do elemento */
-}
-
-/* Estilo para o texto dentro da classe 'text2' */
-.text2 {
-    width: 25vw; /* Largura do texto é 25% da largura da tela */
-    flex-direction: column; /* Empilha os elementos verticalmente */
-    align-items: flex-start; /* Alinha os itens à esquerda */
-    text-align: left; /* Alinha o texto à esquerda */
-    margin-top: 10%; /* Espaço acima do texto */
+/* Estilo para o texto dentro da classe 'text4' */
+.text4 {
+    width: 40vw; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    text-align: left; 
+    margin-top: 10%; 
 }
 
 /* Estilo para o texto com a classe 'texto' */
 .texto {
-    display: flex; /* Usar flexbox para alinhar a imagem do check e o texto */
-    align-items: center; /* Alinha a imagem e o texto verticalmente */
-    margin: 5px 0; /* Espaço entre os parágrafos */
-    width: 50vw; /* Largura do texto é 50% da largura da tela */
-    font-size: 0.875rem; /* Tamanho da fonte */
+    display: flex; 
+    align-items: center; 
+    margin: 5px 0; 
+    width: 50vw; 
+    font-size: 0.875rem; 
 }
 
 /* Estilo para o elemento com a classe 'Check' */
 .Check {
-    background-color: transparent; /* Fundo transparente para o elemento */
-}
-
-/* Estilo para a linha com o id 'linha' */
-#linha {
-    position: absolute; /* Permite posicionar a imagem de forma absoluta */
-    bottom: -73vw; /* Posição da imagem a partir da parte inferior da tela */
-    left: 7vw; /* Distância da imagem a partir da esquerda */
-    width: 5vw; /* Tamanho da imagem */
-}
-
-/* Estilo para o elemento com o id 'formas' */
-#formas {
-    position: absolute; /* Permite posicionar a imagem de forma absoluta */
-    bottom: -42vw; /* Posição da imagem a partir da parte inferior da tela */
-    left: 4vw; /* Distância da imagem a partir da esquerda */
-    width: 5vw; /* Tamanho da imagem */
+    background-color: transparent; 
 }
