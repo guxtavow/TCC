@@ -20,12 +20,14 @@
 #garoto2 {
     width: 400px; 
     display: flex;
-    margin: -27.5% 0 0 12%; 
+    margin-left: 15%; 
+    margin-top: -28%;
 }
 
 #como {
     width: 500px; 
-    margin: -65vh 0 5vh 30vw; 
+    margin-right: -35%; 
+    margin-top: -29%;
 }
 
 #ban1 {
@@ -47,8 +49,8 @@
     width: 90%; 
     text-align: center; 
     text-shadow:
-   -1px  1px 90px #f2994a,
-    1px  1px 50px #f2994a;   
+   -1px  1px 60px #f2994a,
+    1px  1px 60px #f2994a;   
     margin-top: 5%; 
 }
 
