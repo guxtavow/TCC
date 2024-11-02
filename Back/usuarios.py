@@ -7,8 +7,14 @@ from sqlalchemy import DateTime
 
 
 
-DATABASE_URL = "mysql+pymysql://root:Jcm30052000*@localhost:3307/techkids"
-engine = create_engine(DATABASE_URL)
+DATABASE_URL = "mysql+pymysql://root:Jcm30052000*@localhost:3306/techkids"
+engine = create_engine(DATABASE_URL, echo=True)
+
+try:
+    with engine.connect() as connection:
+        print("Conectado ao banco de dados com sucesso!")
+except Exception as e:
+    print(f"Erro ao conectar ao banco de dados: {e}")
 
 Base = declarative_base()
 

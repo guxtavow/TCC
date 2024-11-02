@@ -34,18 +34,28 @@ def login():
 @app.route('/cadastro', methods=['POST'])
 def cadastro():
     data = request.json
+    print(data)
+    
     nome = data.get("nome")
     email = data.get("email")
     senha = data.get("password")
     confirmar_senha = data.get("confirmar_senha")
-    perfil = data.get("perfil")
+    tipo = data.get("tipo")
     celular = data.get("celular")
     instituicao_ensino = data.get("instituicao_ensino")
     grau_parentesco = data.get("grau_parentesco")
     
     if senha != confirmar_senha:
         return jsonify({"error": "As senhas não coincidem"}), 400
-
+    
+    # Mapeamento do perfil para o tipo do banco de dados
+    if tipo == 'Professor' or tipo == 'Responsável' or tipo == 'Responsavel':
+        tipo = 'admin'
+    elif tipo == 'Aluno':
+        tipo = 'Aluno'
+    else:
+        return jsonify({"error": "Tipo de usuário inválido"}), 400
+    
     with Session() as session:
         if session.query(Usuario).filter_by(email=email).first():
             return jsonify({"error": "Este email já está cadastrado"}), 400
@@ -54,10 +64,10 @@ def cadastro():
             nome=nome,
             email=email,
             senha=senha,
-            tipo=perfil,
+            tipo=tipo,
             celular=celular,
-            instituicao_ensino=instituicao_ensino if perfil == 'Professor' else None,
-            grau_parentesco=grau_parentesco if perfil == 'Responsável' else None,
+            instituicao_ensino=instituicao_ensino if tipo == 'Professor' else None,
+            grau_parentesco=grau_parentesco if tipo == 'Responsável' else None,
             data_cadastro=datetime.now()
         )
         

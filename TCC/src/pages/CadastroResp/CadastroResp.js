@@ -31,39 +31,52 @@ const CadastroResp = () => {
         email,
         senha,
         confirmarSenha,
-        perfil: tipoUsuario,
+        tipo: tipoUsuario,
         celular,
     };
+
+    console.log('enviando',tipoUsuario)
 
     // Adiciona campos adicionais dependendo do tipo de usuário
     if (tipoUsuario === "Responsável") {
         payload.grau_parentesco = grau_parentesco;
     } else if (tipoUsuario === "Professor") {
-        payload.instituicao_ensino = "Nome da Instituição"; // Substitua pelo valor adequado
+        payload.instituicao_ensino = "Nome da Instituição"; 
     }
 
     const CadastroUsuario = async (e) => {
         e.preventDefault();
+    
         if (senha !== confirmarSenha) {
             setError("As senhas não coincidem!");
             return;
         }
+    
+        const usuario = {
+            nome,
+            email,
+            celular,
+            grau_parentesco: grau_parentesco, // Campo específico para Responsável
+            password: senha,
+            confirmar_senha: confirmarSenha,
+            tipo: tipoUsuario // Tipo de usuário para o endpoint
+        };
+    
         try {
-            const response = await CadastroApi(payload); // Passa o payload
-
-            if (response) { // Verifique se a resposta é bem-sucedida
+            const response = await CadastroApi(usuario);
+    
+            if (response.status === 201) {
                 alert("Cadastro realizado com sucesso!");
-                localStorage.setItem("cadastroConcluido", "true");
-                navigate("/LoginScreen"); // Redireciona para a página de login
+                navigate("/Login"); // Redireciona para a página de login
             } else {
                 setError("Erro ao cadastrar: " + response.statusText);
-            }            
+            }
         } catch (error) {
             console.error("Erro ao enviar dados:", error);
             setError("Erro ao realizar o cadastro. Tente novamente.");
         }
     };
-
+    
     return (
         <div>                    
             <form onSubmit={CadastroUsuario}>
