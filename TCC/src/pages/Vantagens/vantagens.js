@@ -18,10 +18,11 @@ export default function Vantagens() {
                 O TechBot, nosso chatbot inteligente, está preparado para responder exclusivamente a perguntas relacionadas à tecnologia. 
                 Ele foi criado para ajudar as crianças a aprender, respondendo de forma simples e clara, para que possam entender facilmente. 
                 O TechBot fornece respostas educativas e apropriadas, sempre adaptadas à faixa etária da criança.
+                
             </p>
             <p className='text3'>
-                Além disso, o TECHKIDS também oferece jogos educativos focados em tecnologia, 
-                permitindo que as crianças aprendam enquanto brincam de forma interativa e divertida.
+            Além disso, o TECHKIDS também oferece jogos educativos focados em tecnologia, 
+            permitindo que as crianças aprendam enquanto brincam de forma interativa e divertida.
             </p>
 
             <div className='Bandeiras'>

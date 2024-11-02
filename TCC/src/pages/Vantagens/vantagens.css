@@ -1,85 +1,112 @@
-/* Estilo para a seção do Banner */
+/* Container Principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Banner */
 .Banner {
     background-image: linear-gradient(to bottom, transparent 60%, #FF2B00 60%, #FF8800 100%);
-    max-width: 110vw; 
-    min-height: 60vh; 
-    max-height: 100vh; 
-}
-
-/* Classe para a seção de Vantagens */
-.Vantagens {
-    margin-top: 10vh; 
-}
-
-/* Classe para as Bandeiras */
-.Bandeiras {
-    margin-top: 20vh; 
-}
-
-/* Estilo para imagens */
-#garoto2 {
-    width: 400px; 
+    width: 100%;
+    min-height: 60vh;
+    max-height: 100vh;
     display: flex;
-    margin-left: 15%; 
-    margin-top: -28%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Vantagens e Bandeiras */
+.Vantagens, .Bandeiras {
+    margin-top: 10vh;
+    padding: 20px 0;
+    margin-block-end: 7%;
+}
+
+/* Imagens */
+#garoto2 {
+    max-width: 30vw;
+    height: auto;
+    display: block;
+    margin-top: -29%;
+    margin-left: 14%;
 }
 
 #como {
-    width: 500px; 
-    margin-right: -35%; 
-    margin-top: -29%;
+    max-width: 37vw;
+    height: auto;
+    display: block;
+    margin-top: -21%;
+    margin-left: 52%;
 }
 
-#ban1 {
-    width: 1300px; 
-}
-
-#menina1 {
-    height: 70vh; 
-    margin-bottom: -30px; 
-    border-radius: 30px; 
-    display: flex; 
-    margin-right: 0.1vw; 
-}
-
-/* Estilo para o texto */
+/* Texto */
 .text3 {
-    font-size: x-large; 
-    margin: auto; 
-    width: 90%; 
-    text-align: center; 
+    font-size: 1.5rem;
+    margin: 10% auto;
+    width: 90%;
+    height: 10vh;
+    text-align: center;
     text-shadow:
-   -1px  1px 60px #f2994a,
-    1px  1px 60px #f2994a;   
-    margin-top: 5%; 
+       -1px  1px 60px #f2994a,
+        1px  1px 60px #f2994a;   
 }
 
-/* Estilo para a seção de Recompensa */
+/* Recompensa */
 .Recompensa {
-    display: flex; 
-    margin: 0 5% 10%; 
-    justify-content: space-between; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 5% 10%;
 }
 
-/* Estilo para o texto dentro da classe 'text4' */
 .text4 {
-    width: 40vw; 
-    flex-direction: column; 
-    align-items: flex-start; 
-    text-align: left; 
-    margin-top: 10%; 
+    flex: 1 1 40%;
+    text-align: left;
+    margin-top: 10%;
+    margin-left: 5%;
 }
 
-/* Estilo para o texto com a classe 'texto' */
 .texto {
-    display: flex; 
-    align-items: center; 
-    margin: 5px 0; 
-    width: 50vw; 
-    font-size: 0.875rem; 
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    width: 100%;
+    font-size: 0.875rem;
 }
 
-/* Estilo para o elemento com a classe 'Check' */
 .Check {
-    background-color: transparent; 
+    background-color: transparent;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .text3 {
+        font-size: 1.3rem;
+    }
+    
+    .text4, .texto {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .Banner {
+        min-height: 40vh;
+    }
+    
+    .Recompensa {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .text4, .texto {
+        width: 90%;
+        text-align: center;
+    }
+    
+    .text3 {
+        font-size: 1.2rem;
+    }
 }
