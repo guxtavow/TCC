@@ -67,7 +67,6 @@ return(
                     {!logado ?( 
                         <>
                     <div className='center'>
-                        
                         <li class="nav-item">
                         <a class="nav-link" href='/vantagens'><b>Como usar</b></a>
                         </li>
